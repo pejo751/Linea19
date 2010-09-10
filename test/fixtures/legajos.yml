@@ -1,0 +1,27 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nombre: MyString
+  tipo_documento: MyString
+  documento: 
+  c_u_i_f: 
+  telefonos: MyString
+  inicio: 2010-09-10
+  nacimiento: 2010-09-10
+  estado_civil: MyString
+  nivel_estudio: MyString
+  codigo_agrupacion: MyString
+  observaciones: MyString
+
+two:
+  nombre: MyString
+  tipo_documento: MyString
+  documento: 
+  c_u_i_f: 
+  telefonos: MyString
+  inicio: 2010-09-10
+  nacimiento: 2010-09-10
+  estado_civil: MyString
+  nivel_estudio: MyString
+  codigo_agrupacion: MyString
+  observaciones: MyString

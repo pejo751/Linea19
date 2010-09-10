@@ -1,0 +1,26 @@
+ 
+<%=
+  present :elegant do |p|
+    p.header do |r|
+      r.field 'Nombre', @resource.nombre
+    end
+    p.body do |r|
+      r.field 'Tipo documento', @resource.tipo_documento
+      r.field 'Telefonos', @resource.telefonos
+      r.field 'Inicio', @resource.inicio
+      r.field 'Nacimiento', @resource.nacimiento
+      r.field 'Estado civil', @resource.estado_civil
+      r.field 'Nivel estudio', @resource.nivel_estudio
+      r.field 'Codigo agrupacion', @resource.codigo_agrupacion
+      r.field 'Observaciones', @resource.observaciones
+      r.field 'Created at', @resource.created_at
+      r.field 'Updated at', @resource.updated_at
+    end
+    p.actions do |r|
+#      r.text link_to('manage some nested resource', path_to_some_resource_path(@resource))
+      r.text edit_action
+      r.text destroy_action
+      r.text back_action
+    end
+  end
+%>

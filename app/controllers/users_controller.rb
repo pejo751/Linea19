@@ -10,7 +10,7 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     if @user.save
       flash[:notice] = "Grabacion exitosa!"
-      redirect_back_or_default account_url
+      redirect_back_or_default admin_legajos_path
     else
       render :action => :new
     end

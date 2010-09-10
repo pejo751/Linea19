@@ -1,4 +1,4 @@
 <div id="session">
-  administrate_me 
-  <%= link_to t('views.logout'), '#' %>
+  <%= current_user.full_name %> (<%= current_user.login %>)
+  <%= link_to t('views.logout'), user_session_path, :method => :delete, :confirm => "Desea salir?" %>
 </div>

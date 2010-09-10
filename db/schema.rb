@@ -9,7 +9,23 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100908170450) do
+ActiveRecord::Schema.define(:version => 20100910195350) do
+
+  create_table "legajos", :force => true do |t|
+    t.string   "nombre"
+    t.string   "tipo_documento"
+    t.integer  "documento"
+    t.integer  "c_u_i_f"
+    t.string   "telefonos"
+    t.date     "inicio"
+    t.date     "nacimiento"
+    t.string   "estado_civil"
+    t.string   "nivel_estudio"
+    t.string   "codigo_agrupacion"
+    t.string   "observaciones"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "full_name"
