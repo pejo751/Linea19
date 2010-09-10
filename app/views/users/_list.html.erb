@@ -1,0 +1,15 @@
+<%= list_builder_for @records do |list|
+      list.full_name
+      list.login
+      list.email
+      list.crypted_password
+      list.password_salt
+      list.persistence_token
+      list.single_access_token
+      list.perishable_token
+      list.last_request_at
+      list.current_login_at
+      list.last_login_at
+      list.current_login_ip
+      list.last_login_ip
+    end %>

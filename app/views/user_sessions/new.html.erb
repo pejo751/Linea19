@@ -1,0 +1,15 @@
+<h1>Ingreso al sistema</h1>
+
+<% form_for @user_session, :url => user_session_path do |f| %>
+  <%= f.error_messages %>
+  <%= f.label :usuario %><br />
+  <%= f.text_field :login %><br />
+  <br />
+  <%= f.label :clave %><br />
+  <%= f.password_field :password %><br />
+  <br />
+  <%= f.check_box :remember_me %><%= f.label :recuerdeme %><br />
+  <br />
+  <%= f.submit "Ingresar" %>
+<% end %>
+
