@@ -1,7 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
 
   map.namespace :admin do |admin|
-    admin.resources :legajos
+    admin.resources :legajos, :has_many => :direccion_de_legajos
   end
 
   map.resource :account, :controller => "users"

@@ -18,7 +18,7 @@ class UserSessionsController < ApplicationController
 
   def destroy
     current_user_session.destroy
-    flash[:notice] = "Cierre de cesion exitoso!"
+    flash[:notice] = "Cierre de sesion exitoso!"
     redirect_back_or_default new_user_session_url
   end
 end

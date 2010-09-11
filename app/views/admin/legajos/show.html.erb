@@ -17,7 +17,7 @@
       r.field 'Updated at', @resource.updated_at
     end
     p.actions do |r|
-#      r.text link_to('manage some nested resource', path_to_some_resource_path(@resource))
+      r.text link_to('Direcciones', admin_legajo_direccion_de_legajos_path(@resource))
       r.text edit_action
       r.text destroy_action
       r.text back_action

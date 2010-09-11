@@ -3,6 +3,6 @@
 <% form_for @user, :url => account_path do |f| %>
   <%= f.error_messages %>
   <%= render :partial => "form", :object => f %>
-  <%= f.submit "Grabar" %> <%= link_to "Cancelar", new_user_session_path %>
+  <%= f.submit "Grabar" %>
 <% end %>
 

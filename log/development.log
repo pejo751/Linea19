@@ -6139,3 +6139,3036 @@ Processing UserSessionsController#new (for 127.0.0.1 at 2010-09-10 19:39:48) [GE
 Rendering template within layouts/application
 Rendering user_sessions/new
 Completed in 484ms (View: 328, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-09-11 01:35:48) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 484ms (View: 313, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-09-11 01:35:57) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (0.0ms)
+Completed in 313ms (View: 203, DB: 0) | 200 OK [http://localhost/account/new]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-09-11 01:36:03) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 125ms (View: 31, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-09-11 01:36:05) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (15.6ms)
+Completed in 328ms (View: 47, DB: 0) | 200 OK [http://localhost/account/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-09-11 01:37:08) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (0.0ms)
+Completed in 172ms (View: 47, DB: 0) | 200 OK [http://localhost/account/new]
+
+
+Processing UsersController#new (for 127.0.0.1 at 2010-09-11 01:37:19) [GET]
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/new
+Rendered users/_form (15.6ms)
+Completed in 156ms (View: 63, DB: 0) | 200 OK [http://localhost/account/new]
+
+
+Processing UsersController#create (for 127.0.0.1 at 2010-09-11 01:37:44) [POST]
+  Parameters: {"commit"=>"Grabar", "action"=>"create", "authenticity_token"=>"BuEx7n46drrtGWVW0FYGE7ziQbdx8clZNiDYMK6054w=", "controller"=>"users", "user"=>{"password_confirmation"=>"[FILTERED]", "password"=>"[FILTERED]", "login"=>"jorge2", "email"=>"jorgepereyra751@hotmail.com"}}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE (LOWER("users"."email") = 'jorgepereyra751@hotmail.com') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE (LOWER("users"."login") = 'jorge2') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT "users".id FROM "users" WHERE ("users"."persistence_token" = '19a0fa2516d06da22b8ce8fccabace68221262bb4bbb89e2f31f91c5a1bb194b5400c8128ef4078b747a8a2c25f12c6bd6c2dff1003fcbc905e9e02f337a0e3d') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT "users".id FROM "users" WHERE ("users"."single_access_token" = 'tp3U62wlhCbkmEV4VLzO') LIMIT 1[0m
+  [4;36;1mUser Create (31.3ms)[0m   [0;1mINSERT INTO "users" ("single_access_token", "last_request_at", "created_at", "crypted_password", "perishable_token", "updated_at", "failed_login_count", "current_login_ip", "password_salt", "current_login_at", "full_name", "persistence_token", "login_count", "last_login_ip", "login", "last_login_at", "email") VALUES('tp3U62wlhCbkmEV4VLzO', '2010-09-11 04:37:47', '2010-09-11 04:37:47', 'daa9ee68a1cd0312a36e72e2bc12d088cd952d3e4153c41089149d5a2e103cb6c0099c5cf39473b924ca5ce4e5930e4d779b33df1dae0628bab1610dde9f3993', '7G8vM4FzWjYTaB0opQBX', '2010-09-11 04:37:47', 0, '127.0.0.1', 'sJXd9kgEMqu7TG_iUmno', '2010-09-11 04:37:47', NULL, '19a0fa2516d06da22b8ce8fccabace68221262bb4bbb89e2f31f91c5a1bb194b5400c8128ef4078b747a8a2c25f12c6bd6c2dff1003fcbc905e9e02f337a0e3d', 1, NULL, 'jorge2', NULL, 'jorgepereyra751@hotmail.com')[0m
+Redirected to http://localhost:3000/admin/legajos
+Completed in 3453ms (DB: 31) | 302 Found [http://localhost/account]
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 01:37:48) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."persistence_token" = '19a0fa2516d06da22b8ce8fccabace68221262bb4bbb89e2f31f91c5a1bb194b5400c8128ef4078b747a8a2c25f12c6bd6c2dff1003fcbc905e9e02f337a0e3d') LIMIT 1[0m
+  [4;36;1mUser Update (15.6ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 04:37:48', "perishable_token" = 'LgBEyd1_hmUg7Bfw1z66', "last_request_at" = '2010-09-11 04:37:48' WHERE "id" = 5[0m
+  [4;35;1mLegajo Load (15.6ms)[0m   [0mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (31.3ms)
+Rendered commons/_pagination (15.6ms)
+Rendered admin/legajos/_list (125.0ms)
+Rendered commons/_session (0.0ms)
+Completed in 922ms (View: 625, DB: 31) | 200 OK [http://localhost/admin/legajos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 01:37:51) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-09-11 01:38:02) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"BuEx7n46drrtGWVW0FYGE7ziQbdx8clZNiDYMK6054w=", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (15.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."persistence_token" = '19a0fa2516d06da22b8ce8fccabace68221262bb4bbb89e2f31f91c5a1bb194b5400c8128ef4078b747a8a2c25f12c6bd6c2dff1003fcbc905e9e02f337a0e3d') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-11 04:38:02', "perishable_token" = 'sUr9Fb-PXJk0Xa05Bm1t', "last_request_at" = '2010-09-11 04:38:02' WHERE "id" = 5[0m
+Redirected to http://localhost:3000/user_session/new
+Completed in 656ms (DB: 16) | 302 Found [http://localhost/user_session]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-09-11 01:38:03) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 125ms (View: 31, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-09-11 01:38:24) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 109ms (View: 31, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-09-11 01:38:36) [POST]
+  Parameters: {"commit"=>"Ingresar", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"jorge"}, "action"=>"create", "authenticity_token"=>"BuEx7n46drrtGWVW0FYGE7ziQbdx8clZNiDYMK6054w=", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".login) = 'jorge') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "login_count" = 8, "updated_at" = '2010-09-11 04:38:36', "perishable_token" = 'uremaAgm6OpMd2FdA24o', "last_request_at" = '2010-09-11 04:38:36', "last_login_at" = '2010-09-10 21:38:59', "current_login_at" = '2010-09-11 04:38:36' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/admin/legajos
+Completed in 266ms (DB: 0) | 302 Found [http://localhost/user_session]
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 01:38:36) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-11 04:38:36', "perishable_token" = 'AOug4_7HzLfRl_g0rggT', "last_request_at" = '2010-09-11 04:38:36' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (15.6ms)[0m   [0;1mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/legajos/_list (31.3ms)
+Rendered commons/_session (15.6ms)
+Completed in 563ms (View: 94, DB: 16) | 200 OK [http://localhost/admin/legajos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 01:38:38) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-09-11 01:38:45) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"BuEx7n46drrtGWVW0FYGE7ziQbdx8clZNiDYMK6054w=", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 04:38:45', "perishable_token" = '5yggHGqUdxOYvoKpB3Vu', "last_request_at" = '2010-09-11 04:38:45' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/user_session/new
+Completed in 266ms (DB: 0) | 302 Found [http://localhost/user_session]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-09-11 01:38:45) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 141ms (View: 47, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 01:46:20) [GET]
+
+ActionController::RoutingError (No route matches "/legajos" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 01:46:29) [GET]
+
+ActionController::RoutingError (No route matches "/legajos/new" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-09-11 01:47:52) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 109ms (View: 31, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-09-11 01:47:59) [POST]
+  Parameters: {"commit"=>"Ingresar", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"jorge"}, "action"=>"create", "authenticity_token"=>"BuEx7n46drrtGWVW0FYGE7ziQbdx8clZNiDYMK6054w=", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (15.6ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".login) = 'jorge') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "login_count" = 9, "updated_at" = '2010-09-11 04:47:59', "perishable_token" = '61sNMWfB2iwb9GukTozA', "last_request_at" = '2010-09-11 04:47:59', "last_login_at" = '2010-09-11 04:38:36', "current_login_at" = '2010-09-11 04:47:59' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/admin/legajos
+Completed in 484ms (DB: 16) | 302 Found [http://localhost/user_session]
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 01:47:59) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (15.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (15.6ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 04:47:59', "perishable_token" = 'mvgulG4puPDK48fH4-RU', "last_request_at" = '2010-09-11 04:47:59' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (15.6ms)[0m   [0mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+Rendered commons/_pagination (15.6ms)
+Rendered admin/legajos/_list (78.1ms)
+Rendered commons/_session (0.0ms)
+Completed in 828ms (View: 203, DB: 47) | 200 OK [http://localhost/admin/legajos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 01:48:03) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::LegajosController#new (for 127.0.0.1 at 2010-09-11 01:48:08) [GET]
+  Parameters: {"action"=>"new", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-11 04:48:08', "perishable_token" = 'WJ6CStiU3tCK8eW9nh4Y', "last_request_at" = '2010-09-11 04:48:08' WHERE "id" = 1[0m
+Rendering template within layouts/admin_layout
+Rendering commons/base_form
+Rendered admin/legajos/_form (62.5ms)
+Rendered commons/_session (15.6ms)
+Completed in 484ms (View: 219, DB: 0) | 200 OK [http://localhost/admin/legajos/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 01:48:09) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-09-11 01:48:15) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"BuEx7n46drrtGWVW0FYGE7ziQbdx8clZNiDYMK6054w=", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (15.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-11 04:48:15', "perishable_token" = '_p93K5qWRQ7oWefS1rYF', "last_request_at" = '2010-09-11 04:48:15' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/user_session/new
+Completed in 266ms (DB: 16) | 302 Found [http://localhost/user_session]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-09-11 01:48:16) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 344ms (View: 31, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing Admin::LegajosController#new (for 127.0.0.1 at 2010-09-11 01:48:21) [GET]
+  Parameters: {"action"=>"new", "controller"=>"admin/legajos"}
+Redirected to http://localhost:3000/user_session/new
+Filter chain halted as [:require_user] rendered_or_redirected.
+Completed in 78ms (DB: 0) | 302 Found [http://localhost/admin/legajos/new]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-09-11 01:48:21) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 125ms (View: 31, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-09-11 01:49:51) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 125ms (View: 31, DB: 0) | 200 OK [http://localhost/user_session/new]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-09-11 01:50:01) [POST]
+  Parameters: {"commit"=>"Ingresar", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"jorge"}, "action"=>"create", "authenticity_token"=>"BuEx7n46drrtGWVW0FYGE7ziQbdx8clZNiDYMK6054w=", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".login) = 'jorge') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "login_count" = 10, "updated_at" = '2010-09-11 04:50:01', "perishable_token" = 'IVroPVEdVvacYgwV-JIA', "last_request_at" = '2010-09-11 04:50:01', "last_login_at" = '2010-09-11 04:47:59', "current_login_at" = '2010-09-11 04:50:01' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/admin/legajos/new
+Completed in 219ms (DB: 0) | 302 Found [http://localhost/user_session]
+
+
+Processing Admin::LegajosController#new (for 127.0.0.1 at 2010-09-11 01:50:02) [GET]
+  Parameters: {"action"=>"new", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (15.6ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-11 04:50:02', "perishable_token" = 'zGTKPdk5-HrkcZ4Mip5P', "last_request_at" = '2010-09-11 04:50:02' WHERE "id" = 1[0m
+Rendering template within layouts/admin_layout
+Rendering commons/base_form
+Rendered admin/legajos/_form (31.3ms)
+Rendered commons/_session (0.0ms)
+Completed in 344ms (View: 94, DB: 16) | 200 OK [http://localhost/admin/legajos/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 01:50:04) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 01:53:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-11 04:53:14', "perishable_token" = 'OF9W7_Cr-eCjEX21YgF2', "last_request_at" = '2010-09-11 04:53:14' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (15.6ms)[0m   [0;1mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/legajos/_list (46.9ms)
+Rendered commons/_session (0.0ms)
+Completed in 359ms (View: 94, DB: 16) | 200 OK [http://localhost/admin/legajos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 01:53:15) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 01:54:21) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (15.6ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 04:54:21', "perishable_token" = 'DoQ8gKHDQjxY0dIqiBeF', "last_request_at" = '2010-09-11 04:54:21' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/legajos/_list (46.9ms)
+Rendered commons/_session (15.6ms)
+Completed in 391ms (View: 156, DB: 16) | 200 OK [http://localhost/admin/legajos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 01:54:23) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::LegajosController#edit (for 127.0.0.1 at 2010-09-11 01:55:45) [GET]
+  Parameters: {"action"=>"edit", "id"=>"2", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-11 04:55:45', "perishable_token" = 'TTTNRVhM5KIgdxyX9TEl', "last_request_at" = '2010-09-11 04:55:45' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 2) [0m
+Rendering template within layouts/admin_layout
+Rendering commons/base_form
+Rendered admin/legajos/_form (46.9ms)
+Rendered commons/_session (0.0ms)
+Completed in 328ms (View: 94, DB: 0) | 200 OK [http://localhost/admin/legajos/2/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 01:55:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 01:55:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (15.6ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 04:55:55', "perishable_token" = '-DJxj3__1BgcGTHWHzhW', "last_request_at" = '2010-09-11 04:55:55' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/legajos/_list (31.3ms)
+Rendered commons/_session (0.0ms)
+Completed in 375ms (View: 94, DB: 16) | 200 OK [http://localhost/admin/legajos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 01:55:55) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::LegajosController#edit (for 127.0.0.1 at 2010-09-11 02:05:54) [GET]
+  Parameters: {"action"=>"edit", "id"=>"2", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-11 05:05:55', "perishable_token" = 'EgTZwAAM3g2TuUw67DqZ', "last_request_at" = '2010-09-11 05:05:55' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 2) [0m
+Rendering template within layouts/admin_layout
+Rendering commons/base_form
+Rendered admin/legajos/_form (46.9ms)
+Rendered commons/_session (15.6ms)
+Completed in 813ms (View: 94, DB: 0) | 200 OK [http://localhost/admin/legajos/2/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 02:05:55) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (109.4ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100908170450)
+Migrating to CreateLegajos (20100910195350)
+Migrating to CreateDireccionDeLegajos (20100911052904)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TABLE "direccion_de_legajos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "legajo_id" integer, "tipo_direccion" varchar(255), "direccion" varchar(255), "barrio" varchar(255), "ciudad" varchar(255) DEFAULT 'SAN MIGUEL DE TUCUMAN', "provincia" varchar(255) DEFAULT 'TUCUMAN', "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (15.6ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20100911052904')[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;35;1mSQL (0.0ms)[0m   [0m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("direccion_de_legajos")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("legajos")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("users")[0m
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 02:50:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-11 05:50:36', "perishable_token" = '9bAbnb65BJcP5bk_QK4C', "last_request_at" = '2010-09-11 05:50:36' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+
+ActionView::TemplateError (undefined method `direccion_de_legajo_legajos_path' for #<ActionView::Base:0x44437f8>) on line #7 of app/views/admin/legajos/_list.html.erb:
+4:       list.codigo_agrupacion
+5:       list.inicio
+6:       list.html :caption => 'Direcciones' do |d|
+7:          link_to 'Editar', direccion_de_legajo_legajos_path(d)
+8:       end
+9:     end %>
+
+    app/views/admin/legajos/_list.html.erb:7
+    app/views/admin/legajos/_list.html.erb:1
+    app/views/commons/index.html.erb:3
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (187.5ms)
+Rendered rescues/_request_and_response (15.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 02:52:09) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 05:52:09', "perishable_token" = 'bFJiOmLiZLQv0p2oR2aw', "last_request_at" = '2010-09-11 05:52:09' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+
+ActionView::TemplateError (undefined method `direcciondelegajo_legajos_path' for #<ActionView::Base:0x4494288>) on line #7 of app/views/admin/legajos/_list.html.erb:
+4:       list.codigo_agrupacion
+5:       list.inicio
+6:       list.html :caption => 'Direcciones' do |d|
+7:          link_to 'Editar', direcciondelegajo_legajos_path(d)
+8:       end
+9:     end %>
+
+    app/views/admin/legajos/_list.html.erb:7
+    app/views/admin/legajos/_list.html.erb:1
+    app/views/commons/index.html.erb:3
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (187.5ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 02:56:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (15.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-11 05:56:03', "perishable_token" = '54j3pyYtbOJL1YmOcyM6', "last_request_at" = '2010-09-11 05:56:03' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (15.6ms)[0m   [0;1mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+
+ActionView::TemplateError (undefined method `direccion_de_legajo_legajos_path' for #<ActionView::Base:0x44d6798>) on line #7 of app/views/admin/legajos/_list.html.erb:
+4:       list.codigo_agrupacion
+5:       list.inicio
+6:       list.html :caption => 'Direcciones' do |d|
+7:          link_to 'Editar', direccion_de_legajo_legajos_path(d)
+8:       end
+9:     end %>
+
+    app/views/admin/legajos/_list.html.erb:7
+    app/views/admin/legajos/_list.html.erb:1
+    app/views/commons/index.html.erb:3
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (187.5ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 02:58:21) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (15.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (15.6ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 05:58:22', "perishable_token" = 'Jk-BRUUKAnAMi5jT6Ru1', "last_request_at" = '2010-09-11 05:58:22' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (15.6ms)[0m   [0mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+
+ActionView::TemplateError (undefined method `legajo_direccion_de_legajos_path' for #<ActionView::Base:0x4550aa8>) on line #7 of app/views/admin/legajos/_list.html.erb:
+4:       list.codigo_agrupacion
+5:       list.inicio
+6:       list.html :caption => 'Direcciones' do |d|
+7:          link_to 'Editar', legajo_direccion_de_legajos_path(d)
+8:       end
+9:     end %>
+
+    app/views/admin/legajos/_list.html.erb:7
+    app/views/admin/legajos/_list.html.erb:1
+    app/views/commons/index.html.erb:3
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (187.5ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 02:59:00) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-11 05:59:00', "perishable_token" = 'g1ApJIK2AVySpBwkGaT2', "last_request_at" = '2010-09-11 05:59:00' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+
+ActionView::TemplateError (undefined method `legajos_direccion_de_legajo_path' for #<ActionView::Base:0x45fefd0>) on line #7 of app/views/admin/legajos/_list.html.erb:
+4:       list.codigo_agrupacion
+5:       list.inicio
+6:       list.html :caption => 'Direcciones' do |d|
+7:          link_to 'Editar', legajos_direccion_de_legajo_path(d)
+8:       end
+9:     end %>
+
+    app/views/admin/legajos/_list.html.erb:7
+    app/views/admin/legajos/_list.html.erb:1
+    app/views/commons/index.html.erb:3
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (375.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 03:00:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 06:00:40', "perishable_token" = '_4bUzZFKhFvHTR8-R6-3', "last_request_at" = '2010-09-11 06:00:40' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+
+ActionView::TemplateError (undefined method `legajos_path' for #<ActionView::Base:0x46cc980>) on line #7 of app/views/admin/legajos/_list.html.erb:
+4:       list.codigo_agrupacion
+5:       list.inicio
+6:       list.html :caption => 'Direcciones' do |d|
+7:          link_to 'Editar', legajos_path(d)
+8:       end
+9:     end %>
+
+    app/views/admin/legajos/_list.html.erb:7
+    app/views/admin/legajos/_list.html.erb:1
+    app/views/commons/index.html.erb:3
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (375.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 03:00:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (31.3ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-11 06:00:56', "perishable_token" = 'LFFablJYe-NjCEWDxTWM', "last_request_at" = '2010-09-11 06:00:56' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+
+ActionView::TemplateError (undefined method `legajo_path' for #<ActionView::Base:0x47689f8>) on line #7 of app/views/admin/legajos/_list.html.erb:
+4:       list.codigo_agrupacion
+5:       list.inicio
+6:       list.html :caption => 'Direcciones' do |d|
+7:          link_to 'Editar', legajo_path(d)
+8:       end
+9:     end %>
+
+    app/views/admin/legajos/_list.html.erb:7
+    app/views/admin/legajos/_list.html.erb:1
+    app/views/commons/index.html.erb:3
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (437.5ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 03:02:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 06:02:20', "perishable_token" = '2cpRP4ShYY10poWnym2S', "last_request_at" = '2010-09-11 06:02:20' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+
+ActionView::TemplateError (undefined method `legajo_direccion_de_legajos_path' for #<ActionView::Base:0x4851180>) on line #7 of app/views/admin/legajos/_list.html.erb:
+4:       list.codigo_agrupacion
+5:       list.inicio
+6:       list.html :caption => 'Direcciones' do |d|
+7:          link_to 'Editar', legajo_direccion_de_legajos_path(d)
+8:       end
+9:     end %>
+
+    app/views/admin/legajos/_list.html.erb:7
+    app/views/admin/legajos/_list.html.erb:1
+    app/views/commons/index.html.erb:3
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (171.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 03:09:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (15.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-11 06:09:48', "perishable_token" = 'k4oa2zRLMTpNzHslWQw9', "last_request_at" = '2010-09-11 06:09:48' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+
+ActionView::TemplateError (undefined method `legajo_direccion_de_legajos_path' for #<ActionView::Base:0x4734a80>) on line #7 of app/views/admin/legajos/_list.html.erb:
+4:       list.codigo_agrupacion
+5:       list.inicio
+6:       list.html :caption => 'Direcciones' do |d|
+7:          link_to 'Editar', legajo_direccion_de_legajos_path(d)
+8:       end
+9:     end %>
+
+    app/views/admin/legajos/_list.html.erb:7
+    app/views/admin/legajos/_list.html.erb:1
+    app/views/commons/index.html.erb:3
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (171.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 03:10:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (15.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 06:10:45', "perishable_token" = 'sWvUpGyOj9dTNBpOzbbO', "last_request_at" = '2010-09-11 06:10:45' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+
+ActionView::TemplateError (undefined method `direccion_de_legajos_path' for #<ActionView::Base:0x48554e8>) on line #7 of app/views/admin/legajos/_list.html.erb:
+4:       list.codigo_agrupacion
+5:       list.inicio
+6:       list.html :caption => 'Direcciones' do |d|
+7:          link_to 'Editar', direccion_de_legajos_path(d)
+8:       end
+9:     end %>
+
+    app/views/admin/legajos/_list.html.erb:7
+    app/views/admin/legajos/_list.html.erb:1
+    app/views/commons/index.html.erb:3
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (171.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 03:11:10) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (15.6ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-11 06:11:11', "perishable_token" = 'ESzv-43UsvcCZ2U7qoAw', "last_request_at" = '2010-09-11 06:11:11' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+
+ActionView::TemplateError (undefined method `direccion_de_legajo_path' for #<ActionView::Base:0x44de178>) on line #7 of app/views/admin/legajos/_list.html.erb:
+4:       list.codigo_agrupacion
+5:       list.inicio
+6:       list.html :caption => 'Direcciones' do |d|
+7:          link_to 'Editar', direccion_de_legajo_path(d)
+8:       end
+9:     end %>
+
+    app/views/admin/legajos/_list.html.erb:7
+    app/views/admin/legajos/_list.html.erb:1
+    app/views/commons/index.html.erb:3
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (187.5ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 03:11:44) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 06:11:45', "perishable_token" = 'ozyO1U9tdpFLl2zGQo8e', "last_request_at" = '2010-09-11 06:11:45' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+
+ActionView::TemplateError (undefined local variable or method `direccion_de_legajos_path' for #<ActionView::Base:0x455be78>) on line #7 of app/views/admin/legajos/_list.html.erb:
+4:       list.codigo_agrupacion
+5:       list.inicio
+6:       list.html :caption => 'Direcciones' do |d|
+7:          link_to 'Editar', direccion_de_legajos_path
+8:       end
+9:     end %>
+
+    app/views/admin/legajos/_list.html.erb:7
+    app/views/admin/legajos/_list.html.erb:1
+    app/views/commons/index.html.erb:3
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (171.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 03:12:42) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (15.6ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-11 06:12:42', "perishable_token" = 'iv7cPsgLhnHbdkpGxN4W', "last_request_at" = '2010-09-11 06:12:42' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+
+ActionView::TemplateError (undefined local variable or method `direccion_de_legajos_path' for #<ActionView::Base:0x444da58>) on line #7 of app/views/admin/legajos/_list.html.erb:
+4:       list.codigo_agrupacion
+5:       list.inicio
+6:       list.html :caption => 'Direcciones' do |d|
+7:          link_to 'Editar', direccion_de_legajos_path
+8:       end
+9:     end %>
+
+    app/views/admin/legajos/_list.html.erb:7
+    app/views/admin/legajos/_list.html.erb:1
+    app/views/commons/index.html.erb:3
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (187.5ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 03:13:04) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 06:13:04', "perishable_token" = '_ofdpOMvuaDPUI9BHW-o', "last_request_at" = '2010-09-11 06:13:04' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/legajos/_list (62.5ms)
+Rendered commons/_session (0.0ms)
+Completed in 641ms (View: 188, DB: 0) | 200 OK [http://localhost/admin/legajos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 03:13:06) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 03:13:15) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (15.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-11 06:13:15', "perishable_token" = '9HbWIdKczG5tm-2teUES', "last_request_at" = '2010-09-11 06:13:15' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (15.6ms)[0m   [0;1mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (31.3ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/legajos/_list (140.6ms)
+Rendered commons/_session (15.6ms)
+Completed in 641ms (View: 234, DB: 31) | 200 OK [http://localhost/admin/legajos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 03:13:16) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 03:13:21) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 06:13:21', "perishable_token" = 'ckfGbMlg56Jzuzei3mBa', "last_request_at" = '2010-09-11 06:13:21' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/legajos/_list (31.3ms)
+Rendered commons/_session (0.0ms)
+Completed in 375ms (View: 94, DB: 0) | 200 OK [http://localhost/admin/legajos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 03:13:21) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 03:13:23) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (15.6ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-11 06:13:23', "perishable_token" = 'g40x7382HBZR83UXCR8Y', "last_request_at" = '2010-09-11 06:13:23' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/legajos/_list (31.3ms)
+Rendered commons/_session (0.0ms)
+Completed in 359ms (View: 94, DB: 16) | 200 OK [http://localhost/admin/legajos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 03:13:24) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 03:13:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (15.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 06:13:25', "perishable_token" = '3m_5C3oVWgDTl3h615TM', "last_request_at" = '2010-09-11 06:13:25' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/legajos/_list (62.5ms)
+Rendered commons/_session (15.6ms)
+Completed in 781ms (View: 313, DB: 16) | 200 OK [http://localhost/admin/legajos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 03:13:26) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 03:16:33) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-11 06:16:33', "perishable_token" = 'IAgovq7xpqrocQWJXSS-', "last_request_at" = '2010-09-11 06:16:33' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/legajos/_list (31.3ms)
+Rendered commons/_session (0.0ms)
+Completed in 875ms (View: 94, DB: 0) | 200 OK [http://localhost/admin/legajos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 03:16:35) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 03:17:51) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 06:17:51', "perishable_token" = '1V2FsVy5m9UPqYqXuSTU', "last_request_at" = '2010-09-11 06:17:51' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+
+ActionView::TemplateError (undefined method `legajo_direccion_de_legajos_path' for #<ActionView::Base:0x4840680>) on line #7 of app/views/admin/legajos/_list.html.erb:
+4:       list.codigo_agrupacion
+5:       list.inicio
+6:       list.html :caption => 'Direcciones' do |d|
+7:          link_to 'Editar', legajo_direccion_de_legajos_path(d)
+8:       end
+9:     end %>
+
+    app/views/admin/legajos/_list.html.erb:7
+    app/views/admin/legajos/_list.html.erb:1
+    app/views/commons/index.html.erb:3
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (187.5ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 03:18:40) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-11 06:18:40', "perishable_token" = 'HMsRcTMahAGUOkOOIW3S', "last_request_at" = '2010-09-11 06:18:40' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+
+ActionView::TemplateError (undefined method `legajo_direccion_de_legajo_path' for #<ActionView::Base:0x445d850>) on line #7 of app/views/admin/legajos/_list.html.erb:
+4:       list.codigo_agrupacion
+5:       list.inicio
+6:       list.html :caption => 'Direcciones' do |d|
+7:          link_to 'Editar', legajo_direccion_de_legajo_path(d)
+8:       end
+9:     end %>
+
+    app/views/admin/legajos/_list.html.erb:7
+    app/views/admin/legajos/_list.html.erb:1
+    app/views/commons/index.html.erb:3
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (171.9ms)
+Rendered rescues/_request_and_response (15.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 03:19:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (15.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 06:19:03', "perishable_token" = 'v5K78XsbFvIOkv0yr50A', "last_request_at" = '2010-09-11 06:19:03' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (15.6ms)[0m   [0mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (46.9ms)
+
+ActionView::TemplateError (undefined method `direccion_de_legajo_legajos_path' for #<ActionView::Base:0x44d6c48>) on line #7 of app/views/admin/legajos/_list.html.erb:
+4:       list.codigo_agrupacion
+5:       list.inicio
+6:       list.html :caption => 'Direcciones' do |d|
+7:          link_to 'Editar', direccion_de_legajo_legajos_path(d)
+8:       end
+9:     end %>
+
+    app/views/admin/legajos/_list.html.erb:7
+    app/views/admin/legajos/_list.html.erb:1
+    app/views/commons/index.html.erb:3
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (171.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 03:19:13) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-11 06:19:13', "perishable_token" = 'y9YxteUfL7u1ocIK3h67', "last_request_at" = '2010-09-11 06:19:13' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+
+ActionView::TemplateError (undefined method `direccion_de_legajos_legajo_path' for #<ActionView::Base:0x4563198>) on line #7 of app/views/admin/legajos/_list.html.erb:
+4:       list.codigo_agrupacion
+5:       list.inicio
+6:       list.html :caption => 'Direcciones' do |d|
+7:          link_to 'Editar', direccion_de_legajos_legajo_path(d)
+8:       end
+9:     end %>
+
+    app/views/admin/legajos/_list.html.erb:7
+    app/views/admin/legajos/_list.html.erb:1
+    app/views/commons/index.html.erb:3
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (171.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 03:26:24) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 06:26:24', "perishable_token" = 'HssrXJE8epin5dKopsD0', "last_request_at" = '2010-09-11 06:26:24' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+
+ActionView::TemplateError (undefined method `legajo_direccion_de_legajos_path' for #<ActionView::Base:0x45f0078>) on line #7 of app/views/admin/legajos/_list.html.erb:
+4:       list.codigo_agrupacion
+5:       list.inicio
+6:       list.html :caption => 'Direcciones' do |d|
+7:          link_to 'Editar', legajo_direccion_de_legajos_path(d)
+8:       end
+9:     end %>
+
+    app/views/admin/legajos/_list.html.erb:7
+    app/views/admin/legajos/_list.html.erb:1
+    app/views/commons/index.html.erb:3
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (359.4ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 03:27:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (15.6ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-11 06:27:26', "perishable_token" = '_t1Q-jrk_0tlenEsqodT', "last_request_at" = '2010-09-11 06:27:26' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+
+ActionView::TemplateError (undefined method `legajo_direccion_de_legajos_path' for #<ActionView::Base:0x46637d0>) on line #7 of app/views/admin/legajos/_list.html.erb:
+4:       list.codigo_agrupacion
+5:       list.inicio
+6:       list.html :caption => 'Direcciones' do |d|
+7:          link_to 'Editar', legajo_direccion_de_legajos_path(d)
+8:       end
+9:     end %>
+
+    app/views/admin/legajos/_list.html.erb:7
+    app/views/admin/legajos/_list.html.erb:1
+    app/views/commons/index.html.erb:3
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (359.4ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 03:28:13) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (15.6ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 06:28:13', "perishable_token" = 'thYlxUQ3hBNaSaZ_YCIy', "last_request_at" = '2010-09-11 06:28:13' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (15.6ms)[0m   [0mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+
+ActionView::TemplateError (undefined method `legajo_direcciondelegajos_path' for #<ActionView::Base:0x47dd6f8>) on line #7 of app/views/admin/legajos/_list.html.erb:
+4:       list.codigo_agrupacion
+5:       list.inicio
+6:       list.html :caption => 'Direcciones' do |d|
+7:          link_to 'Editar', legajo_direcciondelegajos_path(d)
+8:       end
+9:     end %>
+
+    app/views/admin/legajos/_list.html.erb:7
+    app/views/admin/legajos/_list.html.erb:1
+    app/views/commons/index.html.erb:3
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (171.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 03:28:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-11 06:28:27', "perishable_token" = '8-vUeZ0XbbhRTIuHHEfm', "last_request_at" = '2010-09-11 06:28:27' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+
+ActionView::TemplateError (undefined method `legajo_DireccionDeLegajos_path' for #<ActionView::Base:0x4899048>) on line #7 of app/views/admin/legajos/_list.html.erb:
+4:       list.codigo_agrupacion
+5:       list.inicio
+6:       list.html :caption => 'Direcciones' do |d|
+7:          link_to 'Editar', legajo_DireccionDeLegajos_path(d)
+8:       end
+9:     end %>
+
+    app/views/admin/legajos/_list.html.erb:7
+    app/views/admin/legajos/_list.html.erb:1
+    app/views/commons/index.html.erb:3
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (171.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 03:29:00) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (15.6ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 06:29:01', "perishable_token" = 'yo7TzNWFHS_PRkhusHRw', "last_request_at" = '2010-09-11 06:29:01' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (15.6ms)[0m   [0mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+
+ActionView::TemplateError (undefined local variable or method `legajo_direccion_de_legajos_path' for #<ActionView::Base:0x448b8b8>) on line #7 of app/views/admin/legajos/_list.html.erb:
+4:       list.codigo_agrupacion
+5:       list.inicio
+6:       list.html :caption => 'Direcciones' do |d|
+7:          link_to 'Editar', legajo_direccion_de_legajos_path
+8:       end
+9:     end %>
+
+    app/views/admin/legajos/_list.html.erb:7
+    app/views/admin/legajos/_list.html.erb:1
+    app/views/commons/index.html.erb:3
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (171.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 03:29:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (15.6ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-11 06:29:49', "perishable_token" = '08Rzssxwo6R0L9M_Vd1U', "last_request_at" = '2010-09-11 06:29:49' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+
+ActionView::TemplateError (undefined method `legajos_path' for #<ActionView::Base:0x4513ce0>) on line #7 of app/views/admin/legajos/_list.html.erb:
+4:       list.codigo_agrupacion
+5:       list.inicio
+6:       list.html :caption => 'Direcciones' do |d|
+7:          link_to 'Editar', legajos_path(d)
+8:       end
+9:     end %>
+
+    app/views/admin/legajos/_list.html.erb:7
+    app/views/admin/legajos/_list.html.erb:1
+    app/views/commons/index.html.erb:3
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (171.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 03:31:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 06:31:02', "perishable_token" = '_wMwMpx_l2vxjtsxzObb', "last_request_at" = '2010-09-11 06:31:02' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+
+ActionView::TemplateError (undefined method `direccion_de_legajos_path' for #<ActionView::Base:0x45889b0>) on line #7 of app/views/admin/legajos/_list.html.erb:
+4:       list.codigo_agrupacion
+5:       list.inicio
+6:       list.html :caption => 'Direcciones' do |d|
+7:          link_to 'Editar', direccion_de_legajos_path(d)
+8:       end
+9:     end %>
+
+    app/views/admin/legajos/_list.html.erb:7
+    app/views/admin/legajos/_list.html.erb:1
+    app/views/commons/index.html.erb:3
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (359.4ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 03:31:37) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (15.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-11 06:31:37', "perishable_token" = 'nY9ge0ircM7JEDk7v3vS', "last_request_at" = '2010-09-11 06:31:37' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/legajos/_list (31.3ms)
+Rendered commons/_session (0.0ms)
+Completed in 344ms (View: 94, DB: 16) | 200 OK [http://localhost/admin/legajos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 03:31:40) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing ApplicationController#index to #<legajo:0x4433910> (for 127.0.0.1 at 2010-09-11 03:31:44) [GET]
+  Parameters: {"format"=>"#<legajo:0x4433910>", "action"=>"index", "controller"=>"direccion_de_legajos"}
+
+NameError (uninitialized constant DireccionDeLegajosController):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (93.8ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index to #<legajo:0x4433910> (for 127.0.0.1 at 2010-09-11 03:34:46) [GET]
+  Parameters: {"format"=>"#<legajo:0x4433910>", "action"=>"index", "controller"=>"direccion_de_legajos"}
+
+NameError (uninitialized constant DireccionDeLegajosController):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (78.1ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing ApplicationController#index to #<legajo:0x4433910> (for 127.0.0.1 at 2010-09-11 03:35:11) [GET]
+  Parameters: {"format"=>"#<legajo:0x4433910>", "action"=>"index", "controller"=>"direccion_de_legajos"}
+
+NameError (uninitialized constant DireccionDeLegajosController):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (250.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 03:35:28) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 06:35:28', "perishable_token" = '6DTJhj9_OxnNCUuylzs1', "last_request_at" = '2010-09-11 06:35:28' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+
+ActionView::TemplateError (undefined method `legajo_direccion_de_legajos_path' for #<ActionView::Base:0x4645980>) on line #7 of app/views/admin/legajos/_list.html.erb:
+4:       list.codigo_agrupacion
+5:       list.inicio
+6:       list.html :caption => 'Direcciones' do |d|
+7:          link_to 'Editar', legajo_direccion_de_legajos_path(d)
+8:       end
+9:     end %>
+
+    app/views/admin/legajos/_list.html.erb:7
+    app/views/admin/legajos/_list.html.erb:1
+    app/views/commons/index.html.erb:3
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (359.4ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 03:50:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-11 06:50:25', "perishable_token" = 'u_Tu4umnz8SxfwU9la_4', "last_request_at" = '2010-09-11 06:50:25' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+
+ActionView::TemplateError (undefined method `admin_legajo_admin_direccion_de_legajos_path' for #<ActionView::Base:0x466f7b8>) on line #7 of app/views/admin/legajos/_list.html.erb:
+4:       list.codigo_agrupacion
+5:       list.inicio
+6:       list.html :caption => 'Direcciones' do |d|
+7:          link_to 'Editar', admin_legajo_admin_direccion_de_legajos_path(d)
+8:       end
+9:     end %>
+
+    app/views/admin/legajos/_list.html.erb:7
+    app/views/admin/legajos/_list.html.erb:1
+    app/views/commons/index.html.erb:3
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (359.4ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-09-11 03:50:34) [POST]
+  Parameters: {"commit"=>"Ingresar", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"jorge"}, "action"=>"create", "authenticity_token"=>"BuEx7n46drrtGWVW0FYGE7ziQbdx8clZNiDYMK6054w=", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (15.6ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 06:50:34', "perishable_token" = 'W2NSiCb9YA9gkmWrordH', "last_request_at" = '2010-09-11 06:50:34' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/account
+Filter chain halted as [:require_no_user] rendered_or_redirected.
+Completed in 219ms (DB: 16) | 302 Found [http://localhost/user_session]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-09-11 03:50:35) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 06:50:35', "perishable_token" = 'iu8WsjgLbwMofen6GgEW', "last_request_at" = '2010-09-11 06:50:35' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 313ms (View: 109, DB: 0) | 200 OK [http://localhost/account]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-09-11 03:50:42) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"BuEx7n46drrtGWVW0FYGE7ziQbdx8clZNiDYMK6054w=", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (15.6ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 06:50:42', "perishable_token" = 'oA54bh6iT7WBaSovBVVX', "last_request_at" = '2010-09-11 06:50:42' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/user_session
+Completed in 234ms (DB: 16) | 302 Found [http://localhost/user_session]
+
+
+Processing UserSessionsController#show (for 127.0.0.1 at 2010-09-11 03:50:42) [GET]
+  Parameters: {"action"=>"show", "controller"=>"user_sessions"}
+
+ActionController::UnknownAction (No action responded to show. Actions: create, destroy, and new):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#show (for 127.0.0.1 at 2010-09-11 03:50:46) [GET]
+  Parameters: {"action"=>"show", "controller"=>"user_sessions"}
+
+ActionController::UnknownAction (No action responded to show. Actions: create, destroy, and new):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-09-11 03:50:52) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 141ms (View: 47, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-09-11 03:50:59) [POST]
+  Parameters: {"commit"=>"Ingresar", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"jorge"}, "action"=>"create", "authenticity_token"=>"BuEx7n46drrtGWVW0FYGE7ziQbdx8clZNiDYMK6054w=", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (31.3ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".login) = 'jorge') LIMIT 1[0m
+  [4;36;1mUser Update (15.6ms)[0m   [0;1mUPDATE "users" SET "login_count" = 11, "updated_at" = '2010-09-11 06:51:01', "perishable_token" = 'bKmLl_6pV8VApuxNsjer', "last_request_at" = '2010-09-11 06:51:01', "last_login_at" = '2010-09-11 04:50:01', "current_login_at" = '2010-09-11 06:51:01' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/admin/legajos
+Completed in 2500ms (DB: 47) | 302 Found [http://localhost/user_session]
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 03:51:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 06:51:02', "perishable_token" = '70S89g_BH4-VgfJJksHD', "last_request_at" = '2010-09-11 06:51:02' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+
+ActionView::TemplateError (undefined method `admin_legajo_admin_direccion_de_legajos_path' for #<ActionView::Base:0x4733e98>) on line #7 of app/views/admin/legajos/_list.html.erb:
+4:       list.codigo_agrupacion
+5:       list.inicio
+6:       list.html :caption => 'Direcciones' do |d|
+7:          link_to 'Editar', admin_legajo_admin_direccion_de_legajos_path(d)
+8:       end
+9:     end %>
+
+    app/views/admin/legajos/_list.html.erb:7
+    app/views/admin/legajos/_list.html.erb:1
+    app/views/commons/index.html.erb:3
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (203.1ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 03:52:02) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-11 06:52:02', "perishable_token" = 'ZEFJ1Vt9Lynn9nZF-21B', "last_request_at" = '2010-09-11 06:52:02' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/legajos/_list (31.3ms)
+Rendered commons/_session (0.0ms)
+Completed in 422ms (View: 125, DB: 0) | 200 OK [http://localhost/admin/legajos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 03:52:04) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::DireccionDeLegajosController#index (for 127.0.0.1 at 2010-09-11 03:52:08) [GET]
+  Parameters: {"legajo_id"=>"2", "action"=>"index", "controller"=>"admin/direccion_de_legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 06:52:09', "perishable_token" = 'd7KL4WWZfMylo7JOKxdj', "last_request_at" = '2010-09-11 06:52:09' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (15.6ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 2) [0m
+  [4;36;1mDireccionDeLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "direccion_de_legajos" WHERE (("direccion_de_legajos"."legajo_id" = 2)) ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+Rendered commons/_pagination (15.6ms)
+Rendered admin/direccion_de_legajos/_list (15.6ms)
+Rendered commons/_session (15.6ms)
+
+ActionView::TemplateError (undefined method `direccion' for #<Legajo:0x44712c0>) on line #38 of app/views/layouts/admin_layout.html.erb:
+35:                   <% end %>
+36:                 </div>
+37:                 <div class="label">                
+38:                   <%= admin_context %>
+39:                 </div>
+40:               </div>
+41:               <div class="inner-content">
+
+    app/views/layouts/admin_layout.html.erb:38
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (156.3ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::DireccionDeLegajosController#index (for 127.0.0.1 at 2010-09-11 03:53:58) [GET]
+  Parameters: {"legajo_id"=>"2", "action"=>"index", "controller"=>"admin/direccion_de_legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 06:53:58', "perishable_token" = 'eX9dBboUTYBlZEN8bw1u', "last_request_at" = '2010-09-11 06:53:58' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 2) [0m
+  [4;36;1mDireccionDeLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "direccion_de_legajos" WHERE (("direccion_de_legajos"."legajo_id" = 2)) ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/direccion_de_legajos/_list (0.0ms)
+Rendered commons/_session (0.0ms)
+
+ActionView::TemplateError (undefined method `direccion' for #<Legajo:0x452ce20>) on line #38 of app/views/layouts/admin_layout.html.erb:
+35:                   <% end %>
+36:                 </div>
+37:                 <div class="label">                
+38:                   <%= admin_context %>
+39:                 </div>
+40:               </div>
+41:               <div class="inner-content">
+
+    app/views/layouts/admin_layout.html.erb:38
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (359.4ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::LegajosController#show (for 127.0.0.1 at 2010-09-11 03:54:16) [GET]
+  Parameters: {"action"=>"show", "id"=>"2", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 06:54:16', "perishable_token" = 'KAsLbrxCawgWT_VEqddX', "last_request_at" = '2010-09-11 06:54:16' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (15.6ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 2) [0m
+Rendering template within layouts/admin_layout
+Rendering admin/legajos/show
+Rendered commons/_session (15.6ms)
+Completed in 500ms (View: 78, DB: 16) | 200 OK [http://localhost/admin/legajos/2]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 03:54:17) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::DireccionDeLegajosController#index (for 127.0.0.1 at 2010-09-11 03:54:21) [GET]
+  Parameters: {"legajo_id"=>"2", "action"=>"index", "controller"=>"admin/direccion_de_legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-11 06:54:21', "perishable_token" = 'kkslDbByC26QbwAl1Z5E', "last_request_at" = '2010-09-11 06:54:21' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 2) [0m
+  [4;35;1mDireccionDeLegajo Load (0.0ms)[0m   [0mSELECT * FROM "direccion_de_legajos" WHERE (("direccion_de_legajos"."legajo_id" = 2)) ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/direccion_de_legajos/_list (0.0ms)
+Rendered commons/_session (0.0ms)
+
+ActionView::TemplateError (undefined method `direccion' for #<Legajo:0x44af420>) on line #38 of app/views/layouts/admin_layout.html.erb:
+35:                   <% end %>
+36:                 </div>
+37:                 <div class="label">                
+38:                   <%= admin_context %>
+39:                 </div>
+40:               </div>
+41:               <div class="inner-content">
+
+    app/views/layouts/admin_layout.html.erb:38
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (390.6ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::DireccionDeLegajosController#index (for 127.0.0.1 at 2010-09-11 03:55:19) [GET]
+  Parameters: {"legajo_id"=>"2", "action"=>"index", "controller"=>"admin/direccion_de_legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-11 06:55:19', "perishable_token" = 'UT9BxVfWkQ4PcfCcKhaX', "last_request_at" = '2010-09-11 06:55:19' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 2) [0m
+  [4;35;1mDireccionDeLegajo Load (0.0ms)[0m   [0mSELECT * FROM "direccion_de_legajos" WHERE (("direccion_de_legajos"."legajo_id" = 2)) ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/direccion_de_legajos/_list (15.6ms)
+Rendered commons/_session (15.6ms)
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+
+ActionView::TemplateError (undefined method `titleize' for #<Class:0x4679220>) on line #38 of app/views/layouts/admin_layout.html.erb:
+35:                   <% end %>
+36:                 </div>
+37:                 <div class="label">                
+38:                   <%= admin_context %>
+39:                 </div>
+40:               </div>
+41:               <div class="inner-content">
+
+    c:/Ruby/lib/ruby/gems/1.8/gems/will_paginate-2.3.14/lib/will_paginate/finder.rb:170:in `method_missing'
+    app/views/layouts/admin_layout.html.erb:38
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (140.6ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::DireccionDeLegajosController#index (for 127.0.0.1 at 2010-09-11 03:56:47) [GET]
+  Parameters: {"legajo_id"=>"2", "action"=>"index", "controller"=>"admin/direccion_de_legajos"}
+  [4;35;1mUser Load (15.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 06:56:48', "perishable_token" = 'OAyp9wJTiCdxBpJWSVdp', "last_request_at" = '2010-09-11 06:56:48' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (15.6ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 2) [0m
+  [4;36;1mDireccionDeLegajo Load (15.6ms)[0m   [0;1mSELECT * FROM "direccion_de_legajos" WHERE (("direccion_de_legajos"."legajo_id" = 2)) ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/direccion_de_legajos/_list (0.0ms)
+Rendered commons/_session (0.0ms)
+Completed in 1094ms (View: 63, DB: 47) | 200 OK [http://localhost/admin/legajos/2/direccion_de_legajos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 03:56:49) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::DireccionDeLegajosController#new (for 127.0.0.1 at 2010-09-11 03:56:58) [GET]
+  Parameters: {"legajo_id"=>"2", "action"=>"new", "controller"=>"admin/direccion_de_legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 06:56:58', "perishable_token" = 'xPV597vh0CbdSYfJvaqi', "last_request_at" = '2010-09-11 06:56:58' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 2) [0m
+Rendering template within layouts/admin_layout
+Rendering commons/base_form
+Rendered admin/direccion_de_legajos/_form (15.6ms)
+Rendered commons/_session (0.0ms)
+Completed in 438ms (View: 172, DB: 0) | 200 OK [http://localhost/admin/legajos/2/direccion_de_legajos/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 03:56:59) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::DireccionDeLegajosController#index (for 127.0.0.1 at 2010-09-11 03:57:04) [GET]
+  Parameters: {"legajo_id"=>"2", "action"=>"index", "controller"=>"admin/direccion_de_legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (15.6ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-11 06:57:04', "perishable_token" = 'g5AnV7c4BzkD3uBcrjAl', "last_request_at" = '2010-09-11 06:57:04' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 2) [0m
+  [4;35;1mDireccionDeLegajo Load (0.0ms)[0m   [0mSELECT * FROM "direccion_de_legajos" WHERE (("direccion_de_legajos"."legajo_id" = 2)) ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+Rendered commons/_pagination (15.6ms)
+Rendered admin/direccion_de_legajos/_list (15.6ms)
+Rendered commons/_session (15.6ms)
+Completed in 406ms (View: 63, DB: 16) | 200 OK [http://localhost/admin/legajos/2/direccion_de_legajos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 03:57:05) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 03:57:15) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (15.6ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-11 06:57:16', "perishable_token" = 'h3Hffpp43Y8ruCYBZ007', "last_request_at" = '2010-09-11 06:57:16' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/legajos/_list (31.3ms)
+Rendered commons/_session (0.0ms)
+Completed in 594ms (View: 94, DB: 16) | 200 OK [http://localhost/admin/legajos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 03:57:16) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::DireccionDeLegajosController#index (for 127.0.0.1 at 2010-09-11 03:57:18) [GET]
+  Parameters: {"legajo_id"=>"2", "action"=>"index", "controller"=>"admin/direccion_de_legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (15.6ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 06:57:18', "perishable_token" = 'FwvigEeE4Ym9I6JiZXMz', "last_request_at" = '2010-09-11 06:57:18' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 2) [0m
+  [4;36;1mDireccionDeLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "direccion_de_legajos" WHERE (("direccion_de_legajos"."legajo_id" = 2)) ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/direccion_de_legajos/_list (0.0ms)
+Rendered commons/_session (0.0ms)
+Completed in 375ms (View: 63, DB: 16) | 200 OK [http://localhost/admin/legajos/2/direccion_de_legajos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 03:57:19) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::DireccionDeLegajosController#new (for 127.0.0.1 at 2010-09-11 03:57:22) [GET]
+  Parameters: {"legajo_id"=>"2", "action"=>"new", "controller"=>"admin/direccion_de_legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 06:57:22', "perishable_token" = 'aZpEgneXhnJFuBVBwNcK', "last_request_at" = '2010-09-11 06:57:22' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 2) [0m
+Rendering template within layouts/admin_layout
+Rendering commons/base_form
+Rendered admin/direccion_de_legajos/_form (15.6ms)
+Rendered commons/_session (0.0ms)
+Completed in 328ms (View: 78, DB: 0) | 200 OK [http://localhost/admin/legajos/2/direccion_de_legajos/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 03:57:22) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::DireccionDeLegajosController#create (for 127.0.0.1 at 2010-09-11 03:57:50) [POST]
+  Parameters: {"commit"=>"Guardar estos cambios", "legajo_id"=>"2", "action"=>"create", "authenticity_token"=>"BuEx7n46drrtGWVW0FYGE7ziQbdx8clZNiDYMK6054w=", "direccion_de_legajo"=>{"provincia"=>"TUCUMAN", "barrio"=>"ciudadela", "ciudad"=>"SAN MIGUEL DE TUCUMAN", "tipo_direccion"=>"domicilio", "direccion"=>"av colon 1090"}, "controller"=>"admin/direccion_de_legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-11 06:57:50', "perishable_token" = '9W7JTHx-qlXiXZP7ZITi', "last_request_at" = '2010-09-11 06:57:50' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 2) [0m
+  [4;35;1mDireccionDeLegajo Create (0.0ms)[0m   [0mINSERT INTO "direccion_de_legajos" ("created_at", "provincia", "updated_at", "legajo_id", "barrio", "ciudad", "tipo_direccion", "direccion") VALUES('2010-09-11 06:57:50', 'TUCUMAN', '2010-09-11 06:57:50', 2, 'ciudadela', 'SAN MIGUEL DE TUCUMAN', 'domicilio', 'av colon 1090')[0m
+Redirected to http://localhost:3000/admin/legajos/2/direccion_de_legajos
+Completed in 625ms (DB: 0) | 302 Found [http://localhost/admin/legajos/2/direccion_de_legajos]
+
+
+Processing Admin::DireccionDeLegajosController#index (for 127.0.0.1 at 2010-09-11 03:57:51) [GET]
+  Parameters: {"legajo_id"=>"2", "action"=>"index", "controller"=>"admin/direccion_de_legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-11 06:57:51', "perishable_token" = 'hmasoC4_f8-OGs3ofg17', "last_request_at" = '2010-09-11 06:57:51' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 2) [0m
+  [4;35;1mDireccionDeLegajo Load (0.0ms)[0m   [0mSELECT * FROM "direccion_de_legajos" WHERE (("direccion_de_legajos"."legajo_id" = 2)) ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/direccion_de_legajos/_list (15.6ms)
+Rendered commons/_session (0.0ms)
+Completed in 359ms (View: 78, DB: 0) | 200 OK [http://localhost/admin/legajos/2/direccion_de_legajos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 03:57:52) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::DireccionDeLegajosController#edit (for 127.0.0.1 at 2010-09-11 03:58:04) [GET]
+  Parameters: {"legajo_id"=>"2", "action"=>"edit", "id"=>"1", "controller"=>"admin/direccion_de_legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (15.6ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-11 06:58:04', "perishable_token" = 'Nz3k78kjU0HcFW33LeOr', "last_request_at" = '2010-09-11 06:58:04' WHERE "id" = 1[0m
+  [4;36;1mDireccionDeLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "direccion_de_legajos" WHERE ("direccion_de_legajos"."id" = 1) [0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 2) [0m
+Rendering template within layouts/admin_layout
+Rendering commons/base_form
+Rendered admin/direccion_de_legajos/_form (15.6ms)
+Rendered commons/_session (15.6ms)
+Completed in 578ms (View: 63, DB: 16) | 200 OK [http://localhost/admin/legajos/2/direccion_de_legajos/1/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 03:58:05) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::DireccionDeLegajosController#index (for 127.0.0.1 at 2010-09-11 03:58:07) [GET]
+  Parameters: {"legajo_id"=>"2", "action"=>"index", "controller"=>"admin/direccion_de_legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (15.6ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-11 06:58:07', "perishable_token" = 'ZTc3NxKjQJWJ_iSsQezr', "last_request_at" = '2010-09-11 06:58:07' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (15.6ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 2) [0m
+  [4;35;1mDireccionDeLegajo Load (0.0ms)[0m   [0mSELECT * FROM "direccion_de_legajos" WHERE (("direccion_de_legajos"."legajo_id" = 2)) ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/direccion_de_legajos/_list (31.3ms)
+Rendered commons/_session (15.6ms)
+Completed in 469ms (View: 94, DB: 31) | 200 OK [http://localhost/admin/legajos/2/direccion_de_legajos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 03:58:08) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 03:58:10) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (15.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-11 06:58:10', "perishable_token" = 'i_MR7VN5L6KCH5ma1qP7', "last_request_at" = '2010-09-11 06:58:10' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/legajos/_list (31.3ms)
+Rendered commons/_session (0.0ms)
+Completed in 344ms (View: 94, DB: 16) | 200 OK [http://localhost/admin/legajos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 03:58:10) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::DireccionDeLegajosController#index (for 127.0.0.1 at 2010-09-11 03:58:32) [GET]
+  Parameters: {"legajo_id"=>"1", "action"=>"index", "controller"=>"admin/direccion_de_legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 06:58:32', "perishable_token" = 'J8uJGR0FNyVHOJ68NQIS', "last_request_at" = '2010-09-11 06:58:32' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (15.6ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 1) [0m
+  [4;36;1mDireccionDeLegajo Load (15.6ms)[0m   [0;1mSELECT * FROM "direccion_de_legajos" WHERE (("direccion_de_legajos"."legajo_id" = 1)) ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/direccion_de_legajos/_list (0.0ms)
+Rendered commons/_session (0.0ms)
+Completed in 328ms (View: 63, DB: 31) | 200 OK [http://localhost/admin/legajos/1/direccion_de_legajos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 03:58:33) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::DireccionDeLegajosController#new (for 127.0.0.1 at 2010-09-11 03:58:38) [GET]
+  Parameters: {"legajo_id"=>"1", "action"=>"new", "controller"=>"admin/direccion_de_legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 06:58:38', "perishable_token" = 'thUlNuZpen6QAcmubquz', "last_request_at" = '2010-09-11 06:58:38' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 1) [0m
+Rendering template within layouts/admin_layout
+Rendering commons/base_form
+Rendered admin/direccion_de_legajos/_form (15.6ms)
+Rendered commons/_session (0.0ms)
+Completed in 453ms (View: 78, DB: 0) | 200 OK [http://localhost/admin/legajos/1/direccion_de_legajos/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 03:58:39) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::DireccionDeLegajosController#create (for 127.0.0.1 at 2010-09-11 03:58:54) [POST]
+  Parameters: {"commit"=>"Guardar estos cambios", "legajo_id"=>"1", "action"=>"create", "authenticity_token"=>"BuEx7n46drrtGWVW0FYGE7ziQbdx8clZNiDYMK6054w=", "direccion_de_legajo"=>{"provincia"=>"TUCUMAN", "barrio"=>"capital", "ciudad"=>"SAN MIGUEL DE TUCUMAN", "tipo_direccion"=>"domicilio", "direccion"=>"entre rios 167"}, "controller"=>"admin/direccion_de_legajos"}
+  [4;36;1mUser Load (15.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-11 06:58:54', "perishable_token" = '9GhJYfkMkdnGrXJ4GWtK', "last_request_at" = '2010-09-11 06:58:54' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 1) [0m
+  [4;35;1mDireccionDeLegajo Create (0.0ms)[0m   [0mINSERT INTO "direccion_de_legajos" ("created_at", "provincia", "updated_at", "legajo_id", "barrio", "ciudad", "tipo_direccion", "direccion") VALUES('2010-09-11 06:58:54', 'TUCUMAN', '2010-09-11 06:58:54', 1, 'capital', 'SAN MIGUEL DE TUCUMAN', 'domicilio', 'entre rios 167')[0m
+Redirected to http://localhost:3000/admin/legajos/1/direccion_de_legajos
+Completed in 484ms (DB: 16) | 302 Found [http://localhost/admin/legajos/1/direccion_de_legajos]
+
+
+Processing Admin::DireccionDeLegajosController#index (for 127.0.0.1 at 2010-09-11 03:58:55) [GET]
+  Parameters: {"legajo_id"=>"1", "action"=>"index", "controller"=>"admin/direccion_de_legajos"}
+  [4;36;1mUser Load (203.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-11 06:58:55', "perishable_token" = 'NeyNvhXcUJxWWxxGyWzf', "last_request_at" = '2010-09-11 06:58:55' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 1) [0m
+  [4;35;1mDireccionDeLegajo Load (0.0ms)[0m   [0mSELECT * FROM "direccion_de_legajos" WHERE (("direccion_de_legajos"."legajo_id" = 1)) ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/direccion_de_legajos/_list (15.6ms)
+Rendered commons/_session (0.0ms)
+Completed in 578ms (View: 78, DB: 203) | 200 OK [http://localhost/admin/legajos/1/direccion_de_legajos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 03:58:57) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::DireccionDeLegajosController#new (for 127.0.0.1 at 2010-09-11 03:59:02) [GET]
+  Parameters: {"legajo_id"=>"1", "action"=>"new", "controller"=>"admin/direccion_de_legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-11 06:59:02', "perishable_token" = '22Yp4406Ez7yrJayG7la', "last_request_at" = '2010-09-11 06:59:02' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 1) [0m
+Rendering template within layouts/admin_layout
+Rendering commons/base_form
+Rendered admin/direccion_de_legajos/_form (15.6ms)
+Rendered commons/_session (15.6ms)
+Completed in 375ms (View: 78, DB: 0) | 200 OK [http://localhost/admin/legajos/1/direccion_de_legajos/new]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 03:59:02) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::DireccionDeLegajosController#create (for 127.0.0.1 at 2010-09-11 03:59:28) [POST]
+  Parameters: {"commit"=>"Guardar estos cambios", "legajo_id"=>"1", "action"=>"create", "authenticity_token"=>"BuEx7n46drrtGWVW0FYGE7ziQbdx8clZNiDYMK6054w=", "direccion_de_legajo"=>{"provincia"=>"TUCUMAN", "barrio"=>"capital", "ciudad"=>"SAN MIGUEL DE TUCUMAN", "tipo_direccion"=>"postal", "direccion"=>"mitre y santiago"}, "controller"=>"admin/direccion_de_legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 06:59:28', "perishable_token" = 'gXcJB8q1dbM41RrIAsfC', "last_request_at" = '2010-09-11 06:59:28' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 1) [0m
+  [4;36;1mDireccionDeLegajo Create (15.6ms)[0m   [0;1mINSERT INTO "direccion_de_legajos" ("created_at", "provincia", "updated_at", "legajo_id", "barrio", "ciudad", "tipo_direccion", "direccion") VALUES('2010-09-11 06:59:29', 'TUCUMAN', '2010-09-11 06:59:29', 1, 'capital', 'SAN MIGUEL DE TUCUMAN', 'postal', 'mitre y santiago')[0m
+Redirected to http://localhost:3000/admin/legajos/1/direccion_de_legajos
+Completed in 797ms (DB: 16) | 302 Found [http://localhost/admin/legajos/1/direccion_de_legajos]
+
+
+Processing Admin::DireccionDeLegajosController#index (for 127.0.0.1 at 2010-09-11 03:59:29) [GET]
+  Parameters: {"legajo_id"=>"1", "action"=>"index", "controller"=>"admin/direccion_de_legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 06:59:29', "perishable_token" = 'kfxc2JgiSCRZ_Y-bgODY', "last_request_at" = '2010-09-11 06:59:29' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 1) [0m
+  [4;36;1mDireccionDeLegajo Load (15.6ms)[0m   [0;1mSELECT * FROM "direccion_de_legajos" WHERE (("direccion_de_legajos"."legajo_id" = 1)) ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/direccion_de_legajos/_list (31.3ms)
+Rendered commons/_session (0.0ms)
+Completed in 359ms (View: 94, DB: 16) | 200 OK [http://localhost/admin/legajos/1/direccion_de_legajos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 03:59:32) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 03:59:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 06:59:41', "perishable_token" = '5CtiqmqpD_a2r7_ZLSDA', "last_request_at" = '2010-09-11 06:59:41' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/legajos/_list (31.3ms)
+Rendered commons/_session (0.0ms)
+Completed in 391ms (View: 94, DB: 0) | 200 OK [http://localhost/admin/legajos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 03:59:42) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::DireccionDeLegajosController#index (for 127.0.0.1 at 2010-09-11 03:59:44) [GET]
+  Parameters: {"legajo_id"=>"2", "action"=>"index", "controller"=>"admin/direccion_de_legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-11 06:59:45', "perishable_token" = 'IEhDszMYSEPPi1WqjVIZ', "last_request_at" = '2010-09-11 06:59:45' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 2) [0m
+  [4;35;1mDireccionDeLegajo Load (0.0ms)[0m   [0mSELECT * FROM "direccion_de_legajos" WHERE (("direccion_de_legajos"."legajo_id" = 2)) ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/direccion_de_legajos/_list (31.3ms)
+Rendered commons/_session (15.6ms)
+Completed in 375ms (View: 94, DB: 0) | 200 OK [http://localhost/admin/legajos/2/direccion_de_legajos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 03:59:45) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::DireccionDeLegajosController#index (for 127.0.0.1 at 2010-09-11 03:59:52) [GET]
+  Parameters: {"legajo_id"=>"1", "action"=>"index", "controller"=>"admin/direccion_de_legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-11 06:59:52', "perishable_token" = 'm2W74q299SGoqo7DvqsV', "last_request_at" = '2010-09-11 06:59:52' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 1) [0m
+  [4;35;1mDireccionDeLegajo Load (0.0ms)[0m   [0mSELECT * FROM "direccion_de_legajos" WHERE (("direccion_de_legajos"."legajo_id" = 1)) ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/direccion_de_legajos/_list (31.3ms)
+Rendered commons/_session (0.0ms)
+Completed in 438ms (View: 94, DB: 0) | 200 OK [http://localhost/admin/legajos/1/direccion_de_legajos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 03:59:53) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::LegajosController#edit (for 127.0.0.1 at 2010-09-11 03:59:58) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (15.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-11 06:59:59', "perishable_token" = 'aj8phVPyBbVTsouQHo3L', "last_request_at" = '2010-09-11 06:59:59' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 1) [0m
+Rendering template within layouts/admin_layout
+Rendering commons/base_form
+Rendered admin/legajos/_form (62.5ms)
+Rendered commons/_session (15.6ms)
+Completed in 1188ms (View: 125, DB: 16) | 200 OK [http://localhost/admin/legajos/1/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 04:00:00) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::LegajosController#update (for 127.0.0.1 at 2010-09-11 04:00:07) [PUT]
+  Parameters: {"commit"=>"Guardar estos cambios", "legajo"=>{"telefonos"=>"1212", "documento"=>"100", "tipo_documento"=>"dfsdf", "nivel_estudio"=>"21212", "c_u_i_f"=>"1000", "nacimiento(1i)"=>"2010", "nombre"=>"jorge pereyra", "nacimiento(2i)"=>"9", "inicio(1i)"=>"2010", "observaciones"=>"212", "nacimiento(3i)"=>"10", "inicio(2i)"=>"9", "inicio(3i)"=>"10", "estado_civil"=>"12121", "codigo_agrupacion"=>"1212"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"BuEx7n46drrtGWVW0FYGE7ziQbdx8clZNiDYMK6054w=", "id"=>"1", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (15.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 07:00:07', "perishable_token" = 'pRWpeJqOUocObPQE2YoY', "last_request_at" = '2010-09-11 07:00:07' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 1) [0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT "legajos".id FROM "legajos" WHERE ("legajos"."documento" = 100 AND "legajos".tipo_documento = 'dfsdf' AND "legajos".id <> 1) LIMIT 1[0m
+  [4;35;1mLegajo Update (15.6ms)[0m   [0mUPDATE "legajos" SET "updated_at" = '2010-09-11 07:00:07', "nombre" = 'jorge pereyra' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/admin/legajos/1
+Completed in 375ms (DB: 31) | 302 Found [http://localhost/admin/legajos/1]
+
+
+Processing Admin::LegajosController#show (for 127.0.0.1 at 2010-09-11 04:00:08) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-11 07:00:08', "perishable_token" = 'N0-VEbeRu5Q9BJVDG-ER', "last_request_at" = '2010-09-11 07:00:08' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 1) [0m
+Rendering template within layouts/admin_layout
+Rendering admin/legajos/show
+Rendered commons/_session (0.0ms)
+Completed in 297ms (View: 63, DB: 0) | 200 OK [http://localhost/admin/legajos/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 04:00:10) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::DireccionDeLegajosController#index (for 127.0.0.1 at 2010-09-11 04:00:15) [GET]
+  Parameters: {"legajo_id"=>"1", "action"=>"index", "controller"=>"admin/direccion_de_legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (15.6ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 07:00:15', "perishable_token" = '_LxGYwhNxYzEmwckMhbO', "last_request_at" = '2010-09-11 07:00:15' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 1) [0m
+  [4;36;1mDireccionDeLegajo Load (15.6ms)[0m   [0;1mSELECT * FROM "direccion_de_legajos" WHERE (("direccion_de_legajos"."legajo_id" = 1)) ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/direccion_de_legajos/_list (31.3ms)
+Rendered commons/_session (0.0ms)
+Completed in 500ms (View: 94, DB: 31) | 200 OK [http://localhost/admin/legajos/1/direccion_de_legajos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 04:00:16) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 04:00:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (15.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 07:00:22', "perishable_token" = 'jc8A8eYOsHxQ8K0sYw67', "last_request_at" = '2010-09-11 07:00:22' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/legajos/_list (31.3ms)
+Rendered commons/_session (0.0ms)
+Completed in 359ms (View: 94, DB: 16) | 200 OK [http://localhost/admin/legajos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 04:00:23) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::DireccionDeLegajosController#index (for 127.0.0.1 at 2010-09-11 04:00:45) [GET]
+  Parameters: {"legajo_id"=>"1", "action"=>"index", "controller"=>"admin/direccion_de_legajos"}
+  [4;36;1mUser Load (15.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-11 07:00:45', "perishable_token" = 'QUkh1gB6votSHgd107O7', "last_request_at" = '2010-09-11 07:00:45' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 1) [0m
+  [4;35;1mDireccionDeLegajo Load (0.0ms)[0m   [0mSELECT * FROM "direccion_de_legajos" WHERE (("direccion_de_legajos"."legajo_id" = 1)) ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (187.5ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/direccion_de_legajos/_list (31.3ms)
+Rendered commons/_session (0.0ms)
+Completed in 625ms (View: 313, DB: 16) | 200 OK [http://localhost/admin/legajos/1/direccion_de_legajos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 04:00:46) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 04:00:49) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-11 07:00:49', "perishable_token" = 'rfJbGsLmyWQ6IZ1g5VTK', "last_request_at" = '2010-09-11 07:00:49' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/legajos/_list (46.9ms)
+Rendered commons/_session (0.0ms)
+Completed in 359ms (View: 94, DB: 0) | 200 OK [http://localhost/admin/legajos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 04:00:49) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::DireccionDeLegajosController#index (for 127.0.0.1 at 2010-09-11 04:00:59) [GET]
+  Parameters: {"legajo_id"=>"2", "action"=>"index", "controller"=>"admin/direccion_de_legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (15.6ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 07:00:59', "perishable_token" = 'vY9f0zp3W46JfHiQjjpy', "last_request_at" = '2010-09-11 07:00:59' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 2) [0m
+  [4;36;1mDireccionDeLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "direccion_de_legajos" WHERE (("direccion_de_legajos"."legajo_id" = 2)) ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/direccion_de_legajos/_list (15.6ms)
+Rendered commons/_session (0.0ms)
+Completed in 375ms (View: 78, DB: 16) | 200 OK [http://localhost/admin/legajos/2/direccion_de_legajos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 04:01:00) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::DireccionDeLegajosController#show (for 127.0.0.1 at 2010-09-11 04:01:25) [GET]
+  Parameters: {"legajo_id"=>"2", "action"=>"show", "id"=>"1", "controller"=>"admin/direccion_de_legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 07:01:26', "perishable_token" = 'JHuxJJ5jHHYWjpYjuPEf', "last_request_at" = '2010-09-11 07:01:26' WHERE "id" = 1[0m
+  [4;35;1mDireccionDeLegajo Load (0.0ms)[0m   [0mSELECT * FROM "direccion_de_legajos" WHERE ("direccion_de_legajos"."id" = 1) [0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 2) [0m
+Rendering template within layouts/admin_layout
+Rendering admin/direccion_de_legajos/show
+Rendered commons/_session (15.6ms)
+Completed in 766ms (View: 78, DB: 0) | 200 OK [http://localhost/admin/legajos/2/direccion_de_legajos/1]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 04:01:27) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::DireccionDeLegajosController#index (for 127.0.0.1 at 2010-09-11 04:01:34) [GET]
+  Parameters: {"legajo_id"=>"2", "action"=>"index", "controller"=>"admin/direccion_de_legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 07:01:34', "perishable_token" = '5Q2t6zUI6vw-RyG5k-LL', "last_request_at" = '2010-09-11 07:01:34' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 2) [0m
+  [4;36;1mDireccionDeLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "direccion_de_legajos" WHERE (("direccion_de_legajos"."legajo_id" = 2)) ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/direccion_de_legajos/_list (15.6ms)
+Rendered commons/_session (0.0ms)
+Completed in 359ms (View: 78, DB: 0) | 200 OK [http://localhost/admin/legajos/2/direccion_de_legajos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 04:01:35) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::DireccionDeLegajosController#edit (for 127.0.0.1 at 2010-09-11 04:01:37) [GET]
+  Parameters: {"legajo_id"=>"2", "action"=>"edit", "id"=>"1", "controller"=>"admin/direccion_de_legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (15.6ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 07:01:37', "perishable_token" = 'Cpp5tWoUJh_35uajGqNU', "last_request_at" = '2010-09-11 07:01:37' WHERE "id" = 1[0m
+  [4;35;1mDireccionDeLegajo Load (0.0ms)[0m   [0mSELECT * FROM "direccion_de_legajos" WHERE ("direccion_de_legajos"."id" = 1) [0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 2) [0m
+Rendering template within layouts/admin_layout
+Rendering commons/base_form
+Rendered admin/direccion_de_legajos/_form (0.0ms)
+Rendered commons/_session (0.0ms)
+Completed in 391ms (View: 78, DB: 16) | 200 OK [http://localhost/admin/legajos/2/direccion_de_legajos/1/edit]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 04:01:37) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::DireccionDeLegajosController#index (for 127.0.0.1 at 2010-09-11 04:01:40) [GET]
+  Parameters: {"legajo_id"=>"2", "action"=>"index", "controller"=>"admin/direccion_de_legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 07:01:40', "perishable_token" = 'fuJCuv_YikJodv5sjdaL', "last_request_at" = '2010-09-11 07:01:40' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 2) [0m
+  [4;36;1mDireccionDeLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "direccion_de_legajos" WHERE (("direccion_de_legajos"."legajo_id" = 2)) ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/direccion_de_legajos/_list (31.3ms)
+Rendered commons/_session (0.0ms)
+Completed in 344ms (View: 78, DB: 0) | 200 OK [http://localhost/admin/legajos/2/direccion_de_legajos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 04:01:40) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-11 04:01:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (15.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-11 07:01:45', "perishable_token" = '8QFvcDt6hipsS8uJ336m', "last_request_at" = '2010-09-11 07:01:45' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/legajos/_list (31.3ms)
+Rendered commons/_session (15.6ms)
+Completed in 359ms (View: 94, DB: 16) | 200 OK [http://localhost/admin/legajos]
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2010-09-11 04:01:46) [GET]
+
+ActionController::RoutingError (No route matches "/stylesheets/admin_custom.css" with {:method=>:get}):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendering rescues/layout (not_found)

@@ -9,7 +9,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100910195350) do
+ActiveRecord::Schema.define(:version => 20100911052904) do
+
+  create_table "direccion_de_legajos", :force => true do |t|
+    t.integer  "legajo_id"
+    t.string   "tipo_direccion"
+    t.string   "direccion"
+    t.string   "barrio"
+    t.string   "ciudad",         :default => "SAN MIGUEL DE TUCUMAN"
+    t.string   "provincia",      :default => "TUCUMAN"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "legajos", :force => true do |t|
     t.string   "nombre"
