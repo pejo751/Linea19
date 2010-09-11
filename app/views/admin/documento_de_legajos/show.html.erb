@@ -2,13 +2,13 @@
 <%=
   present :elegant do |p|
     p.header do |r|
-      r.field 'Tipo direccion', @resource.tipo_direccion
+      r.field 'Tipo documento', @resource.tipo_documento
     end
     p.body do |r|
-      r.field 'Direccion', @resource.direccion
-      r.field 'Barrio', @resource.barrio
-      r.field 'Ciudad', @resource.ciudad
-      r.field 'Provincia', @resource.provincia
+      r.field 'Descripcion', @resource.descripcion
+      r.field 'Vencimiento', @resource.vencimiento
+      r.field 'Usuario verificador', @resource.usuario_verificador
+      r.field 'Url imagen', @resource.url_imagen
       r.field 'Created at', @resource.created_at
       r.field 'Updated at', @resource.updated_at
     end

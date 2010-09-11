@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  legajo: 
+  tipo_documento: MyString
+  descripcion: MyString
+  vencimiento: 2010-09-11
+  usuario_verificador: MyString
+  url_imagen: MyString
+
+two:
+  legajo: 
+  tipo_documento: MyString
+  descripcion: MyString
+  vencimiento: 2010-09-11
+  usuario_verificador: MyString
+  url_imagen: MyString

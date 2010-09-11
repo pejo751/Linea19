@@ -5,7 +5,7 @@
   :views => {
     :prev => 'Anterior',
     :next => 'Siguiente',
-    :logout => 'Salir',
+    :logout => 'Cerrar sesion',
     :save_this_changes => 'Guardar estos cambios',
     :cancel => 'Cancelar',
     :add_new_record => 'Agregar nuevo',
