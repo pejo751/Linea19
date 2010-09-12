@@ -1,0 +1,9 @@
+<%= list_builder_for @records do |list|
+      list.legajo_id :align => :center
+      list.legajo :with => :nombre, :caption => 'Nombre legajo'
+      list.tipo_direccion
+      list.direccion
+      list.barrio
+      list.ciudad
+      list.provincia
+    end %>

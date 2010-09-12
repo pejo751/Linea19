@@ -2,9 +2,10 @@
 <%=
   present :elegant do |p|
     p.header do |r|
-      r.field 'Nombre', @resource.nombre
+      r.field 'Id', @resource.id
     end
     p.body do |r|
+      r.field 'Nombre', @resource.nombre
       r.field 'Tipo documento', @resource.tipo_documento
       r.field 'Telefonos', @resource.telefonos
       r.field 'Inicio', @resource.inicio

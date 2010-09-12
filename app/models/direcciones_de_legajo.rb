@@ -1,0 +1,2 @@
+class DireccionesDeLegajo < DireccionDeLegajo
+end

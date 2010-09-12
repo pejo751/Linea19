@@ -4,6 +4,7 @@ ActionController::Routing::Routes.draw do |map|
     admin.resources :legajos, :has_many => :direccion_de_legajos
     admin.resources :legajos, :has_many => :documento_de_legajos
     admin.resources :legajos, :has_many => :familiar_de_legajos
+    admin.resources :direcciones_de_legajos
   end
 
   map.resource :account, :controller => "users"

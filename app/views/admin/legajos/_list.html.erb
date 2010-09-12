@@ -1,4 +1,5 @@
 <%= list_builder_for @records do |list|
+      list.field_with_helper(:h, :id)
       list.nombre
       list.telefonos
       list.codigo_agrupacion
@@ -9,7 +10,7 @@
       list.html :caption => 'Documentos' do |d|
          link_to 'Editar', admin_legajo_documento_de_legajos_path(d)
       end
-      list.html :caption => 'Familiares' do |d|
-         link_to 'Editar', admin_legajo_familiar_de_legajos_path(d)
+      list.html :caption => 'Familiares' do |f|
+         link_to 'Editar', admin_legajo_familiar_de_legajos_path(f)
       end
     end %>
