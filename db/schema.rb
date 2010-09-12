@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100911073709) do
+ActiveRecord::Schema.define(:version => 20100911224920) do
 
   create_table "direccion_de_legajos", :force => true do |t|
     t.integer  "legajo_id"
@@ -29,6 +29,19 @@ ActiveRecord::Schema.define(:version => 20100911073709) do
     t.date     "vencimiento"
     t.string   "usuario_verificador"
     t.string   "url_imagen"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "familiar_de_legajos", :force => true do |t|
+    t.integer  "legajo_id"
+    t.string   "tipo_familiar"
+    t.string   "nombre"
+    t.string   "tipo_documento"
+    t.integer  "documento"
+    t.integer  "c_u_i_f"
+    t.date     "nacimiento"
+    t.string   "observaciones"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

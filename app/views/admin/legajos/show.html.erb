@@ -19,6 +19,7 @@
     p.actions do |r|
       r.text link_to('Documentos', admin_legajo_documento_de_legajos_path(@resource))
       r.text link_to('Direcciones', admin_legajo_direccion_de_legajos_path(@resource))
+      r.text link_to('Familiares', admin_legajo_familiar_de_legajos_path(@resource))
       r.text edit_action
       r.text destroy_action
       r.text back_action

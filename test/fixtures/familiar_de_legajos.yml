@@ -1,0 +1,21 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  legajo: 
+  tipo_familiar: MyString
+  nombre: MyString
+  tipo_documento: MyString
+  documento: 1
+  c_u_i_f: 1
+  nacimiento: 2010-09-11
+  observaciones: MyString
+
+two:
+  legajo: 
+  tipo_familiar: MyString
+  nombre: MyString
+  tipo_documento: MyString
+  documento: 1
+  c_u_i_f: 1
+  nacimiento: 2010-09-11
+  observaciones: MyString
