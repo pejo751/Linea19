@@ -24383,3 +24383,107 @@ Migrating to ChangeLegajos (20100912221504)
   [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("familiar_de_legajos")[0m
   [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("legajos")[0m
   [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-12 19:25:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (15.6ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-12 22:25:43', "perishable_token" = 'rouVarY1BLq-RyPT6glM', "last_request_at" = '2010-09-12 22:25:43' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" ORDER BY nombre LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (31.3ms)
+Rendered commons/_pagination (15.6ms)
+Rendered admin/legajos/_list (78.1ms)
+Rendered commons/_session (15.6ms)
+Completed in 1109ms (View: 547, DB: 16) | 200 OK [http://localhost/admin/legajos]
+
+
+Processing Admin::LegajosController#show (for 127.0.0.1 at 2010-09-12 19:25:53) [GET]
+  Parameters: {"action"=>"show", "id"=>"5", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-12 22:25:53', "perishable_token" = 'MDeeOSLKnOBvWsPnlIcR', "last_request_at" = '2010-09-12 22:25:53' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 5) [0m
+Rendering template within layouts/admin_layout
+Rendering admin/legajos/show
+Rendered commons/_session (0.0ms)
+Completed in 391ms (View: 125, DB: 0) | 200 OK [http://localhost/admin/legajos/5]
+
+
+Processing Admin::LegajosController#show (for 127.0.0.1 at 2010-09-12 19:27:23) [GET]
+  Parameters: {"action"=>"show", "id"=>"5", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-12 22:27:23', "perishable_token" = 'I3qlW7VtydL0c5MzxnGW', "last_request_at" = '2010-09-12 22:27:23' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 5) [0m
+Rendering template within layouts/admin_layout
+Rendering admin/legajos/show
+Rendered commons/_session (0.0ms)
+Completed in 734ms (View: 469, DB: 0) | 200 OK [http://localhost/admin/legajos/5]
+
+
+Processing Admin::LegajosController#edit (for 127.0.0.1 at 2010-09-12 19:27:41) [GET]
+  Parameters: {"action"=>"edit", "id"=>"5", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-12 22:27:41', "perishable_token" = 'Ez_mvwIKQwiGW8R3mG8-', "last_request_at" = '2010-09-12 22:27:41' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 5) [0m
+Rendering template within layouts/admin_layout
+Rendering commons/base_form
+Rendered admin/legajos/_form (31.3ms)
+Rendered commons/_session (15.6ms)
+Completed in 500ms (View: 172, DB: 0) | 200 OK [http://localhost/admin/legajos/5/edit]
+
+
+Processing Admin::LegajosController#update (for 127.0.0.1 at 2010-09-12 19:27:59) [PUT]
+  Parameters: {"commit"=>"Guardar estos cambios", "legajo"=>{"telefonos"=>"", "documento"=>"23232323", "tipo_documento"=>"DNI", "nivel_estudio"=>"", "c_u_i_f"=>"23213347349", "nombre"=>"pereyra, fabricio ", "observaciones"=>"", "nacimiento"=>"", "inicio"=>"2010-09-11", "estado_civil"=>"", "codigo_agrupacion"=>""}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"ky30CXjJUfKhSkPQhjxYcUKhVbeKTbBKFgWXyuGxMuM=", "id"=>"5", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (15.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-12 22:27:59', "perishable_token" = 'zItyrV4phbL5rhTXcofd', "last_request_at" = '2010-09-12 22:27:59' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 5) [0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT "legajos".id FROM "legajos" WHERE ("legajos"."documento" = 23232323 AND "legajos".tipo_documento = 'DNI' AND "legajos".id <> 5) LIMIT 1[0m
+  [4;36;1mLegajo Update (15.6ms)[0m   [0;1mUPDATE "legajos" SET "updated_at" = '2010-09-12 22:27:59', "c_u_i_f" = 23213347349.0 WHERE "id" = 5[0m
+Redirected to http://localhost:3000/admin/legajos/5
+Completed in 391ms (DB: 31) | 302 Found [http://localhost/admin/legajos/5]
+
+
+Processing Admin::LegajosController#show (for 127.0.0.1 at 2010-09-12 19:27:59) [GET]
+  Parameters: {"action"=>"show", "id"=>"5", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-12 22:27:59', "perishable_token" = 'T-sX4IRIqn0-8X4Fpixi', "last_request_at" = '2010-09-12 22:27:59' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (171.9ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 5) [0m
+Rendering template within layouts/admin_layout
+Rendering admin/legajos/show
+Rendered commons/_session (0.0ms)
+Completed in 594ms (View: 63, DB: 172) | 200 OK [http://localhost/admin/legajos/5]
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateUsers (20100908170450)
+Migrating to CreateLegajos (20100910195350)
+Migrating to CreateDireccionDeLegajos (20100911052904)
+Migrating to CreateDocumentoDeLegajos (20100911073709)
+Migrating to CreateFamiliarDeLegajos (20100911224920)
+Migrating to ChangeLegajos (20100912221504)
+Migrating to ChangeFamiliarDeLegajos (20100912223053)
+  [4;36;1mSQL (0.0ms)[0m   [0;1mselect sqlite_version(*)[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mCREATE TEMPORARY TABLE "altered_familiar_de_legajos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "legajo_id" integer, "tipo_familiar" varchar(255), "nombre" varchar(255), "tipo_documento" varchar(255), "documento" integer, "c_u_i_f" integer, "nacimiento" date, "observaciones" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("familiar_de_legajos")[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mDROP TABLE "familiar_de_legajos"[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mCREATE TABLE "familiar_de_legajos" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "legajo_id" integer, "tipo_familiar" varchar(255), "nombre" varchar(255), "tipo_documento" varchar(255), "documento" integer, "c_u_i_f" float, "nacimiento" date, "observaciones" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("altered_familiar_de_legajos")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mDROP TABLE "altered_familiar_de_legajos"[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mINSERT INTO schema_migrations (version) VALUES ('20100912223053')[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("direccion_de_legajos")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("documento_de_legajos")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("familiar_de_legajos")[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mPRAGMA index_list("legajos")[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mPRAGMA index_list("users")[0m
