@@ -1,0 +1,2 @@
+class DocumentosDeLegajo < DocumentoDeLegajo
+end

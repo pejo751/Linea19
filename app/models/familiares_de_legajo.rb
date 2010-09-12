@@ -1,0 +1,2 @@
+class FamiliaresDeLegajo < FamiliarDeLegajo
+end
