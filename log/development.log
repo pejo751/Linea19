@@ -24241,3 +24241,19 @@ Rendered commons/_pagination (0.0ms)
 Rendered admin/legajos/_list (31.3ms)
 Rendered commons/_session (0.0ms)
 Completed in 422ms (View: 109, DB: 16) | 200 OK [http://localhost/admin/legajos]
+
+
+Processing Admin::FamiliaresDeLegajosController#index (for 127.0.0.1 at 2010-09-12 06:19:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/familiares_de_legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-12 09:19:58', "perishable_token" = 'uLvuprA2JDLcbKv6YzuP', "last_request_at" = '2010-09-12 09:19:58' WHERE "id" = 1[0m
+  [4;36;1mFamiliaresDeLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "familiar_de_legajos" ORDER BY legajo_id, nombre LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (31.3ms)
+  [4;35;1mLegajo Load (15.6ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 5) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 5) [0m
+Rendered commons/_pagination (15.6ms)
+Rendered admin/familiares_de_legajos/_list (93.8ms)
+Rendered commons/_session (0.0ms)
+Completed in 1156ms (View: 609, DB: 16) | 200 OK [http://localhost/admin/familiares_de_legajos]
