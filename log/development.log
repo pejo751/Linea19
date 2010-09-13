@@ -28214,3 +28214,608 @@ Rendered commons/_pagination (15.6ms)
 Rendered admin/direcciones_de_legajos/_list (15.6ms)
 Rendered commons/_session (0.0ms)
 Completed in 328ms (View: 63, DB: 31) | 200 OK [http://localhost/admin/direcciones_de_legajos]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-09-13 14:38:16) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 156ms (View: 31, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-09-13 14:38:22) [POST]
+  Parameters: {"commit"=>"Ingresar", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"jorge"}, "action"=>"create", "authenticity_token"=>"v1tpLY3QVpgOUhqf1pUmlEggea/T9nx/EBSQgtm+IFc=", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".login) = 'jorge') LIMIT 1[0m
+  [4;35;1mUser Update (15.6ms)[0m   [0mUPDATE "users" SET "login_count" = 4, "updated_at" = '2010-09-13 14:38:23', "perishable_token" = 'h7AmLOgwWaUQQ942BrwP', "last_request_at" = '2010-09-13 17:38:23', "last_login_at" = '2010-09-13 00:50:45', "current_login_at" = '2010-09-13 17:38:23' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/admin/legajos
+Completed in 484ms (DB: 16) | 302 Found [http://localhost/user_session]
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-13 14:38:23) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-13 14:38:23', "perishable_token" = 'ryzG-2M5fDwQQEeEElGJ', "last_request_at" = '2010-09-13 17:38:23' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" ORDER BY nombre LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/legajos/_list (31.3ms)
+Rendered commons/_session (15.6ms)
+Completed in 250ms (View: 109, DB: 0) | 200 OK [http://localhost/admin/legajos]
+
+
+Processing Admin::DireccionesDeLegajosController#index (for 127.0.0.1 at 2010-09-13 14:38:31) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/direcciones_de_legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-13 14:38:31', "perishable_token" = '0WYg5MayykW8pnYnWZlP', "last_request_at" = '2010-09-13 17:38:31' WHERE "id" = 1[0m
+  [4;35;1mDireccionesDeLegajo Load (0.0ms)[0m   [0mSELECT * FROM "direccion_de_legajos" ORDER BY legajo_id, direccion LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/direcciones_de_legajos/_list (0.0ms)
+Rendered commons/_session (0.0ms)
+Completed in 203ms (View: 63, DB: 0) | 200 OK [http://localhost/admin/direcciones_de_legajos]
+
+
+Processing Admin::DocumentosDeLegajosController#index (for 127.0.0.1 at 2010-09-13 14:38:33) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/documentos_de_legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (15.6ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-13 14:38:33', "perishable_token" = 'NZLqwB-S8ZRhz_JSbB8v', "last_request_at" = '2010-09-13 17:38:33' WHERE "id" = 1[0m
+  [4;36;1mDocumentosDeLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "documento_de_legajos" ORDER BY legajo_id, descripcion LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/documentos_de_legajos/_list (0.0ms)
+Rendered commons/_session (0.0ms)
+Completed in 250ms (View: 78, DB: 16) | 200 OK [http://localhost/admin/documentos_de_legajos]
+
+
+Processing Admin::FamiliaresDeLegajosController#index (for 127.0.0.1 at 2010-09-13 14:38:34) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/familiares_de_legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-13 14:38:34', "perishable_token" = 'T94eONp6QaMMUiljvvmf', "last_request_at" = '2010-09-13 17:38:34' WHERE "id" = 1[0m
+  [4;35;1mFamiliaresDeLegajo Load (0.0ms)[0m   [0mSELECT * FROM "familiar_de_legajos" ORDER BY legajo_id, nombre LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/familiares_de_legajos/_list (0.0ms)
+Rendered commons/_session (0.0ms)
+Completed in 156ms (View: 31, DB: 0) | 200 OK [http://localhost/admin/familiares_de_legajos]
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-13 14:38:36) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-13 14:38:36', "perishable_token" = 'DMQr1GpbqirvUmhTgwhs', "last_request_at" = '2010-09-13 17:38:36' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" ORDER BY nombre LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/legajos/_list (0.0ms)
+Rendered commons/_session (0.0ms)
+Completed in 344ms (View: 125, DB: 0) | 200 OK [http://localhost/admin/legajos]
+
+
+Processing Admin::LegajosController#edit (for 127.0.0.1 at 2010-09-13 14:38:39) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (15.6ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-13 14:38:39', "perishable_token" = '77jfp61ODXCuirHsiDKc', "last_request_at" = '2010-09-13 17:38:39' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 1) [0m
+Rendering template within layouts/admin_layout
+Rendering commons/base_form
+DEPRECATION WARNING: The binding argument of #concat is no longer needed.  Please remove it from your views and helpers. (called from field_block at z:/web/rails/linea19/vendor/plugins/administrate_me/lib/admin_view/forms.rb:56)
+DEPRECATION WARNING: The binding argument of #concat is no longer needed.  Please remove it from your views and helpers. (called from field_block at z:/web/rails/linea19/vendor/plugins/administrate_me/lib/admin_view/forms.rb:58)
+DEPRECATION WARNING: The binding argument of #concat is no longer needed.  Please remove it from your views and helpers. (called from field_block at z:/web/rails/linea19/vendor/plugins/administrate_me/lib/admin_view/forms.rb:59)
+Rendered admin/legajos/_form (15.6ms)
+Rendered commons/_session (0.0ms)
+Completed in 266ms (View: 125, DB: 16) | 200 OK [http://localhost/admin/legajos/1/edit]
+
+
+Processing Admin::DireccionDeLegajosController#index (for 127.0.0.1 at 2010-09-13 14:38:43) [GET]
+  Parameters: {"action"=>"index", "legajo_id"=>"1", "controller"=>"admin/direccion_de_legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-13 14:38:43', "perishable_token" = 'w2vY4olZp_2-rB2e6WuK', "last_request_at" = '2010-09-13 17:38:43' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 1) [0m
+  [4;35;1mDireccionDeLegajo Load (0.0ms)[0m   [0mSELECT * FROM "direccion_de_legajos" WHERE (("direccion_de_legajos"."legajo_id" = 1)) ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/direccion_de_legajos/_list (0.0ms)
+Rendered commons/_session (0.0ms)
+Completed in 188ms (View: 63, DB: 0) | 200 OK [http://localhost/admin/legajos/1/direccion_de_legajos]
+
+
+Processing Admin::DireccionDeLegajosController#new (for 127.0.0.1 at 2010-09-13 14:38:44) [GET]
+  Parameters: {"action"=>"new", "legajo_id"=>"1", "controller"=>"admin/direccion_de_legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-13 14:38:44', "perishable_token" = 'nI3rNuQH1l_2l6tLyFrg', "last_request_at" = '2010-09-13 17:38:44' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 1) [0m
+Rendering template within layouts/admin_layout
+Rendering commons/base_form
+Rendered admin/direccion_de_legajos/_form (0.0ms)
+Rendered commons/_session (0.0ms)
+Completed in 516ms (View: 234, DB: 0) | 200 OK [http://localhost/admin/legajos/1/direccion_de_legajos/new]
+
+
+Processing Admin::DireccionDeLegajosController#create (for 127.0.0.1 at 2010-09-13 14:38:48) [POST]
+  Parameters: {"commit"=>"Guardar estos cambios", "action"=>"create", "legajo_id"=>"1", "authenticity_token"=>"v1tpLY3QVpgOUhqf1pUmlEggea/T9nx/EBSQgtm+IFc=", "direccion_de_legajo"=>{"provincia"=>"TUCUMAN", "barrio"=>"dsf", "ciudad"=>"SAN MIGUEL DE TUCUMAN", "tipo_direccion"=>"wdfwsf", "direccion"=>"dsf"}, "controller"=>"admin/direccion_de_legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (15.6ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-13 14:38:48', "perishable_token" = 'sEviydZSVIBSaR7HzOHp', "last_request_at" = '2010-09-13 17:38:48' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 1) [0m
+  [4;36;1mDireccionDeLegajo Load (0.0ms)[0m   [0;1mSELECT "direccion_de_legajos".id FROM "direccion_de_legajos" WHERE ("direccion_de_legajos"."tipo_direccion" = 'wdfwsf' AND "direccion_de_legajos".legajo_id = 1) LIMIT 1[0m
+  [4;35;1mDireccionDeLegajo Load (0.0ms)[0m   [0mSELECT "direccion_de_legajos".id FROM "direccion_de_legajos" WHERE ("direccion_de_legajos"."direccion" = 'dsf' AND "direccion_de_legajos".legajo_id = 1) LIMIT 1[0m
+  [4;36;1mDireccionDeLegajo Create (0.0ms)[0m   [0;1mINSERT INTO "direccion_de_legajos" ("created_at", "provincia", "updated_at", "legajo_id", "barrio", "ciudad", "tipo_direccion", "direccion") VALUES('2010-09-13 14:38:48', 'TUCUMAN', '2010-09-13 14:38:48', 1, 'dsf', 'SAN MIGUEL DE TUCUMAN', 'wdfwsf', 'dsf')[0m
+Redirected to http://localhost:3000/admin/legajos/1/direccion_de_legajos
+Completed in 203ms (DB: 16) | 302 Found [http://localhost/admin/legajos/1/direccion_de_legajos]
+
+
+Processing Admin::DireccionDeLegajosController#index (for 127.0.0.1 at 2010-09-13 14:38:48) [GET]
+  Parameters: {"action"=>"index", "legajo_id"=>"1", "controller"=>"admin/direccion_de_legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-13 14:38:48', "perishable_token" = 'blk4KsiRlT9ac6FahQXS', "last_request_at" = '2010-09-13 17:38:48' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 1) [0m
+  [4;36;1mDireccionDeLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "direccion_de_legajos" WHERE (("direccion_de_legajos"."legajo_id" = 1)) ORDER BY created_at DESC LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/direccion_de_legajos/_list (15.6ms)
+Rendered commons/_session (0.0ms)
+Completed in 172ms (View: 31, DB: 0) | 200 OK [http://localhost/admin/legajos/1/direccion_de_legajos]
+
+
+Processing Admin::DireccionesDeLegajosController#index (for 127.0.0.1 at 2010-09-13 14:38:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/direcciones_de_legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-13 14:38:50', "perishable_token" = '-Lsl0SgcIGrS8kqfJeFM', "last_request_at" = '2010-09-13 17:38:50' WHERE "id" = 1[0m
+  [4;35;1mDireccionesDeLegajo Load (0.0ms)[0m   [0mSELECT * FROM "direccion_de_legajos" ORDER BY legajo_id, direccion LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 1) [0m
+Rendered commons/_pagination (0.0ms)
+Rendered admin/direcciones_de_legajos/_list (15.6ms)
+Rendered commons/_session (0.0ms)
+Completed in 156ms (View: 31, DB: 0) | 200 OK [http://localhost/admin/direcciones_de_legajos]
+
+
+Processing Admin::DireccionesDeLegajosController#index (for 127.0.0.1 at 2010-09-13 14:39:06) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/direcciones_de_legajos"}
+  [4;35;1mUser Load (15.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-13 14:39:06', "perishable_token" = '4VFaYxZDMZJYumHL5-od', "last_request_at" = '2010-09-13 17:39:06' WHERE "id" = 1[0m
+  [4;35;1mDireccionesDeLegajo Load (0.0ms)[0m   [0mSELECT * FROM "direccion_de_legajos" ORDER BY legajo_id, direccion LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 1) [0m
+Rendered commons/_pagination (0.0ms)
+Rendered admin/direcciones_de_legajos/_list (15.6ms)
+Rendered commons/_session (0.0ms)
+Completed in 172ms (View: 31, DB: 16) | 200 OK [http://localhost/admin/direcciones_de_legajos]
+
+
+Processing Admin::DireccionesDeLegajosController#index (for 127.0.0.1 at 2010-09-13 14:39:18) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/direcciones_de_legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-13 14:39:18', "perishable_token" = 'x2sSJEMgLlh22Wo21iJj', "last_request_at" = '2010-09-13 17:39:18' WHERE "id" = 1[0m
+  [4;35;1mDireccionesDeLegajo Load (0.0ms)[0m   [0mSELECT * FROM "direccion_de_legajos" ORDER BY legajo_id, direccion LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 1) [0m
+Rendered commons/_pagination (0.0ms)
+Rendered admin/direcciones_de_legajos/_list (15.6ms)
+Rendered commons/_session (0.0ms)
+Completed in 156ms (View: 47, DB: 0) | 200 OK [http://localhost/admin/direcciones_de_legajos]
+
+
+Processing Admin::DireccionesDeLegajosController#index (for 127.0.0.1 at 2010-09-13 14:39:27) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/direcciones_de_legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-13 14:39:27', "perishable_token" = 'i3j9KWOvmQIGDZToNI-l', "last_request_at" = '2010-09-13 17:39:27' WHERE "id" = 1[0m
+  [4;35;1mDireccionesDeLegajo Load (0.0ms)[0m   [0mSELECT * FROM "direccion_de_legajos" ORDER BY legajo_id, direccion LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 1) [0m
+Rendered commons/_pagination (0.0ms)
+Rendered admin/direcciones_de_legajos/_list (93.8ms)
+Rendered commons/_session (0.0ms)
+Completed in 406ms (View: 125, DB: 0) | 200 OK [http://localhost/admin/direcciones_de_legajos]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-09-13 15:08:40) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 125ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-09-13 15:08:51) [POST]
+  Parameters: {"commit"=>"Ingresar", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"jorge"}, "action"=>"create", "authenticity_token"=>"eBWQ/1psZ8CFOTWFIneuQrZt2HQTSdW94IbxlqWxnqQ=", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (15.6ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".login) = 'jorge') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "login_count" = 5, "updated_at" = '2010-09-13 15:08:51', "perishable_token" = 'JAN7KeFRPbPKk12xDFWI', "last_request_at" = '2010-09-13 18:08:51', "last_login_at" = '2010-09-13 17:38:23', "current_login_at" = '2010-09-13 18:08:51' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/admin/legajos
+Completed in 906ms (DB: 16) | 302 Found [http://localhost/user_session]
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-13 15:08:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-13 15:08:52', "perishable_token" = '6FhhNhwq2HzduUNt_k03', "last_request_at" = '2010-09-13 18:08:52' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" ORDER BY nombre LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/legajos/_list (15.6ms)
+Rendered commons/_session (0.0ms)
+Completed in 250ms (View: 63, DB: 0) | 200 OK [http://localhost/admin/legajos]
+
+
+Processing Admin::LegajosController#edit (for 127.0.0.1 at 2010-09-13 15:08:56) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-13 15:08:56', "perishable_token" = 'ZIc2r-gU7u5d9X7nRQYm', "last_request_at" = '2010-09-13 18:08:56' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 1) [0m
+Rendering template within layouts/admin_layout
+Rendering commons/base_form
+DEPRECATION WARNING: The binding argument of #concat is no longer needed.  Please remove it from your views and helpers. (called from field_block at z:/web/rails/linea19/vendor/plugins/administrate_me/lib/admin_view/forms.rb:56)
+DEPRECATION WARNING: The binding argument of #concat is no longer needed.  Please remove it from your views and helpers. (called from field_block at z:/web/rails/linea19/vendor/plugins/administrate_me/lib/admin_view/forms.rb:58)
+DEPRECATION WARNING: The binding argument of #concat is no longer needed.  Please remove it from your views and helpers. (called from field_block at z:/web/rails/linea19/vendor/plugins/administrate_me/lib/admin_view/forms.rb:59)
+Rendered admin/legajos/_form (15.6ms)
+Rendered commons/_session (15.6ms)
+Completed in 250ms (View: 63, DB: 0) | 200 OK [http://localhost/admin/legajos/1/edit]
+
+
+Processing Admin::LegajosController#update (for 127.0.0.1 at 2010-09-13 15:09:19) [PUT]
+  Parameters: {"commit"=>"Guardar estos cambios", "legajo"=>{"telefonos"=>"0381-4975746", "documento"=>"21334734", "tipo_documento"=>"DNI", "nivel_estudio"=>"", "c_u_i_f"=>"23213347349.0", "nombre"=>"jorge pereyra", "observaciones"=>"", "nacimiento"=>"1970-03-10", "inicio"=>"2010-11-13", "estado_civil"=>"separado", "codigo_agrupacion"=>""}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"eBWQ/1psZ8CFOTWFIneuQrZt2HQTSdW94IbxlqWxnqQ=", "id"=>"1", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-13 15:09:19', "perishable_token" = '8UbPXgD3nE6Nw8C56AYu', "last_request_at" = '2010-09-13 18:09:19' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (15.6ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 1) [0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT "legajos".id FROM "legajos" WHERE ("legajos"."documento" = 21334734 AND "legajos".tipo_documento = 'DNI' AND "legajos".id <> 1) LIMIT 1[0m
+Redirected to http://localhost:3000/admin/legajos/1
+Completed in 141ms (DB: 16) | 302 Found [http://localhost/admin/legajos/1]
+
+
+Processing Admin::LegajosController#show (for 127.0.0.1 at 2010-09-13 15:09:19) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-13 15:09:19', "perishable_token" = '6Ns2IqBHFr3yPmAzk6Mt', "last_request_at" = '2010-09-13 18:09:19' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 1) [0m
+Rendering template within layouts/admin_layout
+Rendering admin/legajos/show
+Rendered commons/_session (0.0ms)
+Completed in 281ms (View: 94, DB: 0) | 200 OK [http://localhost/admin/legajos/1]
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-13 15:09:23) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-13 15:09:23', "perishable_token" = 'iGWx-LBoO6Mrjbh70vdT', "last_request_at" = '2010-09-13 18:09:23' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" ORDER BY nombre LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/legajos/_list (15.6ms)
+Rendered commons/_session (0.0ms)
+Completed in 141ms (View: 31, DB: 0) | 200 OK [http://localhost/admin/legajos]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-09-13 15:22:26) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '5') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-13 15:22:26', "perishable_token" = 'fxByozGHxirVooUOiTAH', "last_request_at" = '2010-09-13 18:22:26' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/account
+Filter chain halted as [:require_no_user] rendered_or_redirected.
+Completed in 203ms (DB: 0) | 302 Found [http://localhost/]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-09-13 15:22:26) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '5') LIMIT 1[0m
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-13 15:22:26', "perishable_token" = 'X00Job_FxP-N4XAdKL1q', "last_request_at" = '2010-09-13 18:22:26' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 203ms (View: 94, DB: 0) | 200 OK [http://localhost/account]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-09-13 15:22:30) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"eBWQ/1psZ8CFOTWFIneuQrZt2HQTSdW94IbxlqWxnqQ=", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '5') LIMIT 1[0m
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 1) LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-13 15:22:30', "perishable_token" = 'NV86cIToSLIdFmeZJreH', "last_request_at" = '2010-09-13 18:22:30' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/
+Completed in 94ms (DB: 0) | 302 Found [http://localhost/user_session]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-09-13 15:22:30) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 94ms (View: 16, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-09-13 15:22:35) [POST]
+  Parameters: {"commit"=>"Ingresar", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"jorge"}, "action"=>"create", "authenticity_token"=>"eBWQ/1psZ8CFOTWFIneuQrZt2HQTSdW94IbxlqWxnqQ=", "controller"=>"user_sessions"}
+  [4;35;1mUser Load (15.6ms)[0m   [0mSELECT * FROM "users" WHERE (LOWER("users".login) = 'jorge') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "login_count" = 6, "updated_at" = '2010-09-13 15:22:35', "perishable_token" = 'JAp2lp_pDhoHCWh22J4a', "last_request_at" = '2010-09-13 18:22:35', "last_login_at" = '2010-09-13 18:08:51', "current_login_at" = '2010-09-13 18:22:35' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/admin/legajos
+Completed in 359ms (DB: 16) | 302 Found [http://localhost/user_session]
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-13 15:22:36) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-13 15:22:36', "perishable_token" = '-KILNgmLO0KwaQr-Z7fT', "last_request_at" = '2010-09-13 18:22:36' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" ORDER BY nombre LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/legajos/_list (15.6ms)
+Rendered commons/_session (0.0ms)
+Completed in 219ms (View: 109, DB: 0) | 200 OK [http://localhost/admin/legajos]
+
+
+Processing Admin::LegajosController#edit (for 127.0.0.1 at 2010-09-13 15:22:39) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-13 15:22:39', "perishable_token" = 'NjGpRrJkLyf2F-zoRfDP', "last_request_at" = '2010-09-13 18:22:39' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 1) [0m
+Rendering template within layouts/admin_layout
+Rendering commons/base_form
+DEPRECATION WARNING: The binding argument of #concat is no longer needed.  Please remove it from your views and helpers. (called from field_block at z:/web/rails/linea19/vendor/plugins/administrate_me/lib/admin_view/forms.rb:56)
+DEPRECATION WARNING: The binding argument of #concat is no longer needed.  Please remove it from your views and helpers. (called from field_block at z:/web/rails/linea19/vendor/plugins/administrate_me/lib/admin_view/forms.rb:58)
+DEPRECATION WARNING: The binding argument of #concat is no longer needed.  Please remove it from your views and helpers. (called from field_block at z:/web/rails/linea19/vendor/plugins/administrate_me/lib/admin_view/forms.rb:59)
+Rendered admin/legajos/_form (15.6ms)
+Rendered commons/_session (0.0ms)
+Completed in 188ms (View: 63, DB: 0) | 200 OK [http://localhost/admin/legajos/1/edit]
+
+
+Processing Admin::DireccionesDeLegajosController#index (for 127.0.0.1 at 2010-09-13 15:22:47) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/direcciones_de_legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-13 15:22:47', "perishable_token" = 'YMoMI6Y8-QY5eZr2b7cQ', "last_request_at" = '2010-09-13 18:22:47' WHERE "id" = 1[0m
+  [4;35;1mDireccionesDeLegajo Load (0.0ms)[0m   [0mSELECT * FROM "direccion_de_legajos" ORDER BY legajo_id, direccion LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 1) [0m
+Rendered commons/_pagination (0.0ms)
+Rendered admin/direcciones_de_legajos/_list (46.9ms)
+Rendered commons/_session (0.0ms)
+Completed in 344ms (View: 109, DB: 0) | 200 OK [http://localhost/admin/direcciones_de_legajos]
+
+
+Processing Admin::DireccionesDeLegajosController#index to xls (for 127.0.0.1 at 2010-09-13 15:22:49) [GET]
+  Parameters: {"format"=>"xls", "action"=>"index", "controller"=>"admin/direcciones_de_legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-13 15:22:49', "perishable_token" = 'eHfdWIKrN0ZR0qdSqG1J', "last_request_at" = '2010-09-13 18:22:49' WHERE "id" = 1[0m
+  [4;35;1mDireccionesDeLegajo Load (0.0ms)[0m   [0mSELECT * FROM "direccion_de_legajos" ORDER BY legajo_id, direccion[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 1) [0m
+Rendered admin/direcciones_de_legajos/_list (15.6ms)
+Completed in 266ms (View: 16, DB: 0) | 200 OK [http://localhost/admin/direcciones_de_legajos.xls]
+
+
+Processing Admin::DocumentosDeLegajosController#index (for 127.0.0.1 at 2010-09-13 15:22:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/documentos_de_legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-13 15:22:54', "perishable_token" = 'OzNKohDTyDr3WoxuJn9k', "last_request_at" = '2010-09-13 18:22:54' WHERE "id" = 1[0m
+  [4;35;1mDocumentosDeLegajo Load (0.0ms)[0m   [0mSELECT * FROM "documento_de_legajos" ORDER BY legajo_id, descripcion LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/documentos_de_legajos/_list (0.0ms)
+Rendered commons/_session (15.6ms)
+Completed in 156ms (View: 31, DB: 0) | 200 OK [http://localhost/admin/documentos_de_legajos]
+
+
+Processing Admin::FamiliaresDeLegajosController#index (for 127.0.0.1 at 2010-09-13 15:22:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/familiares_de_legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-13 15:22:55', "perishable_token" = 'jNpEZtCbqexk7cJRT5ol', "last_request_at" = '2010-09-13 18:22:55' WHERE "id" = 1[0m
+  [4;36;1mFamiliaresDeLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "familiar_de_legajos" ORDER BY legajo_id, nombre LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+Rendered commons/_pagination (15.6ms)
+Rendered admin/familiares_de_legajos/_list (15.6ms)
+Rendered commons/_session (15.6ms)
+Completed in 344ms (View: 125, DB: 0) | 200 OK [http://localhost/admin/familiares_de_legajos]
+
+
+Processing Admin::DocumentosDeLegajosController#index (for 127.0.0.1 at 2010-09-13 15:22:56) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/documentos_de_legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (62.5ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-13 15:22:56', "perishable_token" = 'RDZaeMa21mOVyJl5YTH8', "last_request_at" = '2010-09-13 18:22:56' WHERE "id" = 1[0m
+  [4;35;1mDocumentosDeLegajo Load (0.0ms)[0m   [0mSELECT * FROM "documento_de_legajos" ORDER BY legajo_id, descripcion LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/documentos_de_legajos/_list (0.0ms)
+Rendered commons/_session (0.0ms)
+Completed in 281ms (View: 16, DB: 63) | 200 OK [http://localhost/admin/documentos_de_legajos]
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-13 15:24:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-13 15:24:25', "perishable_token" = 'f1oClYqW5ZLeEfxkcX_Q', "last_request_at" = '2010-09-13 18:24:25' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" ORDER BY nombre LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/legajos/_list (15.6ms)
+Rendered commons/_session (0.0ms)
+Completed in 141ms (View: 31, DB: 0) | 200 OK [http://localhost/admin/legajos]
+
+
+Processing Admin::DireccionesDeLegajosController#index (for 127.0.0.1 at 2010-09-13 15:24:26) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/direcciones_de_legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (15.6ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-13 15:24:26', "perishable_token" = 'igLWWzHcrTg4ZRjatPqE', "last_request_at" = '2010-09-13 18:24:26' WHERE "id" = 1[0m
+  [4;35;1mDireccionesDeLegajo Load (0.0ms)[0m   [0mSELECT * FROM "direccion_de_legajos" ORDER BY legajo_id, direccion LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 1) [0m
+Rendered commons/_pagination (0.0ms)
+Rendered admin/direcciones_de_legajos/_list (62.5ms)
+Rendered commons/_session (0.0ms)
+Completed in 359ms (View: 188, DB: 16) | 200 OK [http://localhost/admin/direcciones_de_legajos]
+
+
+Processing Admin::DocumentosDeLegajosController#index (for 127.0.0.1 at 2010-09-13 15:24:27) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/documentos_de_legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-13 15:24:27', "perishable_token" = 'E1INnhQuu1b9PfMmB4L0', "last_request_at" = '2010-09-13 18:24:27' WHERE "id" = 1[0m
+  [4;35;1mDocumentosDeLegajo Load (0.0ms)[0m   [0mSELECT * FROM "documento_de_legajos" ORDER BY legajo_id, descripcion LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/documentos_de_legajos/_list (0.0ms)
+Rendered commons/_session (0.0ms)
+Completed in 156ms (View: 31, DB: 0) | 200 OK [http://localhost/admin/documentos_de_legajos]
+
+
+Processing Admin::FamiliaresDeLegajosController#index (for 127.0.0.1 at 2010-09-13 15:24:28) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/familiares_de_legajos"}
+  [4;36;1mUser Load (15.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-13 15:24:28', "perishable_token" = 'Rr5J5E82JHU3jA_gXpQd', "last_request_at" = '2010-09-13 18:24:28' WHERE "id" = 1[0m
+  [4;36;1mFamiliaresDeLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "familiar_de_legajos" ORDER BY legajo_id, nombre LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/familiares_de_legajos/_list (0.0ms)
+Rendered commons/_session (0.0ms)
+Completed in 141ms (View: 16, DB: 16) | 200 OK [http://localhost/admin/familiares_de_legajos]
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-13 15:24:29) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-13 15:24:29', "perishable_token" = 'cTzUeiqQw2bC4UCwL_Ne', "last_request_at" = '2010-09-13 18:24:29' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" ORDER BY nombre LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/legajos/_list (31.3ms)
+Rendered commons/_session (0.0ms)
+Completed in 438ms (View: 172, DB: 0) | 200 OK [http://localhost/admin/legajos]
+
+
+Processing Admin::LegajosController#edit (for 127.0.0.1 at 2010-09-13 15:24:33) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-13 15:24:33', "perishable_token" = 'cD_ZE3hy720PU9bjm-wM', "last_request_at" = '2010-09-13 18:24:33' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 1) [0m
+Rendering template within layouts/admin_layout
+Rendering commons/base_form
+DEPRECATION WARNING: The binding argument of #concat is no longer needed.  Please remove it from your views and helpers. (called from field_block at z:/web/rails/linea19/vendor/plugins/administrate_me/lib/admin_view/forms.rb:56)
+DEPRECATION WARNING: The binding argument of #concat is no longer needed.  Please remove it from your views and helpers. (called from field_block at z:/web/rails/linea19/vendor/plugins/administrate_me/lib/admin_view/forms.rb:58)
+DEPRECATION WARNING: The binding argument of #concat is no longer needed.  Please remove it from your views and helpers. (called from field_block at z:/web/rails/linea19/vendor/plugins/administrate_me/lib/admin_view/forms.rb:59)
+Rendered admin/legajos/_form (15.6ms)
+Rendered commons/_session (15.6ms)
+Completed in 141ms (View: 31, DB: 0) | 200 OK [http://localhost/admin/legajos/1/edit]
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-13 15:24:41) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-13 15:24:41', "perishable_token" = 'GOwKotcZ2pM5zmhckcti', "last_request_at" = '2010-09-13 18:24:41' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" ORDER BY nombre LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/legajos/_list (15.6ms)
+Rendered commons/_session (0.0ms)
+Completed in 156ms (View: 31, DB: 0) | 200 OK [http://localhost/admin/legajos]
+
+
+Processing Admin::DireccionesDeLegajosController#index (for 127.0.0.1 at 2010-09-13 15:24:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/direcciones_de_legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-13 15:24:50', "perishable_token" = 'mOEer16FofteyQynEp5p', "last_request_at" = '2010-09-13 18:24:50' WHERE "id" = 1[0m
+  [4;36;1mDireccionesDeLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "direccion_de_legajos" ORDER BY legajo_id, direccion LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 1) [0m
+Rendered commons/_pagination (0.0ms)
+Rendered admin/direcciones_de_legajos/_list (31.3ms)
+Rendered commons/_session (0.0ms)
+Completed in 328ms (View: 31, DB: 0) | 200 OK [http://localhost/admin/direcciones_de_legajos]
+
+
+Processing Admin::DocumentosDeLegajosController#index (for 127.0.0.1 at 2010-09-13 15:24:51) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/documentos_de_legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-13 15:24:51', "perishable_token" = 'LpS2bOQ56oRHcxlC0HoG', "last_request_at" = '2010-09-13 18:24:51' WHERE "id" = 1[0m
+  [4;36;1mDocumentosDeLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "documento_de_legajos" ORDER BY legajo_id, descripcion LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/documentos_de_legajos/_list (0.0ms)
+Rendered commons/_session (0.0ms)
+Completed in 141ms (View: 16, DB: 0) | 200 OK [http://localhost/admin/documentos_de_legajos]
+
+
+Processing Admin::FamiliaresDeLegajosController#index (for 127.0.0.1 at 2010-09-13 15:24:53) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/familiares_de_legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (15.6ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-13 15:24:53', "perishable_token" = '_T498kfGkblGF3hd0NPD', "last_request_at" = '2010-09-13 18:24:53' WHERE "id" = 1[0m
+  [4;35;1mFamiliaresDeLegajo Load (15.6ms)[0m   [0mSELECT * FROM "familiar_de_legajos" ORDER BY legajo_id, nombre LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/familiares_de_legajos/_list (0.0ms)
+Rendered commons/_session (0.0ms)
+Completed in 266ms (View: 63, DB: 31) | 200 OK [http://localhost/admin/familiares_de_legajos]
+
+
+Processing Admin::DireccionesDeLegajosController#index (for 127.0.0.1 at 2010-09-13 15:24:54) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/direcciones_de_legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-13 15:24:54', "perishable_token" = 'xOfr8UbqTE6denqlB07T', "last_request_at" = '2010-09-13 18:24:54' WHERE "id" = 1[0m
+  [4;36;1mDireccionesDeLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "direccion_de_legajos" ORDER BY legajo_id, direccion LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 1) [0m
+Rendered commons/_pagination (0.0ms)
+Rendered admin/direcciones_de_legajos/_list (31.3ms)
+Rendered commons/_session (0.0ms)
+Completed in 344ms (View: 31, DB: 0) | 200 OK [http://localhost/admin/direcciones_de_legajos]
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-13 15:24:55) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-13 15:24:55', "perishable_token" = 'tkresYqY5dKnp8yHGmXB', "last_request_at" = '2010-09-13 18:24:55' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" ORDER BY nombre LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/legajos/_list (0.0ms)
+Rendered commons/_session (0.0ms)
+Completed in 156ms (View: 31, DB: 0) | 200 OK [http://localhost/admin/legajos]
