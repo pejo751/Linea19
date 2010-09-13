@@ -4,10 +4,14 @@
 class ApplicationController < ActionController::Base
     helper :all # include all helpers, all the time
     protect_from_forgery # See ActionController::RequestForgeryProtection for details
-    helper_method :current_user_session, :current_user
+    helper_method :current_user_session, :current_user, :my_fecha
     filter_parameter_logging :password, :password_confirmation
 
     private
+        def my_fecha(fecha)
+           fecha.to_s(:my_date)
+        end
+        
         def current_user_session
             return @current_user_session if defined?(@current_user_session)
             @current_user_session = UserSession.find
