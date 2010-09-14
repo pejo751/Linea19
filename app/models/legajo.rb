@@ -8,11 +8,12 @@ class Legajo < ActiveRecord::Base
 	
 	validates_numericality_of :documento, :c_u_i_f
 	
-#	before_save :set_fechas
-	
-#	private
-#		def set_fechas
-#			d = parse(self.inicio)
-#			self.inicio = utc_time(d.day, d.month, d.year)
-#		end
+	has_attached_file :foto, :styles => { :small => "150x150>" },
+		:default_url => ":rails_root/public/images/rails.png",
+		:url  => "/assets/legajos/:basename.:extension",
+		:path => ":rails_root/public/assets/legajos/:basename.:extension"
+
+	# validates_attachment_presence :foto
+	validates_attachment_size :foto, :less_than => 5.megabytes
+	validates_attachment_content_type :foto, :content_type => ['image/jpeg', 'image/png']
 end
