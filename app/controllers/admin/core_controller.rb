@@ -6,7 +6,7 @@ class Admin::CoreController < ApplicationController
   end
 
   def app_name
-    'VyB SRL - Linea 19'
+    'Sistema de transporte v2.2'
   end
 
   set_module :legajos
