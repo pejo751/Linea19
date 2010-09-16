@@ -6,7 +6,7 @@ class Admin::CoreController < ApplicationController
   end
 
   def app_name
-    'Sistema de transporte v2.2'
+    'Sistema de Recursos Humanos'
   end
 
   set_module :legajos
