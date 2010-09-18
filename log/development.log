@@ -33972,3 +33972,1054 @@ Rendered commons/_pagination (0.0ms)
 Rendered admin/legajos/_list (62.5ms)
 Rendered commons/_session (0.0ms)
 Completed in 609ms (View: 141, DB: 16) | 200 OK [http://localhost/admin/legajos]
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-18 13:51:32) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (46.9ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-18 13:51:33', "perishable_token" = 'xED5x_HaFM-RsTjrES3J', "last_request_at" = '2010-09-18 16:51:33' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" ORDER BY nombre LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+
+ActionView::TemplateError (wrong number of arguments (1 for 0)) on line #1 of app/views/admin/legajos/_list.html.erb:
+1: <%= list_builder_for @records do |list|
+2:       list.field_with_helper(:h, :id)
+3:       list.nombre
+4:       list.telefonos
+
+    app/controllers/application_controller.rb:12:in `to_s'
+    app/controllers/application_controller.rb:12:in `my_fecha'
+    (eval):2:in `send'
+    (eval):2:in `my_fecha'
+    app/views/admin/legajos/_list.html.erb:1
+    app/views/commons/index.html.erb:3
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (187.5ms)
+Rendered rescues/_request_and_response (31.3ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-18 13:52:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-18 13:52:58', "perishable_token" = 'mttGKQqserZbDlBDOXkr', "last_request_at" = '2010-09-18 16:52:58' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" ORDER BY nombre LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+
+ActionView::TemplateError (wrong number of arguments (0 for 1)) on line #6 of app/views/admin/legajos/_list.html.erb:
+3:       list.nombre
+4:       list.telefonos
+5:       list.codigo_agrupacion
+6:       list.field_with_helper(my_fecha, 'inicio')
+7:       #list.inicio
+8:       list.html :caption => 'Direcciones' do |d|
+9:          link_to 'Editar', admin_legajo_direccion_de_legajos_path(d)
+
+    (eval):2:in `my_fecha'
+    (eval):2:in `send'
+    (eval):2:in `my_fecha'
+    app/views/admin/legajos/_list.html.erb:6
+    app/views/admin/legajos/_list.html.erb:1
+    app/views/commons/index.html.erb:3
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (156.3ms)
+Rendered rescues/_request_and_response (15.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-18 13:53:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-18 13:53:20', "perishable_token" = 'P8UrbCkv-JSqjmmbIIVx', "last_request_at" = '2010-09-18 16:53:20' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (15.6ms)[0m   [0;1mSELECT * FROM "legajos" ORDER BY nombre LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+
+ActionView::TemplateError (wrong number of arguments (1 for 0)) on line #1 of app/views/admin/legajos/_list.html.erb:
+1: <%= list_builder_for @records do |list|
+2:       list.field_with_helper(:h, :id)
+3:       list.nombre
+4:       list.telefonos
+
+    app/controllers/application_controller.rb:12:in `to_s'
+    app/controllers/application_controller.rb:12:in `my_fecha'
+    (eval):2:in `send'
+    (eval):2:in `my_fecha'
+    app/views/admin/legajos/_list.html.erb:1
+    app/views/commons/index.html.erb:3
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (359.4ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-18 13:56:28) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (15.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-18 13:56:28', "perishable_token" = 'BkIsu-TRWKmuxxhV-74c', "last_request_at" = '2010-09-18 16:56:28' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" ORDER BY nombre LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+
+ActionView::TemplateError (wrong number of arguments (1 for 0)) on line #1 of app/views/admin/legajos/_list.html.erb:
+1: <%= list_builder_for @records do |list|
+2:       list.field_with_helper(:h, :id)
+3:       list.nombre
+4:       list.telefonos
+
+    app/helpers/application_helper.rb:5:in `to_s'
+    app/helpers/application_helper.rb:5:in `my_fecha'
+    app/views/admin/legajos/_list.html.erb:1
+    app/views/commons/index.html.erb:3
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (359.4ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-18 13:56:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-18 13:56:52', "perishable_token" = 'f4yPUq6-aKU9pznjYdrT', "last_request_at" = '2010-09-18 16:56:52' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" ORDER BY nombre LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+
+ActionView::TemplateError (wrong number of arguments (1 for 0)) on line #1 of app/views/admin/legajos/_list.html.erb:
+1: <%= list_builder_for @records do |list|
+2:       list.field_with_helper(:h, :id)
+3:       list.nombre
+4:       list.telefonos
+
+    app/helpers/application_helper.rb:5:in `to_s'
+    app/helpers/application_helper.rb:5:in `my_fecha'
+    app/views/admin/legajos/_list.html.erb:1
+    app/views/commons/index.html.erb:3
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (375.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-18 13:57:11) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-18 13:57:12', "perishable_token" = 'iPP4iFG2tXCn_GfXGXZj', "last_request_at" = '2010-09-18 16:57:12' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" ORDER BY nombre LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+
+ActionView::TemplateError (wrong number of arguments (1 for 0)) on line #1 of app/views/admin/legajos/_list.html.erb:
+1: <%= list_builder_for @records do |list|
+2:       #list.field_with_helper(:h, :id)
+3:       list.nombre
+4:       list.telefonos
+
+    app/helpers/application_helper.rb:5:in `to_s'
+    app/helpers/application_helper.rb:5:in `my_fecha'
+    app/views/admin/legajos/_list.html.erb:1
+    app/views/commons/index.html.erb:3
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (187.5ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-18 13:57:22) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-18 13:57:22', "perishable_token" = '9T1r-9QSPlO1wmU9Qxqv', "last_request_at" = '2010-09-18 16:57:22' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" ORDER BY nombre LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+Rendered commons/_pagination (15.6ms)
+Rendered admin/legajos/_list (93.8ms)
+Rendered commons/_session (15.6ms)
+Completed in 750ms (View: 203, DB: 0) | 200 OK [http://localhost/admin/legajos]
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-18 13:57:34) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-18 13:57:34', "perishable_token" = 'h7tawkkcy84usFRQLyes', "last_request_at" = '2010-09-18 16:57:34' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" ORDER BY nombre LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/legajos/_list (78.1ms)
+Rendered commons/_session (0.0ms)
+Completed in 578ms (View: 156, DB: 0) | 200 OK [http://localhost/admin/legajos]
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-18 14:01:28) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (15.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-18 14:01:28', "perishable_token" = 'oS3MCEpO9VVhnarLCPuG', "last_request_at" = '2010-09-18 17:01:28' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" ORDER BY nombre LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+
+ActionView::TemplateError (undefined method `field_with_helper' for #<ActionView::Base:0x455c7f0>) on line #6 of app/views/admin/legajos/_list.html.erb:
+3:       list.nombre
+4:       list.telefonos
+5:       list.codigo_agrupacion
+6:       field_with_helper(:my_fecha, :inicio)
+7:       #list.inicio
+8:       list.html :caption => 'Direcciones' do |d|
+9:          link_to 'Editar', admin_legajo_direccion_de_legajos_path(d)
+
+    app/views/admin/legajos/_list.html.erb:6
+    app/views/admin/legajos/_list.html.erb:1
+    app/views/commons/index.html.erb:3
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (171.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-18 14:01:52) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (15.6ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-18 14:01:52', "perishable_token" = 'FfUczmnHd9aNrDZPsbjN', "last_request_at" = '2010-09-18 17:01:52' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" ORDER BY nombre LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+
+ActionView::TemplateError (undefined method `:inicio' for #<Legajo:0x4438e60>) on line #1 of app/views/admin/legajos/_list.html.erb:
+1: <%= list_builder_for @records do |list|
+2:       list.field_with_helper(:h, :id)
+3:       list.nombre
+4:       list.telefonos
+
+    app/views/admin/legajos/_list.html.erb:1
+    app/views/commons/index.html.erb:3
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (375.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-18 14:02:09) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (15.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-18 14:02:09', "perishable_token" = 'voOeT9G5qyIW6Ba2uMXW', "last_request_at" = '2010-09-18 17:02:09' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (15.6ms)[0m   [0;1mSELECT * FROM "legajos" ORDER BY nombre LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+
+ActionView::TemplateError ([#<AdminView::PresentationBuilder::GridPresentationBuilder::HelperColumn:0x44f70c0 @helper_method=:h, @field=:id, @options={:caption=>"Id"}>, #<AdminView::PresentationBuilder::GridPresentationBuilder::ListColumn:0x44f6ee0 @field=:nombre, @options={}>, #<AdminView::PresentationBuilder::GridPresentationBuilder::ListColumn:0x44f6eb0 @field=:telefonos, @options={}>, #<AdminView::PresentationBuilder::GridPresentationBuilder::ListColumn:0x44f6e80 @field=:codigo_agrupacion, @options={}>, #<AdminView::Presentation) on line #1 of app/views/admin/legajos/_list.html.erb:
+1: <%= list_builder_for @records do |list|
+2:       list.field_with_helper(:h, :id)
+3:       list.nombre
+4:       list.telefonos
+
+    app/views/admin/legajos/_list.html.erb:1
+    app/views/commons/index.html.erb:3
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (375.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-18 14:03:12) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-18 14:03:12', "perishable_token" = 'Yw_hFql6rC7AHyYqYv3b', "last_request_at" = '2010-09-18 17:03:12' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (15.6ms)[0m   [0mSELECT * FROM "legajos" ORDER BY nombre LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+
+ActionView::TemplateError (wrong number of arguments (1 for 2)) on line #6 of app/views/admin/legajos/_list.html.erb:
+3:       list.nombre
+4:       list.telefonos
+5:       list.codigo_agrupacion
+6:       list.field_with_helper(:my_fecha => :inicio)
+7:       #list.inicio
+8:       list.html :caption => 'Direcciones' do |d|
+9:          link_to 'Editar', admin_legajo_direccion_de_legajos_path(d)
+
+    app/views/admin/legajos/_list.html.erb:6:in `field_with_helper'
+    app/views/admin/legajos/_list.html.erb:6
+    app/views/admin/legajos/_list.html.erb:1
+    app/views/commons/index.html.erb:3
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (156.3ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-18 14:03:25) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (15.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-18 14:03:25', "perishable_token" = 'bxjvZBYQO8oOJLfLu8RU', "last_request_at" = '2010-09-18 17:03:25' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (15.6ms)[0m   [0;1mSELECT * FROM "legajos" ORDER BY nombre LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+ERROR: compiling _run_erb_app47views47admin47legajos47_list46html46erb_locals_list_object RAISED compile error
+z:/web/rails/linea19/app/views/admin/legajos/_list.html.erb:6: odd number list for Hash
+      list.field_with_helper(:my_fecha => {:inicio} )
+                                                   ^
+Function body:           def _run_erb_app47views47admin47legajos47_list46html46erb_locals_list_object(local_assigns)
+            old_output_buffer = output_buffer;list = local_assigns[:list];object = local_assigns[:object];;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat(( list_builder_for @records do |list|
+      list.field_with_helper(:h, :id)
+      list.nombre
+      list.telefonos
+      list.codigo_agrupacion
+      list.field_with_helper(:my_fecha => {:inicio} )
+      #list.inicio
+      list.html :caption => 'Direcciones' do |d|
+         link_to 'Editar', admin_legajo_direccion_de_legajos_path(d)
+      end
+      list.html :caption => 'Documentos' do |d|
+         link_to 'Editar', admin_legajo_documento_de_legajos_path(d)
+      end
+      list.html :caption => 'Familiares' do |f|
+         link_to 'Editar', admin_legajo_familiar_de_legajos_path(f)
+      end
+    end ).to_s); @output_buffer.concat "\n"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: z:/web/rails/linea19/app/views/admin/legajos/_list.html.erb:21:in `compile!'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable_partial.rb:20:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:26:in `benchmark'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:26:in `benchmark'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable_partial.rb:19:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable_partial.rb:44:in `render_partial'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/partials.rb:184:in `render_partial'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:267:in `render'
+z:/web/rails/linea19/vendor/plugins/administrate_me/lib/admin_view/backend.rb:92:in `show_section_body'
+z:/web/rails/linea19/app/views/commons/index.html.erb:3:in `_run_erb_app47views47commons47index46html46erb'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:34:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:34:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:306:in `with_template'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:30:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:936:in `render_without_benchmark'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+z:/web/rails/linea19/vendor/plugins/administrate_me/lib/administrate_me/admin_scaffold/actions.rb:14
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+z:/web/rails/linea19/vendor/plugins/administrate_me/lib/administrate_me/admin_scaffold/actions.rb:13:in `index'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:14:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+z:/web/rails/linea19/app/views/admin/legajos/_list.html.erb:6: odd number list for Hash
+      list.field_with_helper(:my_fecha => {:inicio} )
+                                                   ^) on line #6 of app/views/admin/legajos/_list.html.erb:
+3:       list.nombre
+4:       list.telefonos
+5:       list.codigo_agrupacion
+6:       list.field_with_helper(:my_fecha => {:inicio} )
+7:       #list.inicio
+8:       list.html :caption => 'Direcciones' do |d|
+9:          link_to 'Editar', admin_legajo_direccion_de_legajos_path(d)
+
+    app/views/admin/legajos/_list.html.erb:21:in `compile!'
+    app/views/commons/index.html.erb:3
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (156.3ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-18 14:03:59) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (15.6ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-18 14:03:59', "perishable_token" = 'jQdheUJwPGsWWPjMrMl3', "last_request_at" = '2010-09-18 17:03:59' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (31.3ms)[0m   [0mSELECT * FROM "legajos" ORDER BY nombre LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (46.9ms)
+
+ActionView::TemplateError (illegal radix 47153) on line #1 of app/views/admin/legajos/_list.html.erb:
+1: <%= list_builder_for @records do |list|
+2:       list.field_with_helper(:h, :id)
+3:       list.nombre
+4:       list.telefonos
+
+    app/helpers/application_helper.rb:5:in `to_s'
+    app/helpers/application_helper.rb:5:in `my_fecha'
+    app/views/admin/legajos/_list.html.erb:1
+    app/views/commons/index.html.erb:3
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (171.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-18 14:05:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (15.6ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-18 14:05:03', "perishable_token" = 'BosdY4Rp4shJApCpuRJ_', "last_request_at" = '2010-09-18 17:05:03' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" ORDER BY nombre LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+
+ActionView::TemplateError (illegal radix 47153) on line #1 of app/views/admin/legajos/_list.html.erb:
+1: <%= list_builder_for @records do |list|
+2:       list.field_with_helper(:h, :id)
+3:       list.nombre
+4:       list.telefonos
+
+    app/helpers/admin/legajos_helper.rb:4:in `to_s'
+    app/helpers/admin/legajos_helper.rb:4:in `my_fecha'
+    app/views/admin/legajos/_list.html.erb:1
+    app/views/commons/index.html.erb:3
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (375.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-18 14:05:19) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (15.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-18 14:05:19', "perishable_token" = 'yvzjZuZ-JxqbRKPWNktZ', "last_request_at" = '2010-09-18 17:05:19' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" ORDER BY nombre LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+
+ActionView::TemplateError (wrong number of arguments (1 for 0)) on line #1 of app/views/admin/legajos/_list.html.erb:
+1: <%= list_builder_for @records do |list|
+2:       list.field_with_helper(:h, :id)
+3:       list.nombre
+4:       list.telefonos
+
+    app/helpers/admin/legajos_helper.rb:4:in `to_s'
+    app/helpers/admin/legajos_helper.rb:4:in `my_fecha'
+    app/views/admin/legajos/_list.html.erb:1
+    app/views/commons/index.html.erb:3
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (375.0ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-18 14:05:37) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-18 14:05:37', "perishable_token" = '9533uupuuQaAeefRUA1Z', "last_request_at" = '2010-09-18 17:05:37' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" ORDER BY nombre LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+ERROR: compiling _run_erb_app47views47admin47legajos47_list46html46erb_locals_list_object RAISED compile error
+z:/web/rails/linea19/app/views/admin/legajos/_list.html.erb:6: syntax error, unexpected '(', expecting ')'
+      list.field_with_helper(:my_fecha(:inicio) )
+                                       ^
+Function body:           def _run_erb_app47views47admin47legajos47_list46html46erb_locals_list_object(local_assigns)
+            old_output_buffer = output_buffer;list = local_assigns[:list];object = local_assigns[:object];;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat(( list_builder_for @records do |list|
+      list.field_with_helper(:h, :id)
+      list.nombre
+      list.telefonos
+      list.codigo_agrupacion
+      list.field_with_helper(:my_fecha(:inicio) )
+      #list.inicio
+      list.html :caption => 'Direcciones' do |d|
+         link_to 'Editar', admin_legajo_direccion_de_legajos_path(d)
+      end
+      list.html :caption => 'Documentos' do |d|
+         link_to 'Editar', admin_legajo_documento_de_legajos_path(d)
+      end
+      list.html :caption => 'Familiares' do |f|
+         link_to 'Editar', admin_legajo_familiar_de_legajos_path(f)
+      end
+    end ).to_s); @output_buffer.concat "\n"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: z:/web/rails/linea19/app/views/admin/legajos/_list.html.erb:21:in `compile!'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable_partial.rb:20:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:26:in `benchmark'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:26:in `benchmark'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable_partial.rb:19:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable_partial.rb:44:in `render_partial'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/partials.rb:184:in `render_partial'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:267:in `render'
+z:/web/rails/linea19/vendor/plugins/administrate_me/lib/admin_view/backend.rb:92:in `show_section_body'
+z:/web/rails/linea19/app/views/commons/index.html.erb:3:in `_run_erb_app47views47commons47index46html46erb'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:34:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:34:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:306:in `with_template'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:30:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:936:in `render_without_benchmark'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+z:/web/rails/linea19/vendor/plugins/administrate_me/lib/administrate_me/admin_scaffold/actions.rb:14
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+z:/web/rails/linea19/vendor/plugins/administrate_me/lib/administrate_me/admin_scaffold/actions.rb:13:in `index'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:14:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+z:/web/rails/linea19/app/views/admin/legajos/_list.html.erb:6: syntax error, unexpected '(', expecting ')'
+      list.field_with_helper(:my_fecha(:inicio) )
+                                       ^) on line #6 of app/views/admin/legajos/_list.html.erb:
+3:       list.nombre
+4:       list.telefonos
+5:       list.codigo_agrupacion
+6:       list.field_with_helper(:my_fecha(:inicio) )
+7:       #list.inicio
+8:       list.html :caption => 'Direcciones' do |d|
+9:          link_to 'Editar', admin_legajo_direccion_de_legajos_path(d)
+
+    app/views/admin/legajos/_list.html.erb:21:in `compile!'
+    app/views/commons/index.html.erb:3
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (156.3ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-18 14:05:50) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-18 14:05:50', "perishable_token" = '7n4QlIhe2DZ6iYs-eqbz', "last_request_at" = '2010-09-18 17:05:50' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" ORDER BY nombre LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+ERROR: compiling _run_erb_app47views47admin47legajos47_list46html46erb_locals_list_object RAISED compile error
+z:/web/rails/linea19/app/views/admin/legajos/_list.html.erb:6: syntax error, unexpected '(', expecting ')'
+      list.field_with_helper(:my_fecha(:inicio))
+                                       ^
+Function body:           def _run_erb_app47views47admin47legajos47_list46html46erb_locals_list_object(local_assigns)
+            old_output_buffer = output_buffer;list = local_assigns[:list];object = local_assigns[:object];;@output_buffer = '';  __in_erb_template=true ; @output_buffer.concat(( list_builder_for @records do |list|
+      list.field_with_helper(:h, :id)
+      list.nombre
+      list.telefonos
+      list.codigo_agrupacion
+      list.field_with_helper(:my_fecha(:inicio))
+      #list.inicio
+      list.html :caption => 'Direcciones' do |d|
+         link_to 'Editar', admin_legajo_direccion_de_legajos_path(d)
+      end
+      list.html :caption => 'Documentos' do |d|
+         link_to 'Editar', admin_legajo_documento_de_legajos_path(d)
+      end
+      list.html :caption => 'Familiares' do |f|
+         link_to 'Editar', admin_legajo_familiar_de_legajos_path(f)
+      end
+    end ).to_s); @output_buffer.concat "\n"
+; @output_buffer
+          ensure
+            self.output_buffer = old_output_buffer
+          end
+Backtrace: z:/web/rails/linea19/app/views/admin/legajos/_list.html.erb:21:in `compile!'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:61:in `compile'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:28:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable_partial.rb:20:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:26:in `benchmark'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:26:in `benchmark'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable_partial.rb:19:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable_partial.rb:44:in `render_partial'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/partials.rb:184:in `render_partial'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:267:in `render'
+z:/web/rails/linea19/vendor/plugins/administrate_me/lib/admin_view/backend.rb:92:in `show_section_body'
+z:/web/rails/linea19/app/views/commons/index.html.erb:3:in `_run_erb_app47views47commons47index46html46erb'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:34:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:34:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:306:in `with_template'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/renderable.rb:30:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/template.rb:205:in `render_template'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:265:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:348:in `_render_with_layout'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_view/base.rb:262:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1250:in `render_for_file'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:936:in `render_without_benchmark'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:51:in `render'
+z:/web/rails/linea19/vendor/plugins/administrate_me/lib/administrate_me/admin_scaffold/actions.rb:14
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:135
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:179:in `respond'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:173:in `respond'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/mime_responds.rb:107:in `respond_to'
+z:/web/rails/linea19/vendor/plugins/administrate_me/lib/administrate_me/admin_scaffold/actions.rb:13:in `index'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:1331:in `perform_action_without_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:617:in `call_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:610:in `perform_action_without_benchmark'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/1.8/benchmark.rb:308:in `realtime'
+c:/Ruby/lib/ruby/gems/1.8/gems/activesupport-2.3.8/lib/active_support/core_ext/benchmark.rb:17:in `ms'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/rescue.rb:160:in `perform_action_without_flash'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/flash.rb:151:in `perform_action'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `send'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:532:in `process_without_filters'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/filters.rb:606:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:391:in `process'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/base.rb:386:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/routing/route_set.rb:438:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:87:in `dispatch'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:121:in `_call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:130
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:29:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/query_cache.rb:34:in `cache'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:9:in `cache'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/query_cache.rb:28:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/activerecord-2.3.8/lib/active_record/connection_adapters/abstract/connection_pool.rb:361:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/string_coercion.rb:25:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/head.rb:9:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/methodoverride.rb:24:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/params_parser.rb:15:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/session/cookie_store.rb:99:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/failsafe.rb:26:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `synchronize'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/lock.rb:11:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:114:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/reloader.rb:34:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/actionpack-2.3.8/lib/action_controller/dispatcher.rb:108:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/static.rb:31:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:47:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `each'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/urlmap.rb:41:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/rails/rack/log_tailer.rb:17:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/content_length.rb:13:in `call'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:48:in `service'
+c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+c:/Ruby/lib/ruby/gems/1.8/gems/rack-1.1.0/lib/rack/handler/webrick.rb:14:in `run'
+c:/Ruby/lib/ruby/gems/1.8/gems/rails-2.3.8/lib/commands/server.rb:111
+c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `gem_original_require'
+c:/Ruby/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:31:in `require'
+script/server:3
+
+ActionView::TemplateError (compile error
+z:/web/rails/linea19/app/views/admin/legajos/_list.html.erb:6: syntax error, unexpected '(', expecting ')'
+      list.field_with_helper(:my_fecha(:inicio))
+                                       ^) on line #6 of app/views/admin/legajos/_list.html.erb:
+3:       list.nombre
+4:       list.telefonos
+5:       list.codigo_agrupacion
+6:       list.field_with_helper(:my_fecha(:inicio))
+7:       #list.inicio
+8:       list.html :caption => 'Direcciones' do |d|
+9:          link_to 'Editar', admin_legajo_direccion_de_legajos_path(d)
+
+    app/views/admin/legajos/_list.html.erb:21:in `compile!'
+    app/views/commons/index.html.erb:3
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (140.6ms)
+Rendered rescues/_request_and_response (15.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-18 14:05:58) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-18 14:05:58', "perishable_token" = 'Kuej36TYwFHMZr63NLy1', "last_request_at" = '2010-09-18 17:05:58' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" ORDER BY nombre LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+
+ActionView::TemplateError (wrong number of arguments (1 for 0)) on line #1 of app/views/admin/legajos/_list.html.erb:
+1: <%= list_builder_for @records do |list|
+2:       list.field_with_helper(:h, :id)
+3:       list.nombre
+4:       list.telefonos
+
+    app/helpers/admin/legajos_helper.rb:4:in `to_s'
+    app/helpers/admin/legajos_helper.rb:4:in `my_fecha'
+    app/views/admin/legajos/_list.html.erb:1
+    app/views/commons/index.html.erb:3
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (171.9ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-18 14:07:03) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (15.6ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-09-18 14:07:03', "perishable_token" = 'IRNz5w_ze243rEIOEHNA', "last_request_at" = '2010-09-18 17:07:03' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" ORDER BY nombre LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/legajos/_list (140.6ms)
+Rendered commons/_session (0.0ms)
+Completed in 984ms (View: 734, DB: 16) | 200 OK [http://localhost/admin/legajos]
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-09-18 14:07:45) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (15.6ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-09-18 14:07:45', "perishable_token" = 'gYpGpnkkNPv7XYxLOMO8', "last_request_at" = '2010-09-18 17:07:45' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" ORDER BY nombre LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/legajos/_list (62.5ms)
+Rendered commons/_session (0.0ms)
+Completed in 391ms (View: 156, DB: 16) | 200 OK [http://localhost/admin/legajos]

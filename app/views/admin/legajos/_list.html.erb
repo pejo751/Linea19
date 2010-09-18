@@ -3,8 +3,8 @@
       list.nombre
       list.telefonos
       list.codigo_agrupacion
-      list.field_with_helper(:my_fecha, :inicio)
-      #list.inicio
+      #list.field_with_helper(:my_fecha, :inicio)
+      list.inicio.to_s(:my_date)
       list.html :caption => 'Direcciones' do |d|
          link_to 'Editar', admin_legajo_direccion_de_legajos_path(d)
       end
