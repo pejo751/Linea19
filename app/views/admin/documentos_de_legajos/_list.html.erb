@@ -8,3 +8,9 @@
       list.usuario_verificador
       list.url_imagen
     end %>
+
+<% content_for :extras do %>
+  <% filters_for do %>
+    <%= all_filters %>
+  <% end %>
+<% end %>
