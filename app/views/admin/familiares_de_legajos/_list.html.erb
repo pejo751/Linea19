@@ -1,11 +1,12 @@
 <%= list_builder_for @records do |list|
-      list.legajo_id :align => :center
-      list.legajo :with => :nombre, :caption => 'Nombre Legajo'
+      #list.legajo_id :align => :center, :caption => 'Id'
+      list.legajo :with => :legajo, :caption => 'Legajo'
+      list.legajo :with => :nombre, :caption => 'Nombre'
       list.tipo_familiar
       list.nombre
       list.tipo_documento
       list.documento
       list.c_u_i_f
       list.nacimiento
-      list.observaciones
+      #list.observaciones
     end %>

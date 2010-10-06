@@ -1,8 +1,9 @@
 <%= list_builder_for @records do |list|
-      list.field_with_helper(:h, :id)
+      #list.field_with_helper(:h, :id)
+      list.legajo
       list.nombre
       list.telefonos
-      list.codigo_agrupacion
+      #list.codigo_agrupacion
       #list.field_with_helper(:my_fecha, :inicio)
       list.inicio.to_s(:my_date)
       list.html :caption => 'Direcciones' do |d|

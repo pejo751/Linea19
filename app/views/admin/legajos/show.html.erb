@@ -1,10 +1,14 @@
 
-<%= image_tag @resource.foto.url %>
- 
+<!-- <%= unless @resource.foto.url.nil?
+   image_tag @resource.foto.url
+   end
+%>
+ -->
+  
 <%=
   present :elegant do |p|
     p.header do |r|
-      r.field 'Id', @resource.id
+      r.field 'Legajo', @resource.legajo
     end
     p.body do |r|
       r.field 'Nombre', @resource.nombre
@@ -22,6 +26,7 @@
       r.field 'Tamano de foto', @resource.foto_file_size
       r.field 'Actualizacion de foto', @resource.foto_updated_at
       r.field 'Observaciones', @resource.observaciones
+      r.field 'Id', @resource.id
       r.field 'Created at', @resource.created_at
       r.field 'Updated at', @resource.updated_at
     end
