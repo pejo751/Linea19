@@ -2,9 +2,7 @@ class Admin::DocumentosDeLegajosController < Admin::CoreController
 	administrate_me do |admin|
 		admin.except :new, :show, :edit, :destroy
 		admin.includes :legajo
-		admin.search 'legajos.legajo'
-		#admin.search :descripcion
-		#admin.order 'legajo_id, descripcion'
+		admin.search 'legajos.nombre'
 		admin.order 'legajos.nombre'
 		admin.filters do |f|
 			f.set :vencidos, :conditions => ['vencimiento < ?', Date.today]

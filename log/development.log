@@ -40081,3 +40081,522 @@ Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-10-08 10:37:02)
 Rendered commons/_pagination (0.0ms)
 Rendered admin/legajos/_list (78.1ms)
 Completed in 2375ms (View: 109, DB: 31) | 200 OK [http://localhost/admin/legajos?authenticity_token=SI%2Fu2ZTFCFxUv95sZBF9RK6%2BT66vHa5CSUiNJpQIl2c%3D&search_key=80&commit=Buscar]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-10-08 10:54:45) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (15.6ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-08 10:54:46', "perishable_token" = 'SMYfNxSYx9aMgdEITtjF', "last_request_at" = '2010-10-08 13:54:46' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/account
+Filter chain halted as [:require_no_user] rendered_or_redirected.
+Completed in 906ms (DB: 16) | 302 Found [http://localhost/]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2010-10-08 10:54:46) [GET]
+  Parameters: {"action"=>"show", "controller"=>"users"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-08 10:54:47', "perishable_token" = 'kLJn4icmPVON31K1L4MM', "last_request_at" = '2010-10-08 13:54:47' WHERE "id" = 1[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 516ms (View: 94, DB: 0) | 200 OK [http://localhost/account]
+
+
+Processing UserSessionsController#destroy (for 127.0.0.1 at 2010-10-08 10:54:50) [DELETE]
+  Parameters: {"action"=>"destroy", "_method"=>"delete", "authenticity_token"=>"SI/u2ZTFCFxUv95sZBF9RK6+T66vHa5CSUiNJpQIl2c=", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (15.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-08 10:54:50', "perishable_token" = '2my14kB_qh6QmPB4ujws', "last_request_at" = '2010-10-08 13:54:50' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/
+Completed in 234ms (DB: 16) | 302 Found [http://localhost/user_session]
+
+
+Processing UserSessionsController#new (for 127.0.0.1 at 2010-10-08 10:54:51) [GET]
+  Parameters: {"action"=>"new", "controller"=>"user_sessions"}
+Rendering template within layouts/application
+Rendering user_sessions/new
+Completed in 125ms (View: 47, DB: 0) | 200 OK [http://localhost/]
+
+
+Processing UserSessionsController#create (for 127.0.0.1 at 2010-10-08 10:54:59) [POST]
+  Parameters: {"commit"=>"Ingresar", "user_session"=>{"remember_me"=>"0", "password"=>"[FILTERED]", "login"=>"jorge"}, "action"=>"create", "authenticity_token"=>"SI/u2ZTFCFxUv95sZBF9RK6+T66vHa5CSUiNJpQIl2c=", "controller"=>"user_sessions"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE (LOWER("users".login) = 'jorge') LIMIT 1[0m
+  [4;35;1mUser Update (15.6ms)[0m   [0mUPDATE "users" SET "login_count" = 18, "updated_at" = '2010-10-08 10:55:00', "perishable_token" = 'a8joTFVdI4E7URgN2q_9', "last_request_at" = '2010-10-08 13:55:00', "last_login_at" = '2010-10-08 13:36:34', "current_login_at" = '2010-10-08 13:55:00' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/admin/legajos
+Completed in 969ms (DB: 16) | 302 Found [http://localhost/user_session]
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-10-08 10:55:00) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (15.6ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-08 10:55:00', "perishable_token" = 'dU8IEXLxZ17Zh-U4mOgO', "last_request_at" = '2010-10-08 13:55:00' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ((lower(legajos.legajo) like '%80%')) ORDER BY nombre LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (46.9ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/legajos/_list (218.8ms)
+Rendered commons/_session (0.0ms)
+Completed in 1047ms (View: 594, DB: 16) | 200 OK [http://localhost/admin/legajos]
+
+
+Processing Admin::DireccionesDeLegajosController#index (for 127.0.0.1 at 2010-10-08 10:55:07) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/direcciones_de_legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-10-08 10:55:07', "perishable_token" = 'l5bbS5U8ZZxxHXkYhsPW', "last_request_at" = '2010-10-08 13:55:07' WHERE "id" = 1[0m
+  [4;35;1mDireccionesDeLegajo Load (0.0ms)[0m   [0mSELECT * FROM "direccion_de_legajos" WHERE ((lower(legajo_id) like '%80%')) ORDER BY legajo_id, direccion LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/direcciones_de_legajos/_list (0.0ms)
+Rendered commons/_session (0.0ms)
+Completed in 625ms (View: 109, DB: 0) | 200 OK [http://localhost/admin/direcciones_de_legajos]
+
+
+Processing Admin::DireccionesDeLegajosController#index (for 127.0.0.1 at 2010-10-08 10:55:12) [GET]
+  Parameters: {"commit"=>"Buscar", "action"=>"index", "authenticity_token"=>"SI/u2ZTFCFxUv95sZBF9RK6+T66vHa5CSUiNJpQIl2c=", "controller"=>"admin/direcciones_de_legajos", "search_key"=>""}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-08 10:55:13', "perishable_token" = '1chfWdkQ7IjnlcOpA7QB', "last_request_at" = '2010-10-08 13:55:13' WHERE "id" = 1[0m
+  [4;36;1mDireccionesDeLegajo Load (15.6ms)[0m   [0;1mSELECT * FROM "direccion_de_legajos" ORDER BY legajo_id, direccion LIMIT 30 OFFSET 0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "direccion_de_legajos" [0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 1) [0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 2) [0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 3) [0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 4) [0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 5) [0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 6) [0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 7) [0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 9) [0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 10) [0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 11) [0m
+  [4;36;1mLegajo Load (15.6ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 12) [0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 13) [0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 14) [0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 15) [0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 16) [0m
+  [4;35;1mLegajo Load (15.6ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 17) [0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 19) [0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 20) [0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 23) [0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 24) [0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 25) [0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 26) [0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 27) [0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 28) [0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 29) [0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 30) [0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 31) [0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 32) [0m
+  [4;36;1mLegajo Load (15.6ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 33) [0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 34) [0m
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47commons47_pagination46html46erb_locals_collection_object_pagination at z:/web/rails/linea19/app/views/commons/_pagination.html.erb:2)
+Rendered commons/_pagination (15.6ms)
+Rendered admin/direcciones_de_legajos/_list (250.0ms)
+Completed in 938ms (View: 234, DB: 63) | 200 OK [http://localhost/admin/direcciones_de_legajos?authenticity_token=SI%2Fu2ZTFCFxUv95sZBF9RK6%2BT66vHa5CSUiNJpQIl2c%3D&search_key=&commit=Buscar]
+
+
+Processing Admin::DireccionesDeLegajosController#index (for 127.0.0.1 at 2010-10-08 10:55:16) [GET]
+  Parameters: {"commit"=>"Buscar", "action"=>"index", "authenticity_token"=>"SI/u2ZTFCFxUv95sZBF9RK6+T66vHa5CSUiNJpQIl2c=", "controller"=>"admin/direcciones_de_legajos", "search_key"=>"80"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-08 10:55:16', "perishable_token" = '4W9hO7p2puX4bbzb3FkM', "last_request_at" = '2010-10-08 13:55:16' WHERE "id" = 1[0m
+  [4;36;1mDireccionesDeLegajo Load (15.6ms)[0m   [0;1mSELECT * FROM "direccion_de_legajos" WHERE ((lower(legajo_id) like '%80%')) ORDER BY legajo_id, direccion LIMIT 30 OFFSET 0[0m
+Rendered commons/_pagination (0.0ms)
+Rendered admin/direcciones_de_legajos/_list (31.3ms)
+Completed in 328ms (View: 47, DB: 16) | 200 OK [http://localhost/admin/direcciones_de_legajos?authenticity_token=SI%2Fu2ZTFCFxUv95sZBF9RK6%2BT66vHa5CSUiNJpQIl2c%3D&search_key=80&commit=Buscar]
+
+
+Processing Admin::DireccionesDeLegajosController#index (for 127.0.0.1 at 2010-10-08 10:55:20) [GET]
+  Parameters: {"commit"=>"Buscar", "action"=>"index", "authenticity_token"=>"SI/u2ZTFCFxUv95sZBF9RK6+T66vHa5CSUiNJpQIl2c=", "controller"=>"admin/direcciones_de_legajos", "search_key"=>""}
+  [4;35;1mUser Load (15.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (15.6ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-10-08 10:55:20', "perishable_token" = 'VhTvahezIBRSdJM-AaB0', "last_request_at" = '2010-10-08 13:55:20' WHERE "id" = 1[0m
+  [4;35;1mDireccionesDeLegajo Load (31.3ms)[0m   [0mSELECT * FROM "direccion_de_legajos" ORDER BY legajo_id, direccion LIMIT 30 OFFSET 0[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "direccion_de_legajos" [0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 1) [0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 2) [0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 3) [0m
+  [4;36;1mLegajo Load (15.6ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 4) [0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 5) [0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 6) [0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 7) [0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 9) [0m
+  [4;35;1mLegajo Load (15.6ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 10) [0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 11) [0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 12) [0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 13) [0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 14) [0m
+  [4;36;1mLegajo Load (15.6ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 15) [0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 16) [0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 17) [0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 19) [0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 20) [0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 23) [0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 24) [0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 25) [0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 26) [0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 27) [0m
+  [4;36;1mLegajo Load (15.6ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 28) [0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 29) [0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 30) [0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 31) [0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 32) [0m
+  [4;35;1mLegajo Load (15.6ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 33) [0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 34) [0m
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47commons47_pagination46html46erb_locals_collection_object_pagination at z:/web/rails/linea19/app/views/commons/_pagination.html.erb:2)
+Rendered commons/_pagination (15.6ms)
+Rendered admin/direcciones_de_legajos/_list (546.9ms)
+Completed in 1297ms (View: 516, DB: 141) | 200 OK [http://localhost/admin/direcciones_de_legajos?authenticity_token=SI%2Fu2ZTFCFxUv95sZBF9RK6%2BT66vHa5CSUiNJpQIl2c%3D&search_key=&commit=Buscar]
+
+
+Processing Admin::DireccionesDeLegajosController#index (for 127.0.0.1 at 2010-10-08 10:55:36) [GET]
+  Parameters: {"commit"=>"Buscar", "action"=>"index", "authenticity_token"=>"SI/u2ZTFCFxUv95sZBF9RK6+T66vHa5CSUiNJpQIl2c=", "controller"=>"admin/direcciones_de_legajos", "search_key"=>"80"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (15.6ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-10-08 10:55:36', "perishable_token" = 'WdG4-8SfyGGkmeP9kmO3', "last_request_at" = '2010-10-08 13:55:36' WHERE "id" = 1[0m
+  [4;35;1mDireccionesDeLegajo Load (0.0ms)[0m   [0mSELECT * FROM "direccion_de_legajos" WHERE ((lower(legajo_id) like '%80%')) ORDER BY legajo_id, direccion LIMIT 30 OFFSET 0[0m
+Rendered commons/_pagination (15.6ms)
+Rendered admin/direcciones_de_legajos/_list (15.6ms)
+Completed in 2031ms (View: 31, DB: 16) | 200 OK [http://localhost/admin/direcciones_de_legajos?authenticity_token=SI%2Fu2ZTFCFxUv95sZBF9RK6%2BT66vHa5CSUiNJpQIl2c%3D&search_key=80&commit=Buscar]
+
+
+Processing Admin::DireccionesDeLegajosController#index (for 127.0.0.1 at 2010-10-08 10:56:27) [GET]
+  Parameters: {"commit"=>"Buscar", "action"=>"index", "authenticity_token"=>"SI/u2ZTFCFxUv95sZBF9RK6+T66vHa5CSUiNJpQIl2c=", "controller"=>"admin/direcciones_de_legajos", "search_key"=>""}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-08 10:56:27', "perishable_token" = 'ZOeuc5MvnWgYjbWq-rz1', "last_request_at" = '2010-10-08 13:56:27' WHERE "id" = 1[0m
+  [4;36;1mDireccionesDeLegajo Load (31.3ms)[0m   [0;1mSELECT * FROM "direccion_de_legajos" ORDER BY legajo_id, direccion LIMIT 30 OFFSET 0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "direccion_de_legajos" [0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 1) [0m
+  [4;35;1mLegajo Load (15.6ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 2) [0m
+  [4;36;1mLegajo Load (15.6ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 3) [0m
+  [4;35;1mLegajo Load (15.6ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 4) [0m
+  [4;36;1mLegajo Load (15.6ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 5) [0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 6) [0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 7) [0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 9) [0m
+  [4;36;1mLegajo Load (15.6ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 10) [0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 11) [0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 12) [0m
+  [4;35;1mLegajo Load (15.6ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 13) [0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 14) [0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 15) [0m
+  [4;36;1mLegajo Load (15.6ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 16) [0m
+  [4;35;1mLegajo Load (15.6ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 17) [0m
+  [4;36;1mLegajo Load (15.6ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 19) [0m
+  [4;35;1mLegajo Load (15.6ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 20) [0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 23) [0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 24) [0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 25) [0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 26) [0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 27) [0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 28) [0m
+  [4;36;1mLegajo Load (15.6ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 29) [0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 30) [0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 31) [0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 32) [0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 33) [0m
+  [4;35;1mLegajo Load (15.6ms)[0m   [0mSELECT * FROM "legajos" WHERE ("legajos"."id" = 34) [0m
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47commons47_pagination46html46erb_locals_collection_object_pagination at z:/web/rails/linea19/app/views/commons/_pagination.html.erb:2)
+Rendered commons/_pagination (31.3ms)
+Rendered admin/direcciones_de_legajos/_list (890.6ms)
+Completed in 1359ms (View: 797, DB: 219) | 200 OK [http://localhost/admin/direcciones_de_legajos?authenticity_token=SI%2Fu2ZTFCFxUv95sZBF9RK6%2BT66vHa5CSUiNJpQIl2c%3D&search_key=&commit=Buscar]
+
+
+Processing Admin::DireccionesDeLegajosController#index (for 127.0.0.1 at 2010-10-08 11:04:20) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/direcciones_de_legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-08 11:04:21', "perishable_token" = '6c_yzJhjYMQu8phit0xZ', "last_request_at" = '2010-10-08 14:04:21' WHERE "id" = 1[0m
+  [4;36;1mDireccionesDeLegajo Load IDs For Limited Eager Loading (0.0ms)[0m   [0;1mSELECT DISTINCT "direccion_de_legajos".id FROM "direccion_de_legajos" LEFT OUTER JOIN "legajos" ON "legajos".id = "direccion_de_legajos".legajo_id ORDER BY legajos.nombre LIMIT 30 OFFSET 0[0m
+  [4;35;1mDireccionesDeLegajo Load Including Associations (0.0ms)[0m   [0mSELECT "direccion_de_legajos"."id" AS t0_r0, "direccion_de_legajos"."legajo_id" AS t0_r1, "direccion_de_legajos"."tipo_direccion" AS t0_r2, "direccion_de_legajos"."direccion" AS t0_r3, "direccion_de_legajos"."barrio" AS t0_r4, "direccion_de_legajos"."ciudad" AS t0_r5, "direccion_de_legajos"."provincia" AS t0_r6, "direccion_de_legajos"."created_at" AS t0_r7, "direccion_de_legajos"."updated_at" AS t0_r8, "legajos"."id" AS t1_r0, "legajos"."nombre" AS t1_r1, "legajos"."tipo_documento" AS t1_r2, "legajos"."documento" AS t1_r3, "legajos"."c_u_i_f" AS t1_r4, "legajos"."telefonos" AS t1_r5, "legajos"."inicio" AS t1_r6, "legajos"."nacimiento" AS t1_r7, "legajos"."estado_civil" AS t1_r8, "legajos"."nivel_estudio" AS t1_r9, "legajos"."codigo_agrupacion" AS t1_r10, "legajos"."observaciones" AS t1_r11, "legajos"."created_at" AS t1_r12, "legajos"."updated_at" AS t1_r13, "legajos"."foto_file_name" AS t1_r14, "legajos"."foto_content_type" AS t1_r15, "legajos"."foto_file_size" AS t1_r16, "legajos"."foto_updated_at" AS t1_r17, "legajos"."legajo" AS t1_r18 FROM "direccion_de_legajos" LEFT OUTER JOIN "legajos" ON "legajos".id = "direccion_de_legajos".legajo_id WHERE "direccion_de_legajos".id IN (1, 6, 2, 4, 5, 3, 11, 7, 19, 9, 10, 13, 14, 15, 12, 17, 16, 20, 22, 23, 21, 24, 26, 25, 29, 28, 27, 32, 33, 35) ORDER BY legajos.nombre[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "direccion_de_legajos" [0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47commons47_pagination46html46erb_locals_collection_object_pagination at z:/web/rails/linea19/app/views/commons/_pagination.html.erb:2)
+Rendered commons/_pagination (15.6ms)
+Rendered admin/direcciones_de_legajos/_list (46.9ms)
+Rendered commons/_session (0.0ms)
+Completed in 500ms (View: 125, DB: 0) | 200 OK [http://localhost/admin/direcciones_de_legajos]
+
+
+Processing Admin::DireccionesDeLegajosController#index (for 127.0.0.1 at 2010-10-08 11:04:28) [GET]
+  Parameters: {"commit"=>"Buscar", "action"=>"index", "authenticity_token"=>"SI/u2ZTFCFxUv95sZBF9RK6+T66vHa5CSUiNJpQIl2c=", "controller"=>"admin/direcciones_de_legajos", "search_key"=>"acosta"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (15.6ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-10-08 11:04:28', "perishable_token" = 'clOv9cZEE2zSGRyHT3XU', "last_request_at" = '2010-10-08 14:04:28' WHERE "id" = 1[0m
+  [4;35;1mDireccionesDeLegajo Load IDs For Limited Eager Loading (15.6ms)[0m   [0mSELECT DISTINCT "direccion_de_legajos".id FROM "direccion_de_legajos" LEFT OUTER JOIN "legajos" ON "legajos".id = "direccion_de_legajos".legajo_id WHERE ((lower(legajos.legajo) like '%acosta%')) ORDER BY legajos.nombre LIMIT 30 OFFSET 0[0m
+Rendered commons/_pagination (0.0ms)
+Rendered admin/direcciones_de_legajos/_list (31.3ms)
+Completed in 516ms (View: 47, DB: 31) | 200 OK [http://localhost/admin/direcciones_de_legajos?authenticity_token=SI%2Fu2ZTFCFxUv95sZBF9RK6%2BT66vHa5CSUiNJpQIl2c%3D&search_key=acosta&commit=Buscar]
+
+
+Processing Admin::DireccionesDeLegajosController#index (for 127.0.0.1 at 2010-10-08 11:04:51) [GET]
+  Parameters: {"commit"=>"Buscar", "action"=>"index", "authenticity_token"=>"SI/u2ZTFCFxUv95sZBF9RK6+T66vHa5CSUiNJpQIl2c=", "controller"=>"admin/direcciones_de_legajos", "search_key"=>"ACOSTA"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-08 11:04:51', "perishable_token" = 'RTOHk8JzxbxPKHQN26he', "last_request_at" = '2010-10-08 14:04:51' WHERE "id" = 1[0m
+  [4;36;1mDireccionesDeLegajo Load IDs For Limited Eager Loading (0.0ms)[0m   [0;1mSELECT DISTINCT "direccion_de_legajos".id FROM "direccion_de_legajos" LEFT OUTER JOIN "legajos" ON "legajos".id = "direccion_de_legajos".legajo_id WHERE ((lower(legajos.legajo) like '%acosta%')) ORDER BY legajos.nombre LIMIT 30 OFFSET 0[0m
+Rendered commons/_pagination (0.0ms)
+Rendered admin/direcciones_de_legajos/_list (15.6ms)
+Completed in 734ms (View: 31, DB: 0) | 200 OK [http://localhost/admin/direcciones_de_legajos?authenticity_token=SI%2Fu2ZTFCFxUv95sZBF9RK6%2BT66vHa5CSUiNJpQIl2c%3D&search_key=ACOSTA&commit=Buscar]
+
+
+Processing Admin::DireccionesDeLegajosController#index (for 127.0.0.1 at 2010-10-08 11:05:16) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/direcciones_de_legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-10-08 11:05:16', "perishable_token" = 'bUgTYm3epKeznYd8lVij', "last_request_at" = '2010-10-08 14:05:16' WHERE "id" = 1[0m
+  [4;35;1mDireccionesDeLegajo Load IDs For Limited Eager Loading (15.6ms)[0m   [0mSELECT DISTINCT "direccion_de_legajos".id FROM "direccion_de_legajos" LEFT OUTER JOIN "legajos" ON "legajos".id = "direccion_de_legajos".legajo_id WHERE ((lower(UPPER(legajos.legajo)) like '%acosta%')) ORDER BY legajos.nombre LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/direcciones_de_legajos/_list (0.0ms)
+Rendered commons/_session (0.0ms)
+Completed in 406ms (View: 78, DB: 16) | 200 OK [http://localhost/admin/direcciones_de_legajos]
+
+
+Processing Admin::DireccionesDeLegajosController#index (for 127.0.0.1 at 2010-10-08 11:06:32) [GET]
+  Parameters: {"commit"=>"Buscar", "action"=>"index", "authenticity_token"=>"SI/u2ZTFCFxUv95sZBF9RK6+T66vHa5CSUiNJpQIl2c=", "controller"=>"admin/direcciones_de_legajos", "search_key"=>""}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-08 11:06:32', "perishable_token" = 'ZC3wa1vuJKBdKXJZM_Ku', "last_request_at" = '2010-10-08 14:06:32' WHERE "id" = 1[0m
+  [4;36;1mDireccionesDeLegajo Load IDs For Limited Eager Loading (0.0ms)[0m   [0;1mSELECT DISTINCT "direccion_de_legajos".id FROM "direccion_de_legajos" LEFT OUTER JOIN "legajos" ON "legajos".id = "direccion_de_legajos".legajo_id ORDER BY legajos.nombre LIMIT 30 OFFSET 0[0m
+  [4;35;1mDireccionesDeLegajo Load Including Associations (15.6ms)[0m   [0mSELECT "direccion_de_legajos"."id" AS t0_r0, "direccion_de_legajos"."legajo_id" AS t0_r1, "direccion_de_legajos"."tipo_direccion" AS t0_r2, "direccion_de_legajos"."direccion" AS t0_r3, "direccion_de_legajos"."barrio" AS t0_r4, "direccion_de_legajos"."ciudad" AS t0_r5, "direccion_de_legajos"."provincia" AS t0_r6, "direccion_de_legajos"."created_at" AS t0_r7, "direccion_de_legajos"."updated_at" AS t0_r8, "legajos"."id" AS t1_r0, "legajos"."nombre" AS t1_r1, "legajos"."tipo_documento" AS t1_r2, "legajos"."documento" AS t1_r3, "legajos"."c_u_i_f" AS t1_r4, "legajos"."telefonos" AS t1_r5, "legajos"."inicio" AS t1_r6, "legajos"."nacimiento" AS t1_r7, "legajos"."estado_civil" AS t1_r8, "legajos"."nivel_estudio" AS t1_r9, "legajos"."codigo_agrupacion" AS t1_r10, "legajos"."observaciones" AS t1_r11, "legajos"."created_at" AS t1_r12, "legajos"."updated_at" AS t1_r13, "legajos"."foto_file_name" AS t1_r14, "legajos"."foto_content_type" AS t1_r15, "legajos"."foto_file_size" AS t1_r16, "legajos"."foto_updated_at" AS t1_r17, "legajos"."legajo" AS t1_r18 FROM "direccion_de_legajos" LEFT OUTER JOIN "legajos" ON "legajos".id = "direccion_de_legajos".legajo_id WHERE "direccion_de_legajos".id IN (1, 6, 2, 4, 5, 3, 11, 7, 19, 9, 10, 13, 14, 15, 12, 17, 16, 20, 22, 23, 21, 24, 26, 25, 29, 28, 27, 32, 33, 35) ORDER BY legajos.nombre[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "direccion_de_legajos" [0m
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47commons47_pagination46html46erb_locals_collection_object_pagination at z:/web/rails/linea19/app/views/commons/_pagination.html.erb:2)
+Rendered commons/_pagination (15.6ms)
+Rendered admin/direcciones_de_legajos/_list (46.9ms)
+Completed in 438ms (View: 78, DB: 16) | 200 OK [http://localhost/admin/direcciones_de_legajos?authenticity_token=SI%2Fu2ZTFCFxUv95sZBF9RK6%2BT66vHa5CSUiNJpQIl2c%3D&search_key=&commit=Buscar]
+
+
+Processing Admin::DireccionesDeLegajosController#index (for 127.0.0.1 at 2010-10-08 11:07:21) [GET]
+  Parameters: {"commit"=>"Buscar", "action"=>"index", "authenticity_token"=>"SI/u2ZTFCFxUv95sZBF9RK6+T66vHa5CSUiNJpQIl2c=", "controller"=>"admin/direcciones_de_legajos", "search_key"=>"ale"}
+  [4;35;1mUser Load (15.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-10-08 11:07:21', "perishable_token" = 'jx9PJt_ADoAfCfuKnPqu', "last_request_at" = '2010-10-08 14:07:21' WHERE "id" = 1[0m
+  [4;35;1mDireccionesDeLegajo Load IDs For Limited Eager Loading (0.0ms)[0m   [0mSELECT DISTINCT "direccion_de_legajos".id FROM "direccion_de_legajos" LEFT OUTER JOIN "legajos" ON "legajos".id = "direccion_de_legajos".legajo_id WHERE ((lower(UPPER(legajos.legajo)) like '%ale%')) ORDER BY legajos.nombre LIMIT 30 OFFSET 0[0m
+Rendered commons/_pagination (0.0ms)
+Rendered admin/direcciones_de_legajos/_list (15.6ms)
+Completed in 2109ms (View: 156, DB: 16) | 200 OK [http://localhost/admin/direcciones_de_legajos?authenticity_token=SI%2Fu2ZTFCFxUv95sZBF9RK6%2BT66vHa5CSUiNJpQIl2c%3D&search_key=ale&commit=Buscar]
+
+
+Processing Admin::DireccionesDeLegajosController#index (for 127.0.0.1 at 2010-10-08 11:08:10) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/direcciones_de_legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-08 11:08:10', "perishable_token" = 'B0eH2XzCoMjTv00JkNip', "last_request_at" = '2010-10-08 14:08:10' WHERE "id" = 1[0m
+
+SyntaxError ((eval):1:in `conditions_for': compile error
+(eval):1: syntax error, unexpected tIDENTIFIER, expecting ']'
+["lower("legajos.legajo") like ?", '%' + @search_key.downcase + '%']
+                ^
+(eval):1: syntax error, unexpected ']', expecting $end
+["lower("legajos.legajo") like ?", '%' + @search_key.downcase + '%']
+                                                                    ^):
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+  c:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+  c:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (312.5ms)
+Rendered rescues/_request_and_response (15.6ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::DireccionesDeLegajosController#index (for 127.0.0.1 at 2010-10-08 11:08:59) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/direcciones_de_legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (15.6ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-08 11:08:59', "perishable_token" = 'fdfGbdQaxMPzdcMNMktI', "last_request_at" = '2010-10-08 14:08:59' WHERE "id" = 1[0m
+  [4;36;1mDireccionesDeLegajo Load IDs For Limited Eager Loading (15.6ms)[0m   [0;1mSELECT DISTINCT "direccion_de_legajos".id FROM "direccion_de_legajos" LEFT OUTER JOIN "legajos" ON "legajos".id = "direccion_de_legajos".legajo_id WHERE ((lower(legajos.nombre) like '%ale%')) ORDER BY legajos.nombre LIMIT 30 OFFSET 0[0m
+  [4;35;1mDireccionesDeLegajo Load Including Associations (0.0ms)[0m   [0mSELECT "direccion_de_legajos"."id" AS t0_r0, "direccion_de_legajos"."legajo_id" AS t0_r1, "direccion_de_legajos"."tipo_direccion" AS t0_r2, "direccion_de_legajos"."direccion" AS t0_r3, "direccion_de_legajos"."barrio" AS t0_r4, "direccion_de_legajos"."ciudad" AS t0_r5, "direccion_de_legajos"."provincia" AS t0_r6, "direccion_de_legajos"."created_at" AS t0_r7, "direccion_de_legajos"."updated_at" AS t0_r8, "legajos"."id" AS t1_r0, "legajos"."nombre" AS t1_r1, "legajos"."tipo_documento" AS t1_r2, "legajos"."documento" AS t1_r3, "legajos"."c_u_i_f" AS t1_r4, "legajos"."telefonos" AS t1_r5, "legajos"."inicio" AS t1_r6, "legajos"."nacimiento" AS t1_r7, "legajos"."estado_civil" AS t1_r8, "legajos"."nivel_estudio" AS t1_r9, "legajos"."codigo_agrupacion" AS t1_r10, "legajos"."observaciones" AS t1_r11, "legajos"."created_at" AS t1_r12, "legajos"."updated_at" AS t1_r13, "legajos"."foto_file_name" AS t1_r14, "legajos"."foto_content_type" AS t1_r15, "legajos"."foto_file_size" AS t1_r16, "legajos"."foto_updated_at" AS t1_r17, "legajos"."legajo" AS t1_r18 FROM "direccion_de_legajos" LEFT OUTER JOIN "legajos" ON "legajos".id = "direccion_de_legajos".legajo_id WHERE ((lower(legajos.nombre) like '%ale%')) AND "direccion_de_legajos".id IN (6) ORDER BY legajos.nombre[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/direcciones_de_legajos/_list (15.6ms)
+Rendered commons/_session (0.0ms)
+Completed in 422ms (View: 94, DB: 31) | 200 OK [http://localhost/admin/direcciones_de_legajos]
+
+
+Processing Admin::DireccionesDeLegajosController#index (for 127.0.0.1 at 2010-10-08 11:09:23) [GET]
+  Parameters: {"commit"=>"Buscar", "action"=>"index", "authenticity_token"=>"SI/u2ZTFCFxUv95sZBF9RK6+T66vHa5CSUiNJpQIl2c=", "controller"=>"admin/direcciones_de_legajos", "search_key"=>"acosta"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-08 11:09:23', "perishable_token" = 'Mw09hsZ_U1Fg2jB2Kjnh', "last_request_at" = '2010-10-08 14:09:23' WHERE "id" = 1[0m
+  [4;36;1mDireccionesDeLegajo Load IDs For Limited Eager Loading (0.0ms)[0m   [0;1mSELECT DISTINCT "direccion_de_legajos".id FROM "direccion_de_legajos" LEFT OUTER JOIN "legajos" ON "legajos".id = "direccion_de_legajos".legajo_id WHERE ((lower(legajos.nombre) like '%acosta%')) ORDER BY legajos.nombre LIMIT 30 OFFSET 0[0m
+  [4;35;1mDireccionesDeLegajo Load Including Associations (15.6ms)[0m   [0mSELECT "direccion_de_legajos"."id" AS t0_r0, "direccion_de_legajos"."legajo_id" AS t0_r1, "direccion_de_legajos"."tipo_direccion" AS t0_r2, "direccion_de_legajos"."direccion" AS t0_r3, "direccion_de_legajos"."barrio" AS t0_r4, "direccion_de_legajos"."ciudad" AS t0_r5, "direccion_de_legajos"."provincia" AS t0_r6, "direccion_de_legajos"."created_at" AS t0_r7, "direccion_de_legajos"."updated_at" AS t0_r8, "legajos"."id" AS t1_r0, "legajos"."nombre" AS t1_r1, "legajos"."tipo_documento" AS t1_r2, "legajos"."documento" AS t1_r3, "legajos"."c_u_i_f" AS t1_r4, "legajos"."telefonos" AS t1_r5, "legajos"."inicio" AS t1_r6, "legajos"."nacimiento" AS t1_r7, "legajos"."estado_civil" AS t1_r8, "legajos"."nivel_estudio" AS t1_r9, "legajos"."codigo_agrupacion" AS t1_r10, "legajos"."observaciones" AS t1_r11, "legajos"."created_at" AS t1_r12, "legajos"."updated_at" AS t1_r13, "legajos"."foto_file_name" AS t1_r14, "legajos"."foto_content_type" AS t1_r15, "legajos"."foto_file_size" AS t1_r16, "legajos"."foto_updated_at" AS t1_r17, "legajos"."legajo" AS t1_r18 FROM "direccion_de_legajos" LEFT OUTER JOIN "legajos" ON "legajos".id = "direccion_de_legajos".legajo_id WHERE ((lower(legajos.nombre) like '%acosta%')) AND "direccion_de_legajos".id IN (1) ORDER BY legajos.nombre[0m
+Rendered commons/_pagination (0.0ms)
+Rendered admin/direcciones_de_legajos/_list (15.6ms)
+Completed in 375ms (View: 31, DB: 16) | 200 OK [http://localhost/admin/direcciones_de_legajos?authenticity_token=SI%2Fu2ZTFCFxUv95sZBF9RK6%2BT66vHa5CSUiNJpQIl2c%3D&search_key=acosta&commit=Buscar]
+
+
+Processing Admin::DireccionesDeLegajosController#index (for 127.0.0.1 at 2010-10-08 11:09:26) [GET]
+  Parameters: {"commit"=>"Buscar", "action"=>"index", "authenticity_token"=>"SI/u2ZTFCFxUv95sZBF9RK6+T66vHa5CSUiNJpQIl2c=", "controller"=>"admin/direcciones_de_legajos", "search_key"=>""}
+  [4;36;1mUser Load (15.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-08 11:09:26', "perishable_token" = 'NY1EWe6rrWM53UK_2FH3', "last_request_at" = '2010-10-08 14:09:26' WHERE "id" = 1[0m
+  [4;36;1mDireccionesDeLegajo Load IDs For Limited Eager Loading (0.0ms)[0m   [0;1mSELECT DISTINCT "direccion_de_legajos".id FROM "direccion_de_legajos" LEFT OUTER JOIN "legajos" ON "legajos".id = "direccion_de_legajos".legajo_id ORDER BY legajos.nombre LIMIT 30 OFFSET 0[0m
+  [4;35;1mDireccionesDeLegajo Load Including Associations (0.0ms)[0m   [0mSELECT "direccion_de_legajos"."id" AS t0_r0, "direccion_de_legajos"."legajo_id" AS t0_r1, "direccion_de_legajos"."tipo_direccion" AS t0_r2, "direccion_de_legajos"."direccion" AS t0_r3, "direccion_de_legajos"."barrio" AS t0_r4, "direccion_de_legajos"."ciudad" AS t0_r5, "direccion_de_legajos"."provincia" AS t0_r6, "direccion_de_legajos"."created_at" AS t0_r7, "direccion_de_legajos"."updated_at" AS t0_r8, "legajos"."id" AS t1_r0, "legajos"."nombre" AS t1_r1, "legajos"."tipo_documento" AS t1_r2, "legajos"."documento" AS t1_r3, "legajos"."c_u_i_f" AS t1_r4, "legajos"."telefonos" AS t1_r5, "legajos"."inicio" AS t1_r6, "legajos"."nacimiento" AS t1_r7, "legajos"."estado_civil" AS t1_r8, "legajos"."nivel_estudio" AS t1_r9, "legajos"."codigo_agrupacion" AS t1_r10, "legajos"."observaciones" AS t1_r11, "legajos"."created_at" AS t1_r12, "legajos"."updated_at" AS t1_r13, "legajos"."foto_file_name" AS t1_r14, "legajos"."foto_content_type" AS t1_r15, "legajos"."foto_file_size" AS t1_r16, "legajos"."foto_updated_at" AS t1_r17, "legajos"."legajo" AS t1_r18 FROM "direccion_de_legajos" LEFT OUTER JOIN "legajos" ON "legajos".id = "direccion_de_legajos".legajo_id WHERE "direccion_de_legajos".id IN (1, 6, 2, 4, 5, 3, 11, 7, 19, 9, 10, 13, 14, 15, 12, 17, 16, 20, 22, 23, 21, 24, 26, 25, 29, 28, 27, 32, 33, 35) ORDER BY legajos.nombre[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "direccion_de_legajos" [0m
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47commons47_pagination46html46erb_locals_collection_object_pagination at z:/web/rails/linea19/app/views/commons/_pagination.html.erb:2)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/direcciones_de_legajos/_list (62.5ms)
+Completed in 469ms (View: 78, DB: 16) | 200 OK [http://localhost/admin/direcciones_de_legajos?authenticity_token=SI%2Fu2ZTFCFxUv95sZBF9RK6%2BT66vHa5CSUiNJpQIl2c%3D&search_key=&commit=Buscar]
+
+
+Processing Admin::DireccionesDeLegajosController#index (for 127.0.0.1 at 2010-10-08 11:09:32) [GET]
+  Parameters: {"commit"=>"Buscar", "action"=>"index", "authenticity_token"=>"SI/u2ZTFCFxUv95sZBF9RK6+T66vHa5CSUiNJpQIl2c=", "controller"=>"admin/direcciones_de_legajos", "search_key"=>"bravo"}
+  [4;35;1mUser Load (15.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-10-08 11:09:33', "perishable_token" = 'iDr7ImVK_R-VTRhHk3yf', "last_request_at" = '2010-10-08 14:09:32' WHERE "id" = 1[0m
+  [4;35;1mDireccionesDeLegajo Load IDs For Limited Eager Loading (0.0ms)[0m   [0mSELECT DISTINCT "direccion_de_legajos".id FROM "direccion_de_legajos" LEFT OUTER JOIN "legajos" ON "legajos".id = "direccion_de_legajos".legajo_id WHERE ((lower(legajos.nombre) like '%bravo%')) ORDER BY legajos.nombre LIMIT 30 OFFSET 0[0m
+  [4;36;1mDireccionesDeLegajo Load Including Associations (15.6ms)[0m   [0;1mSELECT "direccion_de_legajos"."id" AS t0_r0, "direccion_de_legajos"."legajo_id" AS t0_r1, "direccion_de_legajos"."tipo_direccion" AS t0_r2, "direccion_de_legajos"."direccion" AS t0_r3, "direccion_de_legajos"."barrio" AS t0_r4, "direccion_de_legajos"."ciudad" AS t0_r5, "direccion_de_legajos"."provincia" AS t0_r6, "direccion_de_legajos"."created_at" AS t0_r7, "direccion_de_legajos"."updated_at" AS t0_r8, "legajos"."id" AS t1_r0, "legajos"."nombre" AS t1_r1, "legajos"."tipo_documento" AS t1_r2, "legajos"."documento" AS t1_r3, "legajos"."c_u_i_f" AS t1_r4, "legajos"."telefonos" AS t1_r5, "legajos"."inicio" AS t1_r6, "legajos"."nacimiento" AS t1_r7, "legajos"."estado_civil" AS t1_r8, "legajos"."nivel_estudio" AS t1_r9, "legajos"."codigo_agrupacion" AS t1_r10, "legajos"."observaciones" AS t1_r11, "legajos"."created_at" AS t1_r12, "legajos"."updated_at" AS t1_r13, "legajos"."foto_file_name" AS t1_r14, "legajos"."foto_content_type" AS t1_r15, "legajos"."foto_file_size" AS t1_r16, "legajos"."foto_updated_at" AS t1_r17, "legajos"."legajo" AS t1_r18 FROM "direccion_de_legajos" LEFT OUTER JOIN "legajos" ON "legajos".id = "direccion_de_legajos".legajo_id WHERE ((lower(legajos.nombre) like '%bravo%')) AND "direccion_de_legajos".id IN (19, 9, 10) ORDER BY legajos.nombre[0m
+Rendered commons/_pagination (0.0ms)
+Rendered admin/direcciones_de_legajos/_list (15.6ms)
+Completed in 922ms (View: 31, DB: 31) | 200 OK [http://localhost/admin/direcciones_de_legajos?authenticity_token=SI%2Fu2ZTFCFxUv95sZBF9RK6%2BT66vHa5CSUiNJpQIl2c%3D&search_key=bravo&commit=Buscar]
+
+
+Processing Admin::DocumentosDeLegajosController#index (for 127.0.0.1 at 2010-10-08 11:10:08) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/documentos_de_legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (15.6ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-10-08 11:10:09', "perishable_token" = 'EBBNmDVXBfW1qU8Hv7GY', "last_request_at" = '2010-10-08 14:10:09' WHERE "id" = 1[0m
+  [4;35;1mDocumentosDeLegajo Load IDs For Limited Eager Loading (15.6ms)[0m   [0mSELECT DISTINCT "documento_de_legajos".id FROM "documento_de_legajos" LEFT OUTER JOIN "legajos" ON "legajos".id = "documento_de_legajos".legajo_id ORDER BY legajos.nombre LIMIT 30 OFFSET 0[0m
+  [4;36;1mDocumentosDeLegajo Load Including Associations (15.6ms)[0m   [0;1mSELECT "documento_de_legajos"."id" AS t0_r0, "documento_de_legajos"."legajo_id" AS t0_r1, "documento_de_legajos"."tipo_documento" AS t0_r2, "documento_de_legajos"."descripcion" AS t0_r3, "documento_de_legajos"."vencimiento" AS t0_r4, "documento_de_legajos"."usuario_verificador" AS t0_r5, "documento_de_legajos"."url_imagen" AS t0_r6, "documento_de_legajos"."created_at" AS t0_r7, "documento_de_legajos"."updated_at" AS t0_r8, "legajos"."id" AS t1_r0, "legajos"."nombre" AS t1_r1, "legajos"."tipo_documento" AS t1_r2, "legajos"."documento" AS t1_r3, "legajos"."c_u_i_f" AS t1_r4, "legajos"."telefonos" AS t1_r5, "legajos"."inicio" AS t1_r6, "legajos"."nacimiento" AS t1_r7, "legajos"."estado_civil" AS t1_r8, "legajos"."nivel_estudio" AS t1_r9, "legajos"."codigo_agrupacion" AS t1_r10, "legajos"."observaciones" AS t1_r11, "legajos"."created_at" AS t1_r12, "legajos"."updated_at" AS t1_r13, "legajos"."foto_file_name" AS t1_r14, "legajos"."foto_content_type" AS t1_r15, "legajos"."foto_file_size" AS t1_r16, "legajos"."foto_updated_at" AS t1_r17, "legajos"."legajo" AS t1_r18 FROM "documento_de_legajos" LEFT OUTER JOIN "legajos" ON "legajos".id = "documento_de_legajos".legajo_id WHERE "documento_de_legajos".id IN (1, 2, 7, 8, 5, 6, 3, 4, 9, 10, 17, 18, 13, 14, 15, 16, 20, 21, 22, 25, 26, 27, 23, 24, 29, 30, 28, 32, 33, 34) ORDER BY legajos.nombre[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSELECT count(*) AS count_all FROM "documento_de_legajos" [0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47commons47_pagination46html46erb_locals_collection_object_pagination at z:/web/rails/linea19/app/views/commons/_pagination.html.erb:2)
+Rendered commons/_pagination (15.6ms)
+Rendered admin/documentos_de_legajos/_list (78.1ms)
+Rendered commons/_session (15.6ms)
+Completed in 516ms (View: 156, DB: 63) | 200 OK [http://localhost/admin/documentos_de_legajos]
+
+
+Processing Admin::DocumentosDeLegajosController#index (for 127.0.0.1 at 2010-10-08 11:10:14) [GET]
+  Parameters: {"commit"=>"Buscar", "action"=>"index", "authenticity_token"=>"SI/u2ZTFCFxUv95sZBF9RK6+T66vHa5CSUiNJpQIl2c=", "controller"=>"admin/documentos_de_legajos", "search_key"=>"acosta"}
+  [4;36;1mUser Load (15.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-08 11:10:15', "perishable_token" = 'ZUtK8LFciW8H82f1tISs', "last_request_at" = '2010-10-08 14:10:15' WHERE "id" = 1[0m
+  [4;36;1mDocumentosDeLegajo Load IDs For Limited Eager Loading (0.0ms)[0m   [0;1mSELECT DISTINCT "documento_de_legajos".id FROM "documento_de_legajos" LEFT OUTER JOIN "legajos" ON "legajos".id = "documento_de_legajos".legajo_id WHERE ((lower(legajos.nombre) like '%acosta%')) ORDER BY legajos.nombre LIMIT 30 OFFSET 0[0m
+  [4;35;1mDocumentosDeLegajo Load Including Associations (0.0ms)[0m   [0mSELECT "documento_de_legajos"."id" AS t0_r0, "documento_de_legajos"."legajo_id" AS t0_r1, "documento_de_legajos"."tipo_documento" AS t0_r2, "documento_de_legajos"."descripcion" AS t0_r3, "documento_de_legajos"."vencimiento" AS t0_r4, "documento_de_legajos"."usuario_verificador" AS t0_r5, "documento_de_legajos"."url_imagen" AS t0_r6, "documento_de_legajos"."created_at" AS t0_r7, "documento_de_legajos"."updated_at" AS t0_r8, "legajos"."id" AS t1_r0, "legajos"."nombre" AS t1_r1, "legajos"."tipo_documento" AS t1_r2, "legajos"."documento" AS t1_r3, "legajos"."c_u_i_f" AS t1_r4, "legajos"."telefonos" AS t1_r5, "legajos"."inicio" AS t1_r6, "legajos"."nacimiento" AS t1_r7, "legajos"."estado_civil" AS t1_r8, "legajos"."nivel_estudio" AS t1_r9, "legajos"."codigo_agrupacion" AS t1_r10, "legajos"."observaciones" AS t1_r11, "legajos"."created_at" AS t1_r12, "legajos"."updated_at" AS t1_r13, "legajos"."foto_file_name" AS t1_r14, "legajos"."foto_content_type" AS t1_r15, "legajos"."foto_file_size" AS t1_r16, "legajos"."foto_updated_at" AS t1_r17, "legajos"."legajo" AS t1_r18 FROM "documento_de_legajos" LEFT OUTER JOIN "legajos" ON "legajos".id = "documento_de_legajos".legajo_id WHERE ((lower(legajos.nombre) like '%acosta%')) AND "documento_de_legajos".id IN (1, 2) ORDER BY legajos.nombre[0m
+Rendered commons/_pagination (0.0ms)
+Rendered admin/documentos_de_legajos/_list (31.3ms)
+Completed in 1047ms (View: 47, DB: 16) | 200 OK [http://localhost/admin/documentos_de_legajos?authenticity_token=SI%2Fu2ZTFCFxUv95sZBF9RK6%2BT66vHa5CSUiNJpQIl2c%3D&search_key=acosta&commit=Buscar]
+
+
+Processing Admin::DocumentosDeLegajosController#index (for 127.0.0.1 at 2010-10-08 11:10:19) [GET]
+  Parameters: {"commit"=>"Buscar", "action"=>"index", "authenticity_token"=>"SI/u2ZTFCFxUv95sZBF9RK6+T66vHa5CSUiNJpQIl2c=", "controller"=>"admin/documentos_de_legajos", "search_key"=>""}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-08 11:10:19', "perishable_token" = 'q2YYB_PDq6E64cWWkcGV', "last_request_at" = '2010-10-08 14:10:19' WHERE "id" = 1[0m
+  [4;36;1mDocumentosDeLegajo Load IDs For Limited Eager Loading (0.0ms)[0m   [0;1mSELECT DISTINCT "documento_de_legajos".id FROM "documento_de_legajos" LEFT OUTER JOIN "legajos" ON "legajos".id = "documento_de_legajos".legajo_id ORDER BY legajos.nombre LIMIT 30 OFFSET 0[0m
+  [4;35;1mDocumentosDeLegajo Load Including Associations (15.6ms)[0m   [0mSELECT "documento_de_legajos"."id" AS t0_r0, "documento_de_legajos"."legajo_id" AS t0_r1, "documento_de_legajos"."tipo_documento" AS t0_r2, "documento_de_legajos"."descripcion" AS t0_r3, "documento_de_legajos"."vencimiento" AS t0_r4, "documento_de_legajos"."usuario_verificador" AS t0_r5, "documento_de_legajos"."url_imagen" AS t0_r6, "documento_de_legajos"."created_at" AS t0_r7, "documento_de_legajos"."updated_at" AS t0_r8, "legajos"."id" AS t1_r0, "legajos"."nombre" AS t1_r1, "legajos"."tipo_documento" AS t1_r2, "legajos"."documento" AS t1_r3, "legajos"."c_u_i_f" AS t1_r4, "legajos"."telefonos" AS t1_r5, "legajos"."inicio" AS t1_r6, "legajos"."nacimiento" AS t1_r7, "legajos"."estado_civil" AS t1_r8, "legajos"."nivel_estudio" AS t1_r9, "legajos"."codigo_agrupacion" AS t1_r10, "legajos"."observaciones" AS t1_r11, "legajos"."created_at" AS t1_r12, "legajos"."updated_at" AS t1_r13, "legajos"."foto_file_name" AS t1_r14, "legajos"."foto_content_type" AS t1_r15, "legajos"."foto_file_size" AS t1_r16, "legajos"."foto_updated_at" AS t1_r17, "legajos"."legajo" AS t1_r18 FROM "documento_de_legajos" LEFT OUTER JOIN "legajos" ON "legajos".id = "documento_de_legajos".legajo_id WHERE "documento_de_legajos".id IN (1, 2, 7, 8, 5, 6, 3, 4, 9, 10, 17, 18, 13, 14, 15, 16, 20, 21, 22, 25, 26, 27, 23, 24, 29, 30, 28, 32, 33, 34) ORDER BY legajos.nombre[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "documento_de_legajos" [0m
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47commons47_pagination46html46erb_locals_collection_object_pagination at z:/web/rails/linea19/app/views/commons/_pagination.html.erb:2)
+Rendered commons/_pagination (15.6ms)
+Rendered admin/documentos_de_legajos/_list (109.4ms)
+Completed in 641ms (View: 125, DB: 16) | 200 OK [http://localhost/admin/documentos_de_legajos?authenticity_token=SI%2Fu2ZTFCFxUv95sZBF9RK6%2BT66vHa5CSUiNJpQIl2c%3D&search_key=&commit=Buscar]
+
+
+Processing Admin::DocumentosDeLegajosController#index (for 127.0.0.1 at 2010-10-08 11:10:29) [GET]
+  Parameters: {"commit"=>"Buscar", "action"=>"index", "authenticity_token"=>"SI/u2ZTFCFxUv95sZBF9RK6+T66vHa5CSUiNJpQIl2c=", "controller"=>"admin/documentos_de_legajos", "search_key"=>"casciota"}
+  [4;35;1mUser Load (15.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-10-08 11:10:29', "perishable_token" = '4ZfRyja1LTVk6e9LEzlz', "last_request_at" = '2010-10-08 14:10:29' WHERE "id" = 1[0m
+  [4;35;1mDocumentosDeLegajo Load IDs For Limited Eager Loading (15.6ms)[0m   [0mSELECT DISTINCT "documento_de_legajos".id FROM "documento_de_legajos" LEFT OUTER JOIN "legajos" ON "legajos".id = "documento_de_legajos".legajo_id WHERE ((lower(legajos.nombre) like '%casciota%')) ORDER BY legajos.nombre LIMIT 30 OFFSET 0[0m
+Rendered commons/_pagination (0.0ms)
+Rendered admin/documentos_de_legajos/_list (46.9ms)
+Completed in 656ms (View: 63, DB: 31) | 200 OK [http://localhost/admin/documentos_de_legajos?authenticity_token=SI%2Fu2ZTFCFxUv95sZBF9RK6%2BT66vHa5CSUiNJpQIl2c%3D&search_key=casciota&commit=Buscar]
+
+
+Processing Admin::DocumentosDeLegajosController#index (for 127.0.0.1 at 2010-10-08 11:10:35) [GET]
+  Parameters: {"commit"=>"Buscar", "action"=>"index", "authenticity_token"=>"SI/u2ZTFCFxUv95sZBF9RK6+T66vHa5CSUiNJpQIl2c=", "controller"=>"admin/documentos_de_legajos", "search_key"=>""}
+  [4;36;1mUser Load (15.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-08 11:10:35', "perishable_token" = 'DsKp8p1_9J79LSIZ7qIK', "last_request_at" = '2010-10-08 14:10:35' WHERE "id" = 1[0m
+  [4;36;1mDocumentosDeLegajo Load IDs For Limited Eager Loading (0.0ms)[0m   [0;1mSELECT DISTINCT "documento_de_legajos".id FROM "documento_de_legajos" LEFT OUTER JOIN "legajos" ON "legajos".id = "documento_de_legajos".legajo_id ORDER BY legajos.nombre LIMIT 30 OFFSET 0[0m
+  [4;35;1mDocumentosDeLegajo Load Including Associations (15.6ms)[0m   [0mSELECT "documento_de_legajos"."id" AS t0_r0, "documento_de_legajos"."legajo_id" AS t0_r1, "documento_de_legajos"."tipo_documento" AS t0_r2, "documento_de_legajos"."descripcion" AS t0_r3, "documento_de_legajos"."vencimiento" AS t0_r4, "documento_de_legajos"."usuario_verificador" AS t0_r5, "documento_de_legajos"."url_imagen" AS t0_r6, "documento_de_legajos"."created_at" AS t0_r7, "documento_de_legajos"."updated_at" AS t0_r8, "legajos"."id" AS t1_r0, "legajos"."nombre" AS t1_r1, "legajos"."tipo_documento" AS t1_r2, "legajos"."documento" AS t1_r3, "legajos"."c_u_i_f" AS t1_r4, "legajos"."telefonos" AS t1_r5, "legajos"."inicio" AS t1_r6, "legajos"."nacimiento" AS t1_r7, "legajos"."estado_civil" AS t1_r8, "legajos"."nivel_estudio" AS t1_r9, "legajos"."codigo_agrupacion" AS t1_r10, "legajos"."observaciones" AS t1_r11, "legajos"."created_at" AS t1_r12, "legajos"."updated_at" AS t1_r13, "legajos"."foto_file_name" AS t1_r14, "legajos"."foto_content_type" AS t1_r15, "legajos"."foto_file_size" AS t1_r16, "legajos"."foto_updated_at" AS t1_r17, "legajos"."legajo" AS t1_r18 FROM "documento_de_legajos" LEFT OUTER JOIN "legajos" ON "legajos".id = "documento_de_legajos".legajo_id WHERE "documento_de_legajos".id IN (1, 2, 7, 8, 5, 6, 3, 4, 9, 10, 17, 18, 13, 14, 15, 16, 20, 21, 22, 25, 26, 27, 23, 24, 29, 30, 28, 32, 33, 34) ORDER BY legajos.nombre[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "documento_de_legajos" [0m
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47commons47_pagination46html46erb_locals_collection_object_pagination at z:/web/rails/linea19/app/views/commons/_pagination.html.erb:2)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/documentos_de_legajos/_list (78.1ms)
+Completed in 422ms (View: 78, DB: 31) | 200 OK [http://localhost/admin/documentos_de_legajos?authenticity_token=SI%2Fu2ZTFCFxUv95sZBF9RK6%2BT66vHa5CSUiNJpQIl2c%3D&search_key=&commit=Buscar]
+
+
+Processing Admin::DocumentosDeLegajosController#index (for 127.0.0.1 at 2010-10-08 11:10:47) [GET]
+  Parameters: {"commit"=>"Buscar", "action"=>"index", "authenticity_token"=>"SI/u2ZTFCFxUv95sZBF9RK6+T66vHa5CSUiNJpQIl2c=", "controller"=>"admin/documentos_de_legajos", "search_key"=>"casciotta"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-10-08 11:10:47', "perishable_token" = 'PwmNv77EQlsAQMAjUhSR', "last_request_at" = '2010-10-08 14:10:47' WHERE "id" = 1[0m
+  [4;35;1mDocumentosDeLegajo Load IDs For Limited Eager Loading (0.0ms)[0m   [0mSELECT DISTINCT "documento_de_legajos".id FROM "documento_de_legajos" LEFT OUTER JOIN "legajos" ON "legajos".id = "documento_de_legajos".legajo_id WHERE ((lower(legajos.nombre) like '%casciotta%')) ORDER BY legajos.nombre LIMIT 30 OFFSET 0[0m
+  [4;36;1mDocumentosDeLegajo Load Including Associations (0.0ms)[0m   [0;1mSELECT "documento_de_legajos"."id" AS t0_r0, "documento_de_legajos"."legajo_id" AS t0_r1, "documento_de_legajos"."tipo_documento" AS t0_r2, "documento_de_legajos"."descripcion" AS t0_r3, "documento_de_legajos"."vencimiento" AS t0_r4, "documento_de_legajos"."usuario_verificador" AS t0_r5, "documento_de_legajos"."url_imagen" AS t0_r6, "documento_de_legajos"."created_at" AS t0_r7, "documento_de_legajos"."updated_at" AS t0_r8, "legajos"."id" AS t1_r0, "legajos"."nombre" AS t1_r1, "legajos"."tipo_documento" AS t1_r2, "legajos"."documento" AS t1_r3, "legajos"."c_u_i_f" AS t1_r4, "legajos"."telefonos" AS t1_r5, "legajos"."inicio" AS t1_r6, "legajos"."nacimiento" AS t1_r7, "legajos"."estado_civil" AS t1_r8, "legajos"."nivel_estudio" AS t1_r9, "legajos"."codigo_agrupacion" AS t1_r10, "legajos"."observaciones" AS t1_r11, "legajos"."created_at" AS t1_r12, "legajos"."updated_at" AS t1_r13, "legajos"."foto_file_name" AS t1_r14, "legajos"."foto_content_type" AS t1_r15, "legajos"."foto_file_size" AS t1_r16, "legajos"."foto_updated_at" AS t1_r17, "legajos"."legajo" AS t1_r18 FROM "documento_de_legajos" LEFT OUTER JOIN "legajos" ON "legajos".id = "documento_de_legajos".legajo_id WHERE ((lower(legajos.nombre) like '%casciotta%')) AND "documento_de_legajos".id IN (16) ORDER BY legajos.nombre[0m
+Rendered commons/_pagination (0.0ms)
+Rendered admin/documentos_de_legajos/_list (31.3ms)
+Completed in 375ms (View: 31, DB: 0) | 200 OK [http://localhost/admin/documentos_de_legajos?authenticity_token=SI%2Fu2ZTFCFxUv95sZBF9RK6%2BT66vHa5CSUiNJpQIl2c%3D&search_key=casciotta&commit=Buscar]
+
+
+Processing Admin::DocumentosDeLegajosController#index (for 127.0.0.1 at 2010-10-08 11:10:52) [GET]
+  Parameters: {"commit"=>"Buscar", "action"=>"index", "authenticity_token"=>"SI/u2ZTFCFxUv95sZBF9RK6+T66vHa5CSUiNJpQIl2c=", "controller"=>"admin/documentos_de_legajos", "search_key"=>""}
+  [4;35;1mUser Load (15.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-10-08 11:10:53', "perishable_token" = 'ykp-WFAa1_eGCnkUMNdx', "last_request_at" = '2010-10-08 14:10:53' WHERE "id" = 1[0m
+  [4;35;1mDocumentosDeLegajo Load IDs For Limited Eager Loading (0.0ms)[0m   [0mSELECT DISTINCT "documento_de_legajos".id FROM "documento_de_legajos" LEFT OUTER JOIN "legajos" ON "legajos".id = "documento_de_legajos".legajo_id ORDER BY legajos.nombre LIMIT 30 OFFSET 0[0m
+  [4;36;1mDocumentosDeLegajo Load Including Associations (15.6ms)[0m   [0;1mSELECT "documento_de_legajos"."id" AS t0_r0, "documento_de_legajos"."legajo_id" AS t0_r1, "documento_de_legajos"."tipo_documento" AS t0_r2, "documento_de_legajos"."descripcion" AS t0_r3, "documento_de_legajos"."vencimiento" AS t0_r4, "documento_de_legajos"."usuario_verificador" AS t0_r5, "documento_de_legajos"."url_imagen" AS t0_r6, "documento_de_legajos"."created_at" AS t0_r7, "documento_de_legajos"."updated_at" AS t0_r8, "legajos"."id" AS t1_r0, "legajos"."nombre" AS t1_r1, "legajos"."tipo_documento" AS t1_r2, "legajos"."documento" AS t1_r3, "legajos"."c_u_i_f" AS t1_r4, "legajos"."telefonos" AS t1_r5, "legajos"."inicio" AS t1_r6, "legajos"."nacimiento" AS t1_r7, "legajos"."estado_civil" AS t1_r8, "legajos"."nivel_estudio" AS t1_r9, "legajos"."codigo_agrupacion" AS t1_r10, "legajos"."observaciones" AS t1_r11, "legajos"."created_at" AS t1_r12, "legajos"."updated_at" AS t1_r13, "legajos"."foto_file_name" AS t1_r14, "legajos"."foto_content_type" AS t1_r15, "legajos"."foto_file_size" AS t1_r16, "legajos"."foto_updated_at" AS t1_r17, "legajos"."legajo" AS t1_r18 FROM "documento_de_legajos" LEFT OUTER JOIN "legajos" ON "legajos".id = "documento_de_legajos".legajo_id WHERE "documento_de_legajos".id IN (1, 2, 7, 8, 5, 6, 3, 4, 9, 10, 17, 18, 13, 14, 15, 16, 20, 21, 22, 25, 26, 27, 23, 24, 29, 30, 28, 32, 33, 34) ORDER BY legajos.nombre[0m
+  [4;35;1mSQL (15.6ms)[0m   [0mSELECT count(*) AS count_all FROM "documento_de_legajos" [0m
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47commons47_pagination46html46erb_locals_collection_object_pagination at z:/web/rails/linea19/app/views/commons/_pagination.html.erb:2)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/documentos_de_legajos/_list (78.1ms)
+Completed in 1031ms (View: 78, DB: 47) | 200 OK [http://localhost/admin/documentos_de_legajos?authenticity_token=SI%2Fu2ZTFCFxUv95sZBF9RK6%2BT66vHa5CSUiNJpQIl2c%3D&search_key=&commit=Buscar]
+
+
+Processing Admin::FamiliaresDeLegajosController#index (for 127.0.0.1 at 2010-10-08 11:11:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/familiares_de_legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-08 11:11:14', "perishable_token" = 'g4cKg2dC-rDzx2wO83pG', "last_request_at" = '2010-10-08 14:11:14' WHERE "id" = 1[0m
+  [4;36;1mFamiliaresDeLegajo Load IDs For Limited Eager Loading (0.0ms)[0m   [0;1mSELECT DISTINCT "familiar_de_legajos".id FROM "familiar_de_legajos" LEFT OUTER JOIN "legajos" ON "legajos".id = "familiar_de_legajos".legajo_id ORDER BY legajos.nombre LIMIT 30 OFFSET 0[0m
+  [4;35;1mFamiliaresDeLegajo Load Including Associations (0.0ms)[0m   [0mSELECT "familiar_de_legajos"."id" AS t0_r0, "familiar_de_legajos"."legajo_id" AS t0_r1, "familiar_de_legajos"."tipo_familiar" AS t0_r2, "familiar_de_legajos"."nombre" AS t0_r3, "familiar_de_legajos"."tipo_documento" AS t0_r4, "familiar_de_legajos"."documento" AS t0_r5, "familiar_de_legajos"."c_u_i_f" AS t0_r6, "familiar_de_legajos"."nacimiento" AS t0_r7, "familiar_de_legajos"."observaciones" AS t0_r8, "familiar_de_legajos"."created_at" AS t0_r9, "familiar_de_legajos"."updated_at" AS t0_r10, "legajos"."id" AS t1_r0, "legajos"."nombre" AS t1_r1, "legajos"."tipo_documento" AS t1_r2, "legajos"."documento" AS t1_r3, "legajos"."c_u_i_f" AS t1_r4, "legajos"."telefonos" AS t1_r5, "legajos"."inicio" AS t1_r6, "legajos"."nacimiento" AS t1_r7, "legajos"."estado_civil" AS t1_r8, "legajos"."nivel_estudio" AS t1_r9, "legajos"."codigo_agrupacion" AS t1_r10, "legajos"."observaciones" AS t1_r11, "legajos"."created_at" AS t1_r12, "legajos"."updated_at" AS t1_r13, "legajos"."foto_file_name" AS t1_r14, "legajos"."foto_content_type" AS t1_r15, "legajos"."foto_file_size" AS t1_r16, "legajos"."foto_updated_at" AS t1_r17, "legajos"."legajo" AS t1_r18 FROM "familiar_de_legajos" LEFT OUTER JOIN "legajos" ON "legajos".id = "familiar_de_legajos".legajo_id WHERE "familiar_de_legajos".id IN (1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 7, 24, 13, 14, 15, 44, 45, 21, 22, 23, 26, 27, 28, 29, 30, 31, 32, 33, 25) ORDER BY legajos.nombre[0m
+  [4;36;1mSQL (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "familiar_de_legajos" [0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47commons47_pagination46html46erb_locals_collection_object_pagination at z:/web/rails/linea19/app/views/commons/_pagination.html.erb:2)
+Rendered commons/_pagination (15.6ms)
+Rendered admin/familiares_de_legajos/_list (62.5ms)
+Rendered commons/_session (0.0ms)
+Completed in 531ms (View: 156, DB: 0) | 200 OK [http://localhost/admin/familiares_de_legajos]
+
+
+Processing Admin::FamiliaresDeLegajosController#index (for 127.0.0.1 at 2010-10-08 11:11:19) [GET]
+  Parameters: {"commit"=>"Buscar", "action"=>"index", "authenticity_token"=>"SI/u2ZTFCFxUv95sZBF9RK6+T66vHa5CSUiNJpQIl2c=", "controller"=>"admin/familiares_de_legajos", "search_key"=>"acosta"}
+  [4;35;1mUser Load (15.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-10-08 11:11:19', "perishable_token" = 'qfpodTQxNNJ4-eGFN8Kw', "last_request_at" = '2010-10-08 14:11:19' WHERE "id" = 1[0m
+  [4;35;1mFamiliaresDeLegajo Load IDs For Limited Eager Loading (0.0ms)[0m   [0mSELECT DISTINCT "familiar_de_legajos".id FROM "familiar_de_legajos" LEFT OUTER JOIN "legajos" ON "legajos".id = "familiar_de_legajos".legajo_id WHERE ((lower(legajos.nombre) like '%acosta%')) ORDER BY legajos.nombre LIMIT 30 OFFSET 0[0m
+  [4;36;1mFamiliaresDeLegajo Load Including Associations (0.0ms)[0m   [0;1mSELECT "familiar_de_legajos"."id" AS t0_r0, "familiar_de_legajos"."legajo_id" AS t0_r1, "familiar_de_legajos"."tipo_familiar" AS t0_r2, "familiar_de_legajos"."nombre" AS t0_r3, "familiar_de_legajos"."tipo_documento" AS t0_r4, "familiar_de_legajos"."documento" AS t0_r5, "familiar_de_legajos"."c_u_i_f" AS t0_r6, "familiar_de_legajos"."nacimiento" AS t0_r7, "familiar_de_legajos"."observaciones" AS t0_r8, "familiar_de_legajos"."created_at" AS t0_r9, "familiar_de_legajos"."updated_at" AS t0_r10, "legajos"."id" AS t1_r0, "legajos"."nombre" AS t1_r1, "legajos"."tipo_documento" AS t1_r2, "legajos"."documento" AS t1_r3, "legajos"."c_u_i_f" AS t1_r4, "legajos"."telefonos" AS t1_r5, "legajos"."inicio" AS t1_r6, "legajos"."nacimiento" AS t1_r7, "legajos"."estado_civil" AS t1_r8, "legajos"."nivel_estudio" AS t1_r9, "legajos"."codigo_agrupacion" AS t1_r10, "legajos"."observaciones" AS t1_r11, "legajos"."created_at" AS t1_r12, "legajos"."updated_at" AS t1_r13, "legajos"."foto_file_name" AS t1_r14, "legajos"."foto_content_type" AS t1_r15, "legajos"."foto_file_size" AS t1_r16, "legajos"."foto_updated_at" AS t1_r17, "legajos"."legajo" AS t1_r18 FROM "familiar_de_legajos" LEFT OUTER JOIN "legajos" ON "legajos".id = "familiar_de_legajos".legajo_id WHERE ((lower(legajos.nombre) like '%acosta%')) AND "familiar_de_legajos".id IN (1, 2, 3) ORDER BY legajos.nombre[0m
+Rendered commons/_pagination (0.0ms)
+Rendered admin/familiares_de_legajos/_list (31.3ms)
+Completed in 1000ms (View: 31, DB: 16) | 200 OK [http://localhost/admin/familiares_de_legajos?authenticity_token=SI%2Fu2ZTFCFxUv95sZBF9RK6%2BT66vHa5CSUiNJpQIl2c%3D&search_key=acosta&commit=Buscar]
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-10-08 11:12:35) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-10-08 11:12:35', "perishable_token" = 'Rq-J9oqAE3tAdtYSM4ds', "last_request_at" = '2010-10-08 14:12:35' WHERE "id" = 1[0m
+  [4;35;1mLegajo Load (0.0ms)[0m   [0mSELECT * FROM "legajos" WHERE ((lower(nombre) like '%80%')) ORDER BY nombre LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/legajos/_list (15.6ms)
+Rendered commons/_session (15.6ms)
+Completed in 344ms (View: 78, DB: 0) | 200 OK [http://localhost/admin/legajos]
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-10-08 11:12:39) [GET]
+  Parameters: {"commit"=>"Buscar", "action"=>"index", "authenticity_token"=>"SI/u2ZTFCFxUv95sZBF9RK6+T66vHa5CSUiNJpQIl2c=", "controller"=>"admin/legajos", "search_key"=>""}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-08 11:12:39', "perishable_token" = 'oVMlwZsB_jM8auEuDRx1', "last_request_at" = '2010-10-08 14:12:39' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (15.6ms)[0m   [0;1mSELECT * FROM "legajos" ORDER BY nombre LIMIT 30 OFFSET 0[0m
+  [4;35;1mSQL (0.0ms)[0m   [0mSELECT count(*) AS count_all FROM "legajos" [0m
+DEPRECATION WARNING: WillPaginate: :prev_label view parameter is now :previous_label; the old name has been deprecated. (called from _run_erb_app47views47commons47_pagination46html46erb_locals_collection_object_pagination at z:/web/rails/linea19/app/views/commons/_pagination.html.erb:2)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/legajos/_list (578.1ms)
+Completed in 906ms (View: 609, DB: 16) | 200 OK [http://localhost/admin/legajos?authenticity_token=SI%2Fu2ZTFCFxUv95sZBF9RK6%2BT66vHa5CSUiNJpQIl2c%3D&search_key=&commit=Buscar]
+
+
+Processing Admin::LegajosController#index (for 127.0.0.1 at 2010-10-08 11:12:42) [GET]
+  Parameters: {"commit"=>"Buscar", "action"=>"index", "authenticity_token"=>"SI/u2ZTFCFxUv95sZBF9RK6+T66vHa5CSUiNJpQIl2c=", "controller"=>"admin/legajos", "search_key"=>"acosta"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (15.6ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-08 11:12:43', "perishable_token" = 'zJClpHYNPFH0vYWdSRxj', "last_request_at" = '2010-10-08 14:12:43' WHERE "id" = 1[0m
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ((lower(nombre) like '%acosta%')) ORDER BY nombre LIMIT 30 OFFSET 0[0m
+Rendered commons/_pagination (0.0ms)
+Rendered admin/legajos/_list (31.3ms)
+Completed in 297ms (View: 47, DB: 16) | 200 OK [http://localhost/admin/legajos?authenticity_token=SI%2Fu2ZTFCFxUv95sZBF9RK6%2BT66vHa5CSUiNJpQIl2c%3D&search_key=acosta&commit=Buscar]
