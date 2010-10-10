@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101006134753) do
+ActiveRecord::Schema.define(:version => 20101010010522) do
 
   create_table "direccion_de_legajos", :force => true do |t|
     t.integer   "legajo_id"
@@ -47,24 +47,24 @@ ActiveRecord::Schema.define(:version => 20101006134753) do
   end
 
   create_table "legajos", :force => true do |t|
-    t.string    "nombre"
-    t.string    "tipo_documento"
-    t.integer   "documento"
-    t.float     "c_u_i_f"
-    t.string    "telefonos"
-    t.date      "inicio"
-    t.date      "nacimiento"
-    t.string    "estado_civil"
-    t.string    "nivel_estudio"
-    t.string    "codigo_agrupacion"
-    t.string    "observaciones"
-    t.timestamp "created_at"
-    t.timestamp "updated_at"
-    t.string    "foto_file_name"
-    t.string    "foto_content_type"
-    t.integer   "foto_file_size"
-    t.timestamp "foto_updated_at"
-    t.integer   "legajo"
+    t.string   "nombre"
+    t.string   "tipo_documento"
+    t.integer  "documento"
+    t.float    "c_u_i_f"
+    t.string   "telefonos"
+    t.date     "inicio"
+    t.date     "nacimiento"
+    t.string   "estado_civil"
+    t.string   "nivel_estudio"
+    t.string   "codigo_agrupacion"
+    t.string   "observaciones"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "foto_file_name"
+    t.string   "foto_content_type"
+    t.integer  "foto_file_size"
+    t.datetime "foto_updated_at"
+    t.integer  "nro_legajo"
   end
 
   create_table "users", :force => true do |t|
