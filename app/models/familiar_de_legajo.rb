@@ -5,4 +5,8 @@ class FamiliarDeLegajo < ActiveRecord::Base
   validates_uniqueness_of :nombre, :scope => :legajo_id
 
   validates_numericality_of :documento, :c_u_i_f
+
+  def datos_de_legajo
+    legajo.legajo.to_s + ' - ' + legajo.nombre
+  end
 end

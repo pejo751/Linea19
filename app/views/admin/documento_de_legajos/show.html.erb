@@ -2,6 +2,7 @@
 <%=
   present :elegant do |p|
     p.header do |r|
+      r.field 'Legajo', @resource.datos_de_legajo
       r.field 'Tipo documento', @resource.tipo_documento
     end
     p.body do |r|

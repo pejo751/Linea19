@@ -4,6 +4,6 @@ class AddLegajoLegajos < ActiveRecord::Migration
   end
 
   def self.down
-    remove_column :legajos, :legajo, :integer
+    remove_column :legajos
   end
 end

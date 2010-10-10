@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  legajo: 
+  fecha: 2010-10-09
+  causa: MyString
+  con_aviso: false
+  justificada: false
+
+two:
+  legajo: 
+  fecha: 2010-10-09
+  causa: MyString
+  con_aviso: false
+  justificada: false

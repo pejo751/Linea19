@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101010015920) do
+ActiveRecord::Schema.define(:version => 20101010024920) do
 
   create_table "direccion_de_legajos", :force => true do |t|
     t.integer   "legajo_id"
@@ -31,6 +31,18 @@ ActiveRecord::Schema.define(:version => 20101010015920) do
     t.string    "url_imagen"
     t.timestamp "created_at"
     t.timestamp "updated_at"
+  end
+
+  create_table "falta_de_legajos", :force => true do |t|
+    t.integer  "legajo_id"
+    t.date     "fecha"
+    t.string   "causa"
+    t.boolean  "con_aviso"
+    t.boolean  "justificada"
+    t.date     "fecha_descargo"
+    t.string   "descargo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "familiar_de_legajos", :force => true do |t|

@@ -3,19 +3,19 @@
   present :elegant do |p|
     p.header do |r|
       r.field 'Legajo', @resource.datos_de_legajo
-      r.field 'Tipo familiar', @resource.tipo_familiar
+      r.field 'Fecha', @resource.fecha
     end
+
     p.body do |r|
-      r.field 'Nombre', @resource.nombre
-      r.field 'Tipo documento', @resource.tipo_documento
-      r.field 'Documento', @resource.documento
-      r.field 'C.U.I.F.', @resource.c_u_i_f
-      r.field 'Nacimiento', @resource.nacimiento
-      r.field 'Observaciones', @resource.observaciones
+      r.field 'Causa', @resource.causa
+      r.field 'Con aviso', @resource.con_aviso
+      r.field 'Justificada', @resource.justificada
       r.field 'Created at', @resource.created_at
       r.field 'Updated at', @resource.updated_at
     end
+
     p.actions do |r|
+#      r.text link_to('manage some nested resource', path_to_some_resource_path(@resource))
       r.text edit_action
       r.text destroy_action
       r.text back_action
