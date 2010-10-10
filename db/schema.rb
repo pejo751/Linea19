@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101010010522) do
+ActiveRecord::Schema.define(:version => 20101010015920) do
 
   create_table "direccion_de_legajos", :force => true do |t|
     t.integer   "legajo_id"
@@ -64,7 +64,7 @@ ActiveRecord::Schema.define(:version => 20101010010522) do
     t.string   "foto_content_type"
     t.integer  "foto_file_size"
     t.datetime "foto_updated_at"
-    t.integer  "nro_legajo"
+    t.integer  "legajo"
   end
 
   create_table "users", :force => true do |t|
