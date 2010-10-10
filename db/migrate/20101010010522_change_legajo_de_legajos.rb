@@ -6,5 +6,6 @@ class ChangeLegajoDeLegajos < ActiveRecord::Migration
   end
 
   def self.down
+      t.rename :nro_legajo, :legajo
   end
 end
