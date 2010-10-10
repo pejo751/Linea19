@@ -7,6 +7,7 @@ ActionController::Routing::Routes.draw do |map|
     admin.resources :direcciones_de_legajos
     admin.resources :documentos_de_legajos
     admin.resources :familiares_de_legajos
+    admin.resources :legajos_completos
   end
 
   map.resource :account, :controller => "users"

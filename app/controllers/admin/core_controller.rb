@@ -10,6 +10,7 @@ class Admin::CoreController < ApplicationController
   end
 
   set_module :legajos
+  set_module :legajos_completos
   set_module :direcciones_de_legajos
   set_module :documentos_de_legajos
   set_module :familiares_de_legajos
