@@ -1,7 +1,11 @@
-<%= f.select :legajo_id, Legajo.to_select %>
 <%= f.text_field :fecha %>
-<%= f.text_field :causa %>
+<%= f.select :legajo_id, Legajo.to_select %>
+<%= f.text_field :dias_afectados %>
 <%= f.check_box :con_aviso %>
 <%= f.check_box :justificada %>
+<%= f.check_box :reposo %>
+<%= f.check_box :suspendido %>
+<%= f.check_box :pescado %>
+<%= f.text_field :tipo %>
 <%= f.text_field :fecha_descargo %>
 <%= f.text_field :descargo %>

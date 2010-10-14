@@ -4,11 +4,11 @@ class Legajo < ActiveRecord::Base
 	has_many :familiar_de_legajos, :dependent => :delete_all
 	has_many :falta_de_legajos, :dependent => :delete_all
 	
-	validates_presence_of :nombre, :legajo, :tipo_documento, :documento
-	validates_uniqueness_of :legajo
-	validates_uniqueness_of :documento, :scope => :tipo_documento
+	validates_presence_of :nombre, :legajo, :tipo_documento, :documento, :message => "no puede estar vacio."
+	validates_uniqueness_of :legajo, :message => "ya existe."
+	validates_uniqueness_of :documento, :scope => :tipo_documento, :message => "ya existe para el tipo de documento."
 	
-	validates_numericality_of :legajo, :documento, :c_u_i_f
+	validates_numericality_of :legajo, :documento, :c_u_i_f, :message => "debe ser un numero."
 	
 	has_attached_file :foto, :styles => { :small => "150x150>" },
 		:default_url => ":rails_root/public/images/rails.png",
