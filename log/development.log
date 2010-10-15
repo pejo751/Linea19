@@ -50090,3 +50090,140 @@ Rendered commons/_pagination (15.6ms)
 Rendered admin/familiares_de_legajos/_list (109.4ms)
 Rendered commons/_session (0.0ms)
 Completed in 1422ms (View: 641, DB: 31) | 200 OK [http://localhost/admin/familiares_de_legajos]
+
+
+Processing Admin::FaltaDeLegajosController#index (for 127.0.0.1 at 2010-10-15 08:25:43) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/falta_de_legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-15 08:25:43', "perishable_token" = 'OnTwyvNUJVgXDqaXaeV2', "last_request_at" = '2010-10-15 11:25:43' WHERE "id" = 1[0m
+  [4;36;1mFaltaDeLegajo Load IDs For Limited Eager Loading (0.0ms)[0m   [0;1mSELECT DISTINCT "falta_de_legajos".id FROM "falta_de_legajos" LEFT OUTER JOIN "legajos" ON "legajos".id = "falta_de_legajos".legajo_id ORDER BY fecha DESC, legajos.nombre LIMIT 30 OFFSET 0[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/falta_de_legajos/_list (15.6ms)
+Rendered commons/_session (0.0ms)
+Completed in 375ms (View: 94, DB: 0) | 200 OK [http://localhost/admin/falta_de_legajos]
+
+
+Processing Admin::FaltaDeLegajosController#new (for 127.0.0.1 at 2010-10-15 08:25:46) [GET]
+  Parameters: {"action"=>"new", "controller"=>"admin/falta_de_legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-10-15 08:25:46', "perishable_token" = 'O4VxmITVX5b14QVRWGZA', "last_request_at" = '2010-10-15 11:25:46' WHERE "id" = 1[0m
+Rendering template within layouts/admin_layout
+Rendering commons/base_form
+  [4;35;1mLegajo Load (15.6ms)[0m   [0mSELECT * FROM "legajos" ORDER BY nombre[0m
+Rendered admin/falta_de_legajos/_form (140.6ms)
+Rendered commons/_session (0.0ms)
+Completed in 469ms (View: 219, DB: 16) | 200 OK [http://localhost/admin/falta_de_legajos/new]
+
+
+Processing Admin::FaltaDeLegajosController#create (for 127.0.0.1 at 2010-10-15 08:26:14) [POST]
+  Parameters: {"commit"=>"Guardar estos cambios", "falta_de_legajo"=>{"tipo"=>"", "con_aviso"=>"0", "suspendido"=>"0", "legajo_id"=>"1", "reposo"=>"0", "dias_afectados"=>"1", "pescado"=>"0", "justificada"=>"0", "fecha"=>"2010-09-01"}, "action"=>"create", "authenticity_token"=>"JfYNtsG3rgdgkRgp5XjPa5k3sfzqQejxNqALdAB0e+Q=", "controller"=>"admin/falta_de_legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-15 08:26:14', "perishable_token" = 'FI8LFS-KwyK0ZER9nCFn', "last_request_at" = '2010-10-15 11:26:14' WHERE "id" = 1[0m
+  [4;36;1mFaltaDeLegajo Load (0.0ms)[0m   [0;1mSELECT "falta_de_legajos".id FROM "falta_de_legajos" WHERE ("falta_de_legajos"."fecha" = '2010-09-01' AND "falta_de_legajos".legajo_id = 1) LIMIT 1[0m
+  [4;35;1mFaltaDeLegajo Create (15.6ms)[0m   [0mINSERT INTO "falta_de_legajos" ("tipo", "con_aviso", "created_at", "updated_at", "legajo_id", "suspendido", "dias_afectados", "reposo", "pescado", "fecha", "justificada") VALUES('', 'f', '2010-10-15 08:26:14', '2010-10-15 08:26:14', 1, 'f', 1, 'f', 'f', '2010-09-01', 'f')[0m
+Redirected to http://localhost:3000/admin/falta_de_legajos
+Completed in 375ms (DB: 16) | 302 Found [http://localhost/admin/falta_de_legajos]
+
+
+Processing Admin::FaltaDeLegajosController#index (for 127.0.0.1 at 2010-10-15 08:26:14) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/falta_de_legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-15 08:26:14', "perishable_token" = 'bPTxh9lq3OF8kosurMo7', "last_request_at" = '2010-10-15 11:26:14' WHERE "id" = 1[0m
+  [4;36;1mFaltaDeLegajo Load IDs For Limited Eager Loading (0.0ms)[0m   [0;1mSELECT DISTINCT "falta_de_legajos".id FROM "falta_de_legajos" LEFT OUTER JOIN "legajos" ON "legajos".id = "falta_de_legajos".legajo_id ORDER BY fecha DESC, legajos.nombre LIMIT 30 OFFSET 0[0m
+  [4;35;1mFaltaDeLegajo Load Including Associations (0.0ms)[0m   [0mSELECT "falta_de_legajos"."id" AS t0_r0, "falta_de_legajos"."legajo_id" AS t0_r1, "falta_de_legajos"."fecha" AS t0_r2, "falta_de_legajos"."con_aviso" AS t0_r3, "falta_de_legajos"."justificada" AS t0_r4, "falta_de_legajos"."created_at" AS t0_r5, "falta_de_legajos"."updated_at" AS t0_r6, "falta_de_legajos"."dias_afectados" AS t0_r7, "falta_de_legajos"."reposo" AS t0_r8, "falta_de_legajos"."suspendido" AS t0_r9, "falta_de_legajos"."pescado" AS t0_r10, "falta_de_legajos"."tipo" AS t0_r11, "legajos"."id" AS t1_r0, "legajos"."nombre" AS t1_r1, "legajos"."tipo_documento" AS t1_r2, "legajos"."documento" AS t1_r3, "legajos"."c_u_i_f" AS t1_r4, "legajos"."telefonos" AS t1_r5, "legajos"."inicio" AS t1_r6, "legajos"."nacimiento" AS t1_r7, "legajos"."estado_civil" AS t1_r8, "legajos"."nivel_estudio" AS t1_r9, "legajos"."categoria" AS t1_r10, "legajos"."observaciones" AS t1_r11, "legajos"."created_at" AS t1_r12, "legajos"."updated_at" AS t1_r13, "legajos"."foto_file_name" AS t1_r14, "legajos"."foto_content_type" AS t1_r15, "legajos"."foto_file_size" AS t1_r16, "legajos"."foto_updated_at" AS t1_r17, "legajos"."legajo" AS t1_r18 FROM "falta_de_legajos" LEFT OUTER JOIN "legajos" ON "legajos".id = "falta_de_legajos".legajo_id WHERE "falta_de_legajos".id IN (1) ORDER BY fecha DESC, legajos.nombre[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+
+ActionView::TemplateError (undefined local variable or method `fecha_descargo' for #<FaltaDeLegajo:0x43367b8>) on line #1 of app/views/admin/falta_de_legajos/_list.html.erb:
+1: <%= list_builder_for @records do |list|
+2:       list.fecha
+3:       list.legajo :with => :legajo, :caption => 'Legajo'
+4:       list.legajo :with => :nombre, :caption => 'Nombre'
+
+    app/models/falta_de_legajo.rb:16:in `banderas_resumidas'
+    app/views/admin/falta_de_legajos/_list.html.erb:1
+    app/views/commons/index.html.erb:3
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:104:in `service'
+    C:/Ruby/lib/ruby/1.8/webrick/httpserver.rb:65:in `run'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:173:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:162:in `start_thread'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:95:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `each'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:92:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:23:in `start'
+    C:/Ruby/lib/ruby/1.8/webrick/server.rb:82:in `start'
+
+Rendered rescues/_trace (390.6ms)
+Rendered rescues/_request_and_response (0.0ms)
+Rendering rescues/layout (internal_server_error)
+
+
+Processing Admin::FaltaDeLegajosController#index (for 127.0.0.1 at 2010-10-15 08:26:51) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/falta_de_legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-15 08:26:51', "perishable_token" = 'uQvgwVzFovYgwJAOY_mu', "last_request_at" = '2010-10-15 11:26:51' WHERE "id" = 1[0m
+  [4;36;1mFaltaDeLegajo Load IDs For Limited Eager Loading (15.6ms)[0m   [0;1mSELECT DISTINCT "falta_de_legajos".id FROM "falta_de_legajos" LEFT OUTER JOIN "legajos" ON "legajos".id = "falta_de_legajos".legajo_id ORDER BY fecha DESC, legajos.nombre LIMIT 30 OFFSET 0[0m
+  [4;35;1mFaltaDeLegajo Load Including Associations (0.0ms)[0m   [0mSELECT "falta_de_legajos"."id" AS t0_r0, "falta_de_legajos"."legajo_id" AS t0_r1, "falta_de_legajos"."fecha" AS t0_r2, "falta_de_legajos"."con_aviso" AS t0_r3, "falta_de_legajos"."justificada" AS t0_r4, "falta_de_legajos"."created_at" AS t0_r5, "falta_de_legajos"."updated_at" AS t0_r6, "falta_de_legajos"."dias_afectados" AS t0_r7, "falta_de_legajos"."reposo" AS t0_r8, "falta_de_legajos"."suspendido" AS t0_r9, "falta_de_legajos"."pescado" AS t0_r10, "falta_de_legajos"."tipo" AS t0_r11, "legajos"."id" AS t1_r0, "legajos"."nombre" AS t1_r1, "legajos"."tipo_documento" AS t1_r2, "legajos"."documento" AS t1_r3, "legajos"."c_u_i_f" AS t1_r4, "legajos"."telefonos" AS t1_r5, "legajos"."inicio" AS t1_r6, "legajos"."nacimiento" AS t1_r7, "legajos"."estado_civil" AS t1_r8, "legajos"."nivel_estudio" AS t1_r9, "legajos"."categoria" AS t1_r10, "legajos"."observaciones" AS t1_r11, "legajos"."created_at" AS t1_r12, "legajos"."updated_at" AS t1_r13, "legajos"."foto_file_name" AS t1_r14, "legajos"."foto_content_type" AS t1_r15, "legajos"."foto_file_size" AS t1_r16, "legajos"."foto_updated_at" AS t1_r17, "legajos"."legajo" AS t1_r18 FROM "falta_de_legajos" LEFT OUTER JOIN "legajos" ON "legajos".id = "falta_de_legajos".legajo_id WHERE "falta_de_legajos".id IN (1) ORDER BY fecha DESC, legajos.nombre[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (0.0ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/falta_de_legajos/_list (31.3ms)
+Rendered commons/_session (0.0ms)
+Completed in 438ms (View: 125, DB: 16) | 200 OK [http://localhost/admin/falta_de_legajos]
+
+
+Processing Admin::FaltaDeLegajosController#edit (for 127.0.0.1 at 2010-10-15 08:26:56) [GET]
+  Parameters: {"action"=>"edit", "id"=>"1", "controller"=>"admin/falta_de_legajos"}
+  [4;36;1mUser Load (15.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-15 08:26:57', "perishable_token" = 'UODwMC7u9OY2a33p_3Oz', "last_request_at" = '2010-10-15 11:26:57' WHERE "id" = 1[0m
+  [4;36;1mFaltaDeLegajo Load (15.6ms)[0m   [0;1mSELECT * FROM "falta_de_legajos" WHERE ("falta_de_legajos"."id" = 1) [0m
+Rendering template within layouts/admin_layout
+Rendering commons/base_form
+  [4;35;1mLegajo Load (15.6ms)[0m   [0mSELECT * FROM "legajos" ORDER BY nombre[0m
+Rendered admin/falta_de_legajos/_form (156.3ms)
+Rendered commons/_session (0.0ms)
+Completed in 500ms (View: 203, DB: 47) | 200 OK [http://localhost/admin/falta_de_legajos/1/edit]
+
+
+Processing Admin::FaltaDeLegajosController#update (for 127.0.0.1 at 2010-10-15 08:27:10) [PUT]
+  Parameters: {"commit"=>"Guardar estos cambios", "falta_de_legajo"=>{"tipo"=>"ss", "con_aviso"=>"1", "suspendido"=>"1", "legajo_id"=>"1", "reposo"=>"1", "dias_afectados"=>"1", "pescado"=>"1", "justificada"=>"1", "fecha"=>"2010-09-01"}, "action"=>"update", "_method"=>"put", "authenticity_token"=>"JfYNtsG3rgdgkRgp5XjPa5k3sfzqQejxNqALdAB0e+Q=", "id"=>"1", "controller"=>"admin/falta_de_legajos"}
+  [4;36;1mUser Load (0.0ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;35;1mUser Update (0.0ms)[0m   [0mUPDATE "users" SET "updated_at" = '2010-10-15 08:27:10', "perishable_token" = 'K9XqJaTGqI4LKFNojQx3', "last_request_at" = '2010-10-15 11:27:10' WHERE "id" = 1[0m
+  [4;36;1mFaltaDeLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "falta_de_legajos" WHERE ("falta_de_legajos"."id" = 1) [0m
+  [4;35;1mFaltaDeLegajo Load (0.0ms)[0m   [0mSELECT "falta_de_legajos".id FROM "falta_de_legajos" WHERE ("falta_de_legajos"."fecha" = '2010-09-01' AND "falta_de_legajos".legajo_id = 1 AND "falta_de_legajos".id <> 1) LIMIT 1[0m
+  [4;36;1mFaltaDeLegajo Update (0.0ms)[0m   [0;1mUPDATE "falta_de_legajos" SET "pescado" = 't', "reposo" = 't', "updated_at" = '2010-10-15 08:27:10', "suspendido" = 't', "tipo" = 'ss', "con_aviso" = 't', "justificada" = 't' WHERE "id" = 1[0m
+Redirected to http://localhost:3000/admin/falta_de_legajos/1
+Completed in 359ms (DB: 0) | 302 Found [http://localhost/admin/falta_de_legajos/1]
+
+
+Processing Admin::FaltaDeLegajosController#show (for 127.0.0.1 at 2010-10-15 08:27:11) [GET]
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"admin/falta_de_legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-10-15 08:27:11', "perishable_token" = 'Fxif-XLzTY8C9RLuYX6E', "last_request_at" = '2010-10-15 11:27:11' WHERE "id" = 1[0m
+  [4;35;1mFaltaDeLegajo Load (0.0ms)[0m   [0mSELECT * FROM "falta_de_legajos" WHERE ("falta_de_legajos"."id" = 1) [0m
+Rendering template within layouts/admin_layout
+Rendering admin/falta_de_legajos/show
+  [4;36;1mLegajo Load (0.0ms)[0m   [0;1mSELECT * FROM "legajos" WHERE ("legajos"."id" = 1) [0m
+Rendered commons/_session (0.0ms)
+Completed in 609ms (View: 172, DB: 0) | 200 OK [http://localhost/admin/falta_de_legajos/1]
+
+
+Processing Admin::FaltaDeLegajosController#index (for 127.0.0.1 at 2010-10-15 08:27:17) [GET]
+  Parameters: {"action"=>"index", "controller"=>"admin/falta_de_legajos"}
+  [4;35;1mUser Load (0.0ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = '1') LIMIT 1[0m
+  [4;36;1mUser Update (0.0ms)[0m   [0;1mUPDATE "users" SET "updated_at" = '2010-10-15 08:27:18', "perishable_token" = 'O07kNxkNJ2xs93PnroKH', "last_request_at" = '2010-10-15 11:27:18' WHERE "id" = 1[0m
+  [4;35;1mFaltaDeLegajo Load IDs For Limited Eager Loading (0.0ms)[0m   [0mSELECT DISTINCT "falta_de_legajos".id FROM "falta_de_legajos" LEFT OUTER JOIN "legajos" ON "legajos".id = "falta_de_legajos".legajo_id ORDER BY fecha DESC, legajos.nombre LIMIT 30 OFFSET 0[0m
+  [4;36;1mFaltaDeLegajo Load Including Associations (0.0ms)[0m   [0;1mSELECT "falta_de_legajos"."id" AS t0_r0, "falta_de_legajos"."legajo_id" AS t0_r1, "falta_de_legajos"."fecha" AS t0_r2, "falta_de_legajos"."con_aviso" AS t0_r3, "falta_de_legajos"."justificada" AS t0_r4, "falta_de_legajos"."created_at" AS t0_r5, "falta_de_legajos"."updated_at" AS t0_r6, "falta_de_legajos"."dias_afectados" AS t0_r7, "falta_de_legajos"."reposo" AS t0_r8, "falta_de_legajos"."suspendido" AS t0_r9, "falta_de_legajos"."pescado" AS t0_r10, "falta_de_legajos"."tipo" AS t0_r11, "legajos"."id" AS t1_r0, "legajos"."nombre" AS t1_r1, "legajos"."tipo_documento" AS t1_r2, "legajos"."documento" AS t1_r3, "legajos"."c_u_i_f" AS t1_r4, "legajos"."telefonos" AS t1_r5, "legajos"."inicio" AS t1_r6, "legajos"."nacimiento" AS t1_r7, "legajos"."estado_civil" AS t1_r8, "legajos"."nivel_estudio" AS t1_r9, "legajos"."categoria" AS t1_r10, "legajos"."observaciones" AS t1_r11, "legajos"."created_at" AS t1_r12, "legajos"."updated_at" AS t1_r13, "legajos"."foto_file_name" AS t1_r14, "legajos"."foto_content_type" AS t1_r15, "legajos"."foto_file_size" AS t1_r16, "legajos"."foto_updated_at" AS t1_r17, "legajos"."legajo" AS t1_r18 FROM "falta_de_legajos" LEFT OUTER JOIN "legajos" ON "legajos".id = "falta_de_legajos".legajo_id WHERE "falta_de_legajos".id IN (1) ORDER BY fecha DESC, legajos.nombre[0m
+Rendering template within layouts/admin_layout
+Rendering commons/index
+Rendered commons/_search_form (15.6ms)
+Rendered commons/_pagination (0.0ms)
+Rendered admin/falta_de_legajos/_list (218.8ms)
+Rendered commons/_session (0.0ms)
+Completed in 688ms (View: 313, DB: 0) | 200 OK [http://localhost/admin/falta_de_legajos]

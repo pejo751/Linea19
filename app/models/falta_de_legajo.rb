@@ -13,7 +13,6 @@ class FaltaDeLegajo < ActiveRecord::Base
     r = r + (reposo ? (r.empty? ? '' : ', ') + 'Reposo' : '')
     r = r + (suspendido ? (r.empty? ? '' : ', ') + 'Suspendido' : '')
     r = r + (pescado ? (r.empty? ? '' : ', ') + 'Pescado' : '')
-    r = r + ((fecha_descargo.nil? and descargo.empty?) ? '' : (r.empty? ? '' : ', ') + 'DESCARGO')
   end
 
   def datos_de_legajo
