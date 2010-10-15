@@ -7,17 +7,10 @@
     end
 
     p.body do |r|
-      r.field 'Legajo', @resource.datos_de_legajo
-      r.field 'Dias afectados', @resource.dias_afectados
-      r.field 'Con aviso?', @resource.con_aviso
-      r.field 'Justificada?', @resource.justificada
-      r.field 'Reposo?', @resource.reposo
-      r.field 'Suspendido?', @resource.suspendido
-      r.field 'Pescado?', @resource.pescado
       r.field 'Tipo', @resource.tipo
+      r.field 'Detalle', @resource.detalle
       r.field 'Fecha descargo', @resource.fecha_descargo
       r.field 'Descargo', @resource.descargo
-      r.field 'Tipo', @resource.tipo
       r.field 'Created at', @resource.created_at
       r.field 'Updated at', @resource.updated_at
     end

@@ -2,9 +2,10 @@
       list.fecha
       list.legajo :with => :legajo, :caption => 'Legajo'
       list.legajo :with => :nombre, :caption => 'Nombre'
-      list.dias_afectados :caption => 'Dias'
-      list.banderas_resumidas :caption => 'Detalle'
       list.tipo
+      list.detalle
+      list.fecha_descargo
+      list.descargo
     end %>
 
 <% content_for :extras do %>
@@ -12,3 +13,4 @@
     <%= all_filters %>
   <% end %>
 <% end %>
+    

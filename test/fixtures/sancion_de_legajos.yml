@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  legajo: 
+  fecha: 2010-10-15
+  tipo: MyString
+  detalle: MyString
+  fecha_descargo: 2010-10-15
+  descargo: MyString
+
+two:
+  legajo: 
+  fecha: 2010-10-15
+  tipo: MyString
+  detalle: MyString
+  fecha_descargo: 2010-10-15
+  descargo: MyString

@@ -1,15 +1,15 @@
 <%= list_builder_for @records do |list|
       list.legajo
       list.nombre
-      list.tipo_documento
+      list.tipo_documento :caption => 'TDoc'
       list.documento
       list.c_u_i_f
       list.inicio
       list.telefonos
       list.nacimiento
       list.estado_civil
-      list.nivel_estudio
-      #list.codigo_agrupacion
+      list.nivel_estudio :caption => 'Niv.Est.'
+      list.categoria
       #list.observaciones
       #list.foto_file_name
     end %>

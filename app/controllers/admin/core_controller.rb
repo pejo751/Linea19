@@ -15,6 +15,7 @@ class Admin::CoreController < ApplicationController
   set_module :documentos_de_legajos
   set_module :familiares_de_legajos
   set_module :falta_de_legajos
+  set_module :sancion_de_legajos
 
 end
 
