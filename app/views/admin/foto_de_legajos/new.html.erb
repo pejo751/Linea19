@@ -1,0 +1,15 @@
+
+<% form_for [:admin, @legajo, @foto_de_legajo], :html => { :multipart => true } do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :tipo %><br />
+    <%= f.text_field :tipo %>
+  </p>
+  <p>
+    <%= f.label :foto %><br />
+    <%= f.file_field :foto %>
+  </p>
+  <p>
+    <%= f.submit 'Guardar estos cambios' %>
+  </p>
+<% end %>

@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101015103502) do
+ActiveRecord::Schema.define(:version => 20101021132722) do
 
   create_table "direccion_de_legajos", :force => true do |t|
     t.integer   "legajo_id"
@@ -34,17 +34,17 @@ ActiveRecord::Schema.define(:version => 20101015103502) do
   end
 
   create_table "falta_de_legajos", :force => true do |t|
-    t.integer  "legajo_id"
-    t.date     "fecha"
-    t.boolean  "con_aviso"
-    t.boolean  "justificada"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "dias_afectados", :default => 1
-    t.boolean  "reposo"
-    t.boolean  "suspendido"
-    t.boolean  "pescado"
-    t.string   "tipo"
+    t.integer   "legajo_id"
+    t.date      "fecha"
+    t.boolean   "con_aviso"
+    t.boolean   "justificada"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.integer   "dias_afectados", :default => 1
+    t.boolean   "reposo"
+    t.boolean   "suspendido"
+    t.boolean   "pescado"
+    t.string    "tipo"
   end
 
   create_table "familiar_de_legajos", :force => true do |t|
@@ -58,6 +58,24 @@ ActiveRecord::Schema.define(:version => 20101015103502) do
     t.string    "observaciones"
     t.timestamp "created_at"
     t.timestamp "updated_at"
+  end
+
+  create_table "foto_de_legajos", :force => true do |t|
+    t.integer  "legajo_id"
+    t.string   "tipo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "foto_file_name"
+    t.string   "foto_content_type"
+    t.integer  "foto_file_size"
+    t.datetime "foto_updated_at"
+  end
+
+  create_table "fotos_de_legajos", :force => true do |t|
+    t.integer  "legajo_id"
+    t.string   "tipo"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "legajos", :force => true do |t|
@@ -74,22 +92,18 @@ ActiveRecord::Schema.define(:version => 20101015103502) do
     t.string   "observaciones"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "foto_file_name"
-    t.string   "foto_content_type"
-    t.integer  "foto_file_size"
-    t.datetime "foto_updated_at"
     t.integer  "legajo"
   end
 
   create_table "sancion_de_legajos", :force => true do |t|
-    t.integer  "legajo_id"
-    t.date     "fecha"
-    t.string   "tipo"
-    t.string   "detalle"
-    t.date     "fecha_descargo"
-    t.string   "descargo"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.integer   "legajo_id"
+    t.date      "fecha"
+    t.string    "tipo"
+    t.string    "detalle"
+    t.date      "fecha_descargo"
+    t.string    "descargo"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "users", :force => true do |t|

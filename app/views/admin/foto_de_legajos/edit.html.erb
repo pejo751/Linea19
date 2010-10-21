@@ -1,0 +1,23 @@
+<h1>Edicion de foto de legajo</h1>
+
+<% form_for [:admin, @legajo, @foto_de_legajo], :html => { :multipart => true } do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :tipo %><br />
+    <%= f.text_field :tipo %>
+  </p>
+  <p>
+    <%= f.label :foto_file_name %><br />
+    <%= f.text_field :foto_file_name, :disabled => true %>
+  </p>
+  <p>
+    <%= f.label :foto %><br />
+    <%= f.file_field :foto %>
+  </p>
+  <p>
+    <%= f.submit 'Guardar estos cambios' %>
+  </p>
+<% end %>
+
+<%= link_to 'volver', admin_legajo_foto_de_legajos_path %>

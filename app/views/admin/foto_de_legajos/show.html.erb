@@ -1,0 +1,31 @@
+
+<%= image_tag @foto_de_legajo.foto.url, :size => "300x300" %>
+
+<p>
+  <b>Legajo:</b>
+  <%=h @foto_de_legajo.legajo_id %>
+</p>
+
+<p>
+  <b>Tipo:</b>
+  <%=h @foto_de_legajo.tipo %>
+</p>
+<p>
+  <b>foto_file_name:</b>
+  <%=h @foto_de_legajo.foto_file_name %>
+</p>
+<p>
+  <b>foto_content_type:</b>
+  <%=h @foto_de_legajo.foto_content_type %>
+</p>
+<p>
+  <b>foto_file_size:</b>
+  <%=h @foto_de_legajo.foto_file_size %>
+</p>
+<p>
+  <b>foto_updated_at:</b>
+  <%=h @foto_de_legajo.foto_updated_at %>
+</p>
+
+<%= link_to 'editar', edit_admin_legajo_foto_de_legajo_path(@legajo, @foto_de_legajo) %> |
+<%= link_to 'volver', admin_legajo_foto_de_legajos_path %>

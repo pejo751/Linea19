@@ -1,0 +1,24 @@
+
+<%= link_to 'Agregar nueva Foto De Legajo', new_admin_legajo_foto_de_legajo_path %><br />
+
+<br />
+
+<table>
+  <tr>
+    <th>Tipo</th>
+  </tr>
+
+<% @foto_de_legajos.each do |foto_de_legajo| %>
+  <tr>
+    <td><%=h foto_de_legajo.tipo %></td>
+    <td>...</td>
+    <td><%= link_to 'ver', admin_legajo_foto_de_legajo_path(@legajo, foto_de_legajo) %></td>
+    <td>...</td>
+    <td><%= link_to 'editar', edit_admin_legajo_foto_de_legajo_path(@legajo, foto_de_legajo) %></td>
+    <td>...</td>
+    <td><%= link_to 'eliminar', admin_legajo_foto_de_legajo_path(@legajo, foto_de_legajo), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />

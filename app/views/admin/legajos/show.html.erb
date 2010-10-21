@@ -1,10 +1,3 @@
-
-<!-- <%= unless @resource.foto.url.nil?
-   image_tag @resource.foto.url
-   end
-%>
- -->
-  
 <%=
   present :elegant do |p|
     p.header do |r|
@@ -21,10 +14,6 @@
       r.field 'Estado civil', @resource.estado_civil
       r.field 'Nivel estudio', @resource.nivel_estudio
       r.field 'Categoria', @resource.categoria
-      r.field 'Archivo de foto', @resource.foto_file_name
-      r.field 'Contenido de foto', @resource.foto_content_type
-      r.field 'Tamano de foto', @resource.foto_file_size
-      r.field 'Actualizacion de foto', @resource.foto_updated_at
       r.field 'Observaciones', @resource.observaciones
       r.field 'Id', @resource.id
       r.field 'Created at', @resource.created_at

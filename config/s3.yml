@@ -1,0 +1,14 @@
+development:
+  bucket: download.forumdg.com
+  access_key_id: AKIAJBCD7DNSI4HEQIVQ
+  secret_access_key: yah0GPxsfgtbQxFJn2nOwgR8yPiHauJJ8c7CsuwB
+
+test:
+  bucket: myapptest
+  access_key_id: <your key>
+  secret_access_key: <your key>
+
+production:
+  bucket: myapp
+  access_key_id: <your key>
+  secret_access_key: <your key>

@@ -2,14 +2,16 @@
       list.legajo
       list.nombre
       list.telefonos
-      list.inicio
-      list.html :caption => 'Direcciones' do |d|
-         link_to 'Editar', admin_legajo_direccion_de_legajos_path(d)
+      list.html :caption => '' do |d|
+         link_to 'Direcciones', admin_legajo_direccion_de_legajos_path(d)
       end
-      list.html :caption => 'Documentos' do |d|
-         link_to 'Editar', admin_legajo_documento_de_legajos_path(d)
+      list.html :caption => '' do |d|
+         link_to 'Documentos', admin_legajo_documento_de_legajos_path(d)
       end
-      list.html :caption => 'Familiares' do |f|
-         link_to 'Editar', admin_legajo_familiar_de_legajos_path(f)
+      list.html :caption => '' do |f|
+         link_to 'Familiares', admin_legajo_familiar_de_legajos_path(f)
+      end
+      list.html :caption => '' do |f|
+         link_to 'Fotos', admin_legajo_foto_de_legajos_path(f)
       end
     end %>

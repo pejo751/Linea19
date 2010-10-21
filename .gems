@@ -2,4 +2,4 @@ authlogic --version '= 2.1.3'
 will_paginate --version '=2.3.14'
 faker
 populator
-
+aws-s3
