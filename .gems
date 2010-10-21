@@ -3,3 +3,4 @@ will_paginate --version '=2.3.14'
 faker
 populator
 aws-s3
+paperclip
