@@ -15,8 +15,9 @@ class FotoDeLegajo < ActiveRecord::Base
 
   validates_attachment_size :foto, :less_than => 1.megabytes,
     :message => "es demasiado grande. Debe ser menor a 1 mb."
-  validates_attachment_content_type :foto, :content_type => ['image/jpeg', 'image/gif', 'image/bmp'],
-    :message => "debe ser .jpg o .gif"
+  validates_attachment_content_type :foto,
+    :content_type => ['image/jpeg', 'image/gif', 'image/bmp'],
+    :message => "debe ser .jpg, .gif o .bmp"
 
   # validates_attachment_presence :foto
 
