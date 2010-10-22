@@ -7,7 +7,8 @@ class Admin::SancionDeLegajosController < Admin::CoreController
 			f.set :ultimo_mes,
 				:conditions => ['fecha BETWEEN ? AND ?',
 					1.months.ago.to_date, Date.today]
-			f.set :con_descargo, :conditions => ['fecha_descargo IS NOT NULL']
+			f.set :con_descargo,
+				:conditions => ['fecha_descargo IS NOT NULL']
 		end
 	end
 end

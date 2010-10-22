@@ -4,19 +4,17 @@
 <br />
 
 <table>
-  <tr>
-    <th>Tipo</th>
-  </tr>
-
 <% @foto_de_legajos.each do |foto_de_legajo| %>
   <tr>
+    <td><%= image_tag foto_de_legajo.foto.url, :size => '100x100' %></td>
+    <td>...</td>
     <td><%=h foto_de_legajo.tipo %></td>
     <td>...</td>
     <td><%= link_to 'ver', admin_legajo_foto_de_legajo_path(@legajo, foto_de_legajo) %></td>
     <td>...</td>
     <td><%= link_to 'editar', edit_admin_legajo_foto_de_legajo_path(@legajo, foto_de_legajo) %></td>
     <td>...</td>
-    <td><%= link_to 'eliminar', admin_legajo_foto_de_legajo_path(@legajo, foto_de_legajo), :confirm => 'Are you sure?', :method => :delete %></td>
+    <td><%= link_to 'eliminar', admin_legajo_foto_de_legajo_path(@legajo, foto_de_legajo), :confirm => 'El registro sera eliminado definitivamente. ¿Desea continuar?', :method => :delete %></td>
   </tr>
 <% end %>
 </table>

@@ -1,5 +1,5 @@
 
-<%= image_tag @foto_de_legajo.foto.url, :size => "300x300" %>
+<%= image_tag @foto_de_legajo.foto.url, :height => 300 %>
 
 <p>
   <b>Legajo:</b>
@@ -27,5 +27,4 @@
   <%=h @foto_de_legajo.foto_updated_at %>
 </p>
 
-<%= link_to 'editar', edit_admin_legajo_foto_de_legajo_path(@legajo, @foto_de_legajo) %> |
-<%= link_to 'volver', admin_legajo_foto_de_legajos_path %>
+<%= link_to 'Editar este registro', edit_admin_legajo_foto_de_legajo_path(@legajo, @foto_de_legajo) %> <%= link_to 'Eliminar este registro', admin_legajo_foto_de_legajo_path(@legajo, @foto_de_legajo), :confirm => 'El registro sera eliminado definitivamente. ¿Desea continuar?', :method => :delete %> <%= link_to 'Volver', admin_legajo_foto_de_legajos_path %>

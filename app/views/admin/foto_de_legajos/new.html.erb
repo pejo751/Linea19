@@ -5,11 +5,13 @@
     <%= f.label :tipo %><br />
     <%= f.text_field :tipo %>
   </p>
+  <br />
   <p>
     <%= f.label :foto %><br />
     <%= f.file_field :foto %>
   </p>
+  <br /><br />
   <p>
-    <%= f.submit 'Guardar estos cambios' %>
+    <%= f.submit 'Guardar estos cambios' %> o <%= link_to 'Cancelar', admin_legajo_foto_de_legajos_path %>
   </p>
 <% end %>

@@ -1,12 +1,8 @@
-<%= f.text_field :fecha %>
-<%= f.select :legajo_id, Legajo.to_select %>
-<%= f.text_field :tipo %>
-<%= f.text_field :detalle %>
-<%= f.text_field :fecha_descargo %>
-<%= f.text_field :descargo %>
-
-
-
-
-
-
+<% field_block 2 do %>
+	<%= f.text_field :fecha %>
+	<%= f.select :legajo_id, Legajo.to_select %>
+	<%= f.text_field :tipo %>
+	<%= f.text_field :detalle %>
+	<%= f.text_field :fecha_descargo %>
+	<%= f.text_field :descargo %>
+<% end %>

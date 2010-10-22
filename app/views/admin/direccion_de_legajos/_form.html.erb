@@ -1,5 +1,7 @@
-<%= f.text_field :tipo_direccion %>
-<%= f.text_field :direccion %>
-<%= f.text_field :barrio %>
-<%= f.text_field :ciudad %>
-<%= f.text_field :provincia %>
+<% field_block 3 do %>
+	<%= f.text_field :tipo_direccion %>
+	<%= f.text_field :direccion %>
+	<%= f.text_field :barrio %>
+	<%= f.text_field :ciudad %>
+	<%= f.text_field :provincia %>
+<% end %>

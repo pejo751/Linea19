@@ -1,3 +1,12 @@
+
+<%=
+   if @resource.foto_de_legajos.first
+      image_tag @resource.foto_de_legajos.first.foto.url, :height => 300
+   else
+      image_tag '/images/legajo.gif', :height => 300
+   end
+%>
+
 <%=
   present :elegant do |p|
     p.header do |r|
@@ -20,9 +29,10 @@
       r.field 'Updated at', @resource.updated_at
     end
     p.actions do |r|
-      r.text link_to('Documentos', admin_legajo_documento_de_legajos_path(@resource))
       r.text link_to('Direcciones', admin_legajo_direccion_de_legajos_path(@resource))
+      r.text link_to('Documentos', admin_legajo_documento_de_legajos_path(@resource))
       r.text link_to('Familiares', admin_legajo_familiar_de_legajos_path(@resource))
+      r.text link_to('Fotos', admin_legajo_foto_de_legajos_path(@resource))
       r.text edit_action
       r.text destroy_action
       r.text back_action

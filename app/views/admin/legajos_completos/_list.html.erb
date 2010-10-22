@@ -1,14 +1,14 @@
 <%= list_builder_for @records do |list|
-      list.legajo
+      list.legajo :caption => 'Leg.'
       list.nombre
-      list.tipo_documento :caption => 'TDoc'
-      list.documento
+      list.tipo_documento :caption => 'T.Doc'
+      list.documento :caption => 'Docum.'
       list.c_u_i_f
       list.inicio
-      list.telefonos
-      list.nacimiento
-      list.estado_civil
-      list.nivel_estudio :caption => 'Niv.Est.'
+      list.telefonos :caption => 'Telef.'
+      list.nacimiento :caption => 'Nacim.'
+      list.estado_civil :caption => 'Est.civil.'
+      list.nivel_estudio :caption => 'Niv.est.'
       list.categoria
       #list.observaciones
       #list.foto_file_name
